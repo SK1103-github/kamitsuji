@@ -3,13 +3,12 @@
 Gulp-Packages
 
 ---------------------------------*/
-const gulp = require("gulp");
-const sass = require("gulp-sass");
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
 const stylus = require('gulp-stylus');
-const postcss = require("gulp-postcss");
-const autoprefixer = require("autoprefixer");
-const plumber = require("gulp-plumber");
-
+const plumber = require('gulp-plumber');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
 /*---------------------------------
 
 Gulp-Tasks
@@ -19,12 +18,12 @@ Gulp-Tasks
 /**
  * sass -> cssにコンパイル
  */
-gulp.task('sass', function(done){
-  gulp.src("./assets/sass/**/*.scss")
-  .pipe(plumber())
-  .pipe(sass({outputStyle: 'expanded'}))
-  .pipe(postcss([autoprefixer()]))
-  .pipe(gulp.dest("./assets/css"));
+gulp.task('sass', function (done) {
+  gulp.src("./assets/sass/**/*.scss") // Sassファイルを対象
+    .pipe(plumber()) // エラー防止
+    .pipe(sass({ outputStyle: 'expanded', sourceMap: false })) // Dart Sass コンパイル設定
+    .pipe(postcss([autoprefixer()])) // CSSに自動プレフィックス付加
+    .pipe(gulp.dest("./assets/css")) // 出力先を assets/css に指定
   done();
 });
 
@@ -54,6 +53,6 @@ gulp.task('watch', function(done){
  * Gulpタスクをデフォルトのコマンドで起動
  * $ npx gulp
  */
-gulp.task('default', gulp.series('sass', 'watch', function(done) {
+gulp.task('default', gulp.series('watch', function(done) {
   done();
 }));
