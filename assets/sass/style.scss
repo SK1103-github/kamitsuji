@@ -1,6 +1,4 @@
-$primary-color: #3498db;
-
-body {
-  background-color: $primary-color;
-  color: white;
-}
+@charset "utf-8";
+@use "components";
+@use "layouts";
+@use "pages";
