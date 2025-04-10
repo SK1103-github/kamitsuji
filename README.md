@@ -1,2 +1,2 @@
-# kamitsuji
-上辻会計事務所コーポレートサイト
+# Template_scss_ver
+テンプレートフォルダ（scss ver）
