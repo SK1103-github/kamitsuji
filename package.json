@@ -1,0 +1,30 @@
+{
+  "name": "template_sass_new",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SK1103-github/kamitsuji.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/SK1103-github/kamitsuji/issues"
+  },
+  "homepage": "https://github.com/SK1103-github/kamitsuji#readme",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.86.3"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.21",
+    "browserslist": "^4.24.4"
+  }
+}
