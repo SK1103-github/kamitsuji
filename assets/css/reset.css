@@ -26,6 +26,7 @@ time, mark, audio, video {
   background:transparent;
   list-style:none;
   box-sizing: border-box;
+  font-weight: normal;
 }
 
 table, tbody, tfoot, thead, tr, th, td{

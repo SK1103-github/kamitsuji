@@ -3,3 +3,284 @@
 /*========================================================
 button
 ========================================================*/
+.b-button{
+
+  &.--orange{
+
+    .b-button__link{
+      width: 264px;
+      height: 64px;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      color:#fff;
+      padding-left: 32px;
+      position: relative;
+      background: $sub-color;
+      margin:0 auto;
+      border: 1px solid $sub-color;
+
+      &:hover{
+        background: $bg01-color;
+        color:$sub-color;
+
+        .b-button__link-arrow{
+          background: $sub-color;
+
+          .arrow{
+
+            &::before{
+              animation-name: transformRightLeft;
+              animation-delay: 0s;
+              @include svg-arrow(15px, 13px, ffffff);
+            }
+
+            &::after{
+              animation-name: transformLeftRight;
+              animation-delay: 0.2s;
+              @include svg-arrow(15px, 13px, ffffff);
+            }
+
+          }
+
+        }
+
+      }
+
+      &-arrow{
+        width:48px;
+        height: 48px;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+        margin: auto 0;
+        line-height: 1;
+        border-radius: 100px;
+        background: $bg01-color;
+
+        .arrow{
+          width:16px;
+          height: 14px;
+          overflow: hidden;
+          position: absolute;
+          top: 0;
+          bottom:0;
+          left: 0;
+          right:0;
+          margin: auto;
+
+          &::before,
+          &::after{
+            content: "";
+            width:16px;
+            height: 14px;
+            @include svg-arrow(15px, 13px, F84B20);
+            position: absolute;
+            top: 0;
+            bottom:0;
+            left: 0;
+            right:0;
+            margin: auto;
+            animation-fill-mode: forwards;
+            animation-duration: 0.6s;
+            display: block;
+          }
+
+          &::after{
+            transform: translateX(-100%);
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  &.--white{
+
+    .b-button__link{
+      width: 264px;
+      height: 64px;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      color:#fff;
+      padding-left: 32px;
+      position: relative;
+      margin:0 auto;
+      border: 1px solid #fff;
+
+      &:hover{
+        background: $bg01-color;
+        color:$sub-color;
+
+        .b-button__link-arrow{
+          background: $sub-color;
+
+          .arrow{
+
+            &::before{
+              animation-name: transformRightLeft;
+              animation-delay: 0s;
+              @include svg-arrow(15px, 13px, ffffff);
+            }
+
+            &::after{
+              animation-name: transformLeftRight;
+              animation-delay: 0.2s;
+              @include svg-arrow(15px, 13px, ffffff);
+            }
+
+          }
+
+        }
+
+      }
+
+      &-arrow{
+        width:48px;
+        height: 48px;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+        margin: auto 0;
+        line-height: 1;
+        border-radius: 100px;
+        background: $bg01-color;
+
+        .arrow{
+          width:16px;
+          height: 14px;
+          overflow: hidden;
+          position: absolute;
+          top: 0;
+          bottom:0;
+          left: 0;
+          right:0;
+          margin: auto;
+
+          &::before,
+          &::after{
+            content: "";
+            width:16px;
+            height: 14px;
+            @include svg-arrow(15px, 13px, F84B20);
+            position: absolute;
+            top: 0;
+            bottom:0;
+            left: 0;
+            right:0;
+            margin: auto;
+            animation-fill-mode: forwards;
+            animation-duration: 0.6s;
+            display: block;
+          }
+
+          &::after{
+            transform: translateX(-100%);
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  &.--contact{
+
+    .b-button__link{
+      width: 322px;
+
+      .b-button__link-arrow{
+        right: auto;
+        left:8px;
+      }
+
+      &.--tel{
+        padding-left: 106px;
+        .arrow{
+          width: 20px;
+          height: 20px;
+
+          &::before{
+            width: 20px;
+            height: 20px;
+            animation: none!important;
+            @include svg-tel(20px, 20px, F84B20);
+          }
+          &:after{
+            display: none;
+          }
+        }
+
+        .b-button__link-txt{
+          text-align: center;
+          font-size: 28px;
+
+          span{
+            display: block;
+            font-size: 12px;
+            line-height: $line-height-l;
+          }
+        }
+
+        &:hover{
+          .arrow{
+            &::before{
+              animation: none!important;
+              @include svg-tel(20px, 20px, FFFFFF);
+            }
+          }
+        }
+      }
+
+      &.--mail{
+        margin-top: 16px;
+        padding-left: 90px;
+        .arrow{
+          width: 20px;
+          height: 20px;
+
+          &::before{
+            width: 20px;
+            height: 20px;
+            animation: none!important;
+            @include svg-mail(20px, 20px, F84B20);
+          }
+          &:after{
+            display: none;
+          }
+        }
+
+        &:hover{
+          .arrow{
+            &::before{
+              animation: none!important;
+              @include svg-mail(20px, 20px, FFFFFF);
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+
+}
+
+.b-button__arrow{
+  &.--orange{
+    @include button-arrow(48px, $sub-color, FFFFFF);
+  }
+  &.--white {
+    @include button-arrow(48px, $bg01-color, F84B20);
+  }
+}

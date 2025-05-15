@@ -1,0 +1,72 @@
+@use "../base" as *;
+
+/*========================================================
+about
+========================================================*/
+#about{
+
+  .about-point{
+
+    &__flex{
+      display: flex;
+      justify-content: space-between;
+      padding: 40px 90px 40px 70px;
+      background: $bg01-color;
+      position: relative;
+      overflow: hidden;
+      border-radius: 0 16px 0 16px;
+
+      &+.about-point__flex{
+        margin-top: 20px;
+      }
+
+      &-item{
+
+        &.--left{
+          width: 166px;
+        }
+
+        &.--right{
+          width: calc(100% - 214px);
+
+          .about-point__ttl{
+            padding: 10px 0 0 35px;
+            position: relative;
+            font-size: 24px;
+            margin-bottom: 44px;
+            display: block;
+
+            &:before{
+              content:"";
+              width: 24px;
+              height: 24px;
+              position: absolute;
+              top:0;
+              left:0;
+              @include svg-plus(24px, 24px, F84B20);
+            }
+          }
+
+          .about-point__txt{
+            line-height: $line-height-l;
+          }
+
+          .about-point__img{
+            margin-top: 44px;
+            display: block;
+          }
+
+          .about-point__num{
+            font-size: 200px;
+            color:$sub-color;
+            opacity: .1;
+            position: absolute;
+            bottom:-30px;
+            right:48px;
+          }
+
+        }
+      }
+    }
+  }
+}

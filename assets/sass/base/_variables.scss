@@ -1,17 +1,23 @@
 /*========================================================
 colors
 ========================================================*/
-$main-color: #000000; // メインカラー
-$sub-color: #6c757d; // 補助カラー
-$bg-color: #f8f9fa; // 背景色
+$main-color: #F3EAD9; // メインカラー
+$sub-color: #F84B20; // 補助カラー
+$bg01-color: #fff; // 背景色
+$bg02-color: #C1B092; // 背景色
 $err-color: #dc3545; // 警告色
 
 /*========================================================
 fonts
 ========================================================*/
-$base-font-family: "Arial, sans-serif";
-$base-font-size-small: 16px; // 基本サイズ
+$base-font-family-jp: "Zen Kaku Gothic New", sans-serif;
+$base-font-family-en: "EB Garamond", sans-serif;
+$base-font-size-small: 14px; // 基本サイズ
 $base-font-size-title: 20px; // 見出しサイズ
+
+$line-height-l: 180%;
+$line-height-m: 150%;
+$line-height-s: 100%;
 
 /*========================================================
 spacing
@@ -20,9 +26,53 @@ $left-space: 10px; // 左側余白
 $right-space: 10px; // 右側余白
 
 /*========================================================
+content
+========================================================*/
+$content-width:59.38vw;
+
+/*========================================================
 breakpoint
 ========================================================*/
 $breakpoint-xs: 768px; // スマホ（iPadmini含む）
 $breakpoint-s: 992px; // タブレット
 $breakpoint-m: 1200px; //MacBook Air
 $breakpoint-l: 1440px; //MacBook Pro
+
+/*========================================================
+animation
+========================================================*/
+//右向き
+@keyframes transformLeftRight {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes transformRightLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+//左向き
+@keyframes transformLeftRotateRight {
+  0% {
+    transform: translateX(200%) rotate(-180deg);
+  }
+  100% {
+    transform: translateX(0) rotate(-180deg);
+  }
+}
+@keyframes transformRightRotateLeft {
+  0% {
+    transform: translateX(0) rotate(-180deg);
+  }
+  100% {
+    transform: translateX(-200%) rotate(-180deg);
+  }
+}

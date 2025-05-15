@@ -1,0 +1,15 @@
+@use "../base" as *;
+
+/*========================================================
+js
+========================================================*/
+.js-scroll__txt{
+  font-size: 128px;
+  color:#C1B092;
+  white-space: nowrap;
+  position: absolute;
+  left:0;
+  top:-108px;
+  opacity: .3;
+  transition: 0s;
+}

@@ -3,3 +3,95 @@
 /*========================================================
 mixin
 ========================================================*/
+
+//矢印（→）
+@mixin svg-arrow($width, $height, $color) {
+  background-image: url('data:image/svg+xml,<svg width="#{$width}" height="#{$height}" viewBox="0 0 #{$width} #{$height}" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.32056 12.5L7.43945 11.6589L12.044 7.20093H0V5.79906H12.0156L7.43945 1.34112L8.32056 0.5L15 6.5L8.32056 12.5Z" fill="%23#{$color}"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+//プラス（＋）
+@mixin svg-plus($width, $height, $color) {
+  background-image: url('data:image/svg+xml,<svg width="#{$width}" height="#{$height}" viewBox="0 0 #{$width} #{$height}" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.5537 13.9056V24H10.4463V13.9056H0.5V9.78541H10.4463V0H14.5537V9.78541H24.5V13.9056H14.5537Z" fill="%23#{$color}"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+//mail
+@mixin svg-mail($width, $height, $color) {
+  background-image: url('data:image/svg+xml,<svg width="#{$width}" height="#{$height}" viewBox="0 0 29 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.75" y="1.40625" width="26.5313" height="17.1875" stroke="%23#{$color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1.55713 2.21278L14.7941 12.3352L27.2524 1.43414" stroke="%23#{$color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+//tel
+@mixin svg-tel($width, $height, $color) {
+  background-image: url('data:image/svg+xml,<svg width="#{$width}" height="#{$height}" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.7579 0.78125C1.04657 0.911318 0.993031 1.8677 1.04657 2.40328C1.7579 15.3183 11.7012 24.4996 23.939 25.2188C24.4362 25.2188 25.4687 25.0351 25.4687 24.4996" stroke="%23#{$color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/><path d="M8.38281 11C10.0832 14.0678 13.4688 16.6044 15.3828 18" stroke="%23#{$color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/><path d="M25.4686 16.8485L18.5925 15.3029L15.7395 18.1338" stroke="%23#{$color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.407 0.78125L10.9525 7.65956L8.15222 10.5593" stroke="%23#{$color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1.75769 0.78125H9.40635" stroke="%23#{$color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/><path d="M25.4686 16.8508V24.5018" stroke="%23#{$color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+@mixin button-arrow($size, $bg-color, $icon-color) {
+  width: $size;
+  height: $size;
+  line-height: 1;
+  border-radius: 100px;
+  position: relative;
+  background-color: $bg-color;
+  cursor: pointer;
+
+  .b-button__arrow-item {
+    width: calc($size / 2.6);
+    height: calc($size / 2.6);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      content: "";
+      width: calc($size / 3);
+      height: calc($size / 3.4);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      animation-fill-mode: forwards;
+      animation-duration: 0.6s;
+      display: block;
+      @include svg-arrow(calc($size / 3), calc($size / 3.4), $icon-color);
+    }
+
+    &::after {
+      transform: translateX(-200%);
+    }
+  }
+
+  &:hover {
+    background-color: #{$icon-color};
+    .b-button__arrow-item {
+      &::before {
+        animation-name: transformRightLeft;
+        animation-delay: 0s;
+        @include svg-arrow(calc($size / 3), calc($size / 3.4), $icon-color);
+      }
+
+      &::after {
+        animation-name: transformLeftRight;
+        animation-delay: 0.2s;
+        @include svg-arrow(calc($size / 3), calc($size / 3.4), $icon-color);
+      }
+    }
+  }
+}

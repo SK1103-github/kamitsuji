@@ -1,0 +1,152 @@
+@use "../base" as *;
+
+/*========================================================
+section
+========================================================*/
+.s-section__inner{
+  width: $content-width;
+  margin:0 auto;
+  padding: 100px 0;
+
+  &.--full{
+    width: 100%;
+    padding: 100px 150px 100px 0;
+  }
+  &.--recruit{
+    width: 100%;
+  }
+}
+
+.s-page__head{
+  position: relative;
+
+  &-inner{
+    padding: 0 150px;
+    width: 100%;
+    height: 470px;
+    background: url(../images/common/page_head_bg.png) no-repeat;
+    background-position: center bottom;
+  }
+  &-logo{
+    position: absolute;
+    top:60px;
+    left:100px;
+  }
+  &-ttl{
+    color:#fff;
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+
+    h1{
+      font-size: 96px;
+    }
+    p{
+      font-size: 20px;
+    }
+  }
+  &-txt{
+    text-align: center;
+    line-height: $line-height-l;
+    font-size: 16px;
+  }
+}
+
+.s-font__en{
+  font-family: $base-font-family-en;
+}
+.s-ttl{
+  padding-left: 40px;
+  position: relative;
+  margin-bottom: 80px;
+
+  &.--recruit{
+    display: inline-block;
+  }
+
+  &.--contact{
+    margin-bottom: 50px;
+  }
+
+  span{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top:0;
+    left:0;
+
+    &::before{
+      content:"";
+      width: 24px;
+      height: 24px;
+      @include svg-plus(24, 24, F84B20);
+      position: absolute;
+      top:0;
+      left:0;
+      display: block;
+    }
+  }
+
+  &__text{
+    font-size: 64px;
+    display: inline-block;
+    margin-right: 24px;
+
+    &.--white{
+      color:#fff;
+    }
+
+  }
+
+  &__desp{
+    font-size: 20px;
+    display: inline-block;
+
+    &.--white{
+      color:#fff;
+    }
+
+  }
+
+}
+
+/*========================================================
+contact
+========================================================*/
+.s-contact{
+  background: url(../images/common/footer_bg.png) no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+
+  .contact-layout__flex{
+    width: 1140px;
+    margin:0 auto;
+    padding: 100px 100px 120px;
+    background: url(../images/common/contact_bg.png) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    color:#fff;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .contact__head-txt{
+      font-size: 16px;
+      line-height: $line-height-l;
+    }
+
+    .contact__btn{
+
+    }
+  }
+}
+
+/*========================================================
+関連コンテンツ
+========================================================*/
+.s-contents{
+  background: url(../images/common/footer_bg.png) no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+}

@@ -1,0 +1,25 @@
+@use "variables" as *;
+
+/*========================================================
+global
+========================================================*/
+html {
+  font-size: $base-font-size-small; // 基本のフォントサイズ
+}
+
+body {
+  font-family: $base-font-family-jp; // フォント設定
+  color: #000!important; // テキストの基本色
+  background-color: #f6f1e8!important; // 背景色
+  font-weight: normal!important;
+
+  a{
+    text-decoration: none;
+  }
+
+  *,
+  ::after,
+  ::before{
+    transition: .5s;
+  }
+}
