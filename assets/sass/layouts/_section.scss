@@ -8,12 +8,18 @@ section
   margin:0 auto;
   padding: 100px 0;
 
-  &.--full{
+  &.--service{
     width: 100%;
     padding: 100px 150px 100px 0;
   }
   &.--recruit{
     width: 100%;
+  }
+  &.--environment{
+    padding: 0 0 100px;
+  }
+  &.--message{
+    padding: 120px 0;
   }
 }
 
@@ -67,6 +73,10 @@ section
 
   &.--contact{
     margin-bottom: 50px;
+  }
+
+  &.--company{
+    margin: 0 auto;
   }
 
   span{
@@ -146,7 +156,241 @@ contact
 関連コンテンツ
 ========================================================*/
 .s-contents{
-  background: url(../images/common/footer_bg.png) no-repeat;
-  background-position: center bottom;
+  background: #F3EAD9;
+
+  &__flex{
+    display: flex;
+    gap: 0 30px;
+
+    &-item{
+      width: calc(100% / 3 - 15px);
+      position: relative;
+
+      &:hover{
+        opacity: .7;
+
+        .b-button__arrow-item {
+          &::before {
+            animation-name: transformRightLeft;
+            animation-delay: 0s;
+          }
+
+          &::after {
+            animation-name: transformLeftRight;
+            animation-delay: 0.2s;
+          }
+        }
+      }
+
+      .s-contents__ttl{
+        position: absolute;
+        top:40px;
+        left:16px;
+        color:#fff;
+        padding-left: 40px;
+
+        &::before{
+          content:"";
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          top:0;
+          left:0;
+          @include svg-plus(24px, 24px, F84B20);
+          display: block;
+        }
+
+        .s-contents__ttl-txt{
+          font-size: 40px;
+          margin-bottom: 8px;
+        }
+
+        .s-contents__ttl-desp{
+          font-size: 16px;
+        }
+
+      }
+
+      .s-contents__btn{
+        position: absolute;
+        right:24px;
+        bottom:40px;
+      }
+
+    }
+
+  }
+
+}
+
+/*========================================================
+サービス内容
+========================================================*/
+.s-service{
+  background: #F3EAD9;
+
+  .section-ttl{
+    text-align: center;
+
+    .s-ttl{
+      display: inline-block;
+    }
+  }
+
+  &__flex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    gap: 32px;
+
+    &-item{
+      padding: 32px 24px 40px;
+      background: #fff;
+      border-radius: 0 8px 0 8px;
+      width: calc(100% /3 - 32px);
+      position: relative;
+
+      &:before{
+        content:"";
+        @include svg-plus(24px, 24px, F84B20);
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top:-12px;
+        left:-12px;
+      }
+
+    }
+
+    &-ttl{
+      color:$sub-color;
+      font-size: 20px;
+      display: block;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    &-txt{
+      line-height: $line-height-l;
+    }
+  }
+
+  .s-service__txt{
+    line-height: $line-height-l;
+    text-align: center;
+    font-size: 16px;
+  }
+
+}
+
+/*========================================================
+サービス概要
+========================================================*/
+.s-about{
+
+  .s-about__flex{
+    display: flex;
+    justify-content: space-between;
+
+    .--about{
+      margin-bottom: 48px;
+    }
+
+  }
+
+  .s-about__item{
+    width: 50%;
+
+    &.--txt{
+      padding-right: 67px;
+    }
+
+    &-ttl{
+      color:$sub-color;
+      font-size: 24px;
+      line-height: $line-height-l;
+      display: block;
+      margin-bottom: 32px;
+    }
+
+    &-txt{
+      line-height: $line-height-l;
+    }
+
+    &-img{
+      display: block;
+      margin-left: auto;
+    }
+  }
+}
+
+/*========================================================
+ページリンク
+========================================================*/
+.s-page__link{
+  background: url(../images/common/page_link_bg.png) no-repeat;
   background-size: contain;
+  background-position: top center;
+  padding: 300px 0 0;
+
+  .s-page__link-flex{
+    padding: 64px;
+    background: #fff;
+    display: flex;
+  }
+
+  .s-page__flex-item{
+
+    &.--img{
+      width: 250px;
+
+      p{
+        margin-top: 16px;
+      }
+
+      span{
+        font-size: 20px;
+        display: inline-block;
+        margin-left: 16px;
+      }
+    }
+
+    &.--txt{
+      width: calc(100% - 250px);
+      padding-left: 48px;
+    }
+  }
+
+  .s-page__item-ttl{
+    font-size: 28px;
+    padding-left:40px;
+    position: relative;
+    margin-bottom: 20px;
+    display: block;
+
+    &::before{
+      content:"";
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top:-7px;
+      left:0;
+      @include svg-plus(24px, 24px, F84B20);
+      display: block;
+    }
+
+  }
+
+  .s-page__item-txt{
+    font-size: 16px;
+    line-height: $line-height-l;
+    margin-bottom: 48px;
+  }
+
+  .s-page__flex-btn{
+    display: flex;
+    gap:0 16px;
+  }
+
 }

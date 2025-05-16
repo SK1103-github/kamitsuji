@@ -1,0 +1,79 @@
+@use "../base" as *;
+
+/*========================================================
+service
+========================================================*/
+#service{
+
+  .service-content__flex{
+    display: flex;
+    align-items: center;
+    padding: 60px 0 60px 56px;
+    position: relative;
+
+    &+.service-content__flex{
+      margin-top: 40px;
+    }
+    &:before{
+      content:"";
+      width: 100%;
+      background: #F3EAD9;
+      height: 100%;
+      position: absolute;
+      top:0;
+      left:0;
+      z-index: -1;
+    }
+
+    &-item{
+
+      &.--left{
+        width: calc(100% - 385px);
+        position: relative;
+        z-index: 1;
+        .service-content__ttl{
+          font-size: 32px;
+          margin-bottom: 24px;
+          display: block;
+          color:$sub-color;
+          &-txt{
+            display: block;
+            font-size: 20px;
+            margin-bottom: 24px;
+          }
+        }
+        .service-content__txt{
+          line-height: $line-height-l;
+        }
+      }
+
+      &.--right{
+        width: 385px;
+        transform: translateX(62px);
+        position: relative;
+        z-index: 1;
+      }
+
+      .service-content__btn{
+        .b-button__link{
+          margin-left: 0;
+          margin-right: auto;
+          margin-top: 48px;
+        }
+
+      }
+
+    }
+
+    .service-content__en-txt{
+      font-size: 128px;
+      color:$sub-color;
+      opacity: .1;
+      position: absolute;
+      bottom:20px;
+      right:0;
+    }
+
+  }
+
+}

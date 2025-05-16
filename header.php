@@ -85,13 +85,13 @@
             <a href="" class="l-header__list-link">お知らせ</a>
           </li>
           <li class="l-header__list-item">
-            <a href="" class="l-header__list-link">上辻会計事務所について</a>
+            <a href="page-about.php" class="l-header__list-link">上辻会計事務所について</a>
           </li>
           <li class="l-header__list-item">
             <div class="l-header__sub-nav js-nav__sub-btn">サービス内容</div>
             <div class="l-header__sub-item">
-              <a href="" class="l-header__sub-link">- サービス内容一覧</a>
-              <a href="" class="l-header__sub-link">- 税務会計顧問</a>
+              <a href="page-service.php" class="l-header__sub-link">- サービス内容一覧</a>
+              <a href="page-consultant.php" class="l-header__sub-link">- 税務会計顧問</a>
               <a href="" class="l-header__sub-link">- 財務デューデリジェンス</a>
               <a href="" class="l-header__sub-link">- 会社設立支援</a>
               <a href="" class="l-header__sub-link">- その他</a>
@@ -104,10 +104,10 @@
             <a href="" class="l-header__list-link">コラム</a>
           </li>
           <li class="l-header__list-item">
-            <a href="" class="l-header__list-link">事務所概要</a>
+            <a href="page-company.php" class="l-header__list-link">事務所概要</a>
           </li>
           <li class="l-header__list-item">
-            <a href="" class="l-header__list-link">採用情報</a>
+            <a href="page-recruit.php" class="l-header__list-link">採用情報</a>
           </li>
           <li class="l-header__list-item">
             <a href="" class="l-header__list-link">お問い合わせ</a>

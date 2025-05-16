@@ -76,25 +76,7 @@
     </section>
 
 
-    <section class="s-contents">
-      <div class="s-section__inner contents__inner">
-        <div class="s-ttl">
-          <span></span>
-          <h1 class="s-ttl__text s-font__en">Contents</h1>
-          <p class="s-ttl__desp">関連コンテンツ</p>
-        </div>
-
-        <div class="s-contents__flex">
-          <a href="" class="s-contents__flex-item">
-            <img src="" alt="">
-            <div class="s-contents__ttl">
-              <h3 class="s-contents__ttl-txt">Company</h3>
-              <p class="s-contents__ttl-desp">事業所概要</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
+    <?php include('components/c-contents.php'); ?>
 
     <?php include('components/c-contact.php'); ?>
   </main>

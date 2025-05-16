@@ -1,0 +1,88 @@
+@use "../base" as *;
+
+/*========================================================
+company
+========================================================*/
+#company{
+
+  .section-ttl{
+    text-align: center;
+    margin-bottom: 80px;
+
+    .--company{
+      display: inline-block;
+    }
+
+  }
+
+  .company-info{
+
+    .company-info__row{
+      display: flex;
+      padding: 40px 60px;
+      line-height: $line-height-l;
+
+      &:nth-child(odd){
+        background: #F3EAD9;
+      }
+      &:nth-child(even){
+        background: #F9F5EC;
+      }
+    }
+
+    .company-info__item{
+      font-size: 18px;
+
+      &:nth-child(1){
+        width: 19.3%;
+        color:$sub-color;
+      }
+      &:nth-child(2){
+        width: 80.7%;
+      }
+
+    }
+
+  }
+
+  .access{
+
+    &-flex{
+      display: flex;
+      justify-content: space-between;
+
+      &__txt{
+        font-size: 18px;
+        line-height: $line-height-l;
+      }
+    }
+
+  }
+
+  .greeting{
+    background: url(../images/company/greeting_bg.png) no-repeat;
+    background-size: cover;
+
+    .greeting-flex{
+      display: flex;
+
+      &__txt{
+        font-size: 16px;
+        line-height: $line-height-l;
+        color:#fff;
+        padding-right: 48px;
+        width: calc(100% - 520px);
+
+        span{
+          font-size: 24px;
+          display: inline-block;
+          margin-left: 16px;
+        }
+      }
+
+      &__img{
+        width: 520px;
+      }
+    }
+  }
+}

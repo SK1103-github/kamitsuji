@@ -121,7 +121,7 @@
 
 
     <section class="service">
-      <div class="s-section__inner --full">
+      <div class="s-section__inner --service">
         <div class="service-layout__flex">
           <div class="flexitem__left">
             <picture class="flexitem__img">

@@ -1,0 +1,222 @@
+@use "../base" as *;
+
+/*========================================================
+recruit
+========================================================*/
+#recruit{
+
+  .recruit{
+    margin-bottom: 100px;
+
+    .recruit__inner{
+      position: relative;
+    }
+
+    .recruit__head{
+      width: 500px;
+      margin:0 auto;
+      text-align: center;
+
+      &-txt{
+        margin-bottom: 60px;
+        font-size: 16px;
+        line-height: $line-height-l;
+      }
+
+    }
+
+    .recruit__img{
+
+      .recruit__img-01{
+        position: absolute;
+        width: 294px;
+        height: auto;
+        top:50px;
+        left:0;
+      }
+      .recruit__img-02{
+        position: absolute;
+        width: 317px;
+        height: auto;
+        top:50px;
+        right:0;
+      }
+      .recruit__img-03{
+        position: absolute;
+        width: 216px;
+        height: auto;
+        bottom:0;
+        left:210px;
+      }
+      .recruit__img-04{
+        position: absolute;
+        width: 178px;
+        height: auto;
+        bottom:0;
+        right:229px;
+      }
+
+    }
+
+  }
+
+  .culture{
+    background: url(../images/recruit/culture_bg.png) no-repeat;
+    background-size: contain;
+    background-position: top center;
+    padding: 170px 0 100px;
+
+    .culture-content{
+      padding: 64px;
+      background: #fff;
+      position: relative;
+    }
+
+    .culture-head__txt{
+      font-size: 28px;
+      line-height: $line-height-l;
+      margin-bottom: 50px;
+    }
+
+    .culture-ttl{
+      font-size: 20px;
+      color:$sub-color;
+      padding-left:40px;
+      position: relative;
+      margin-bottom: 30px;
+      display: block;
+
+      &::before{
+        content:"";
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top:-7px;
+        left:0;
+        @include svg-plus(24px, 24px, F84B20);
+        display: block;
+      }
+
+    }
+
+    .culture-list{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+
+      &__item{
+        padding: 11px 16px;
+        background: #F6F1E8;
+        border-radius: 0 16px 0 16px;
+        font-size: 16px;
+      }
+
+    }
+
+    .culture-txt__en{
+      font-size: 96px;
+      color:#C1B092;
+      transform: rotate(90deg);
+      position: absolute;
+      top:245px;
+      right:-360px;
+      opacity: .3;
+      line-height: 120%;
+    }
+
+  }
+
+  .environment{
+
+    .environment-flex{
+      display: flex;
+      padding-bottom: 48px;
+      border-bottom: 1px solid #DDDDDD;
+      margin-bottom: 48px;
+
+      &__item{
+
+        &.--txt{
+          width: calc(100% - 522px);
+          padding: 48px 40px 56px;
+        }
+        &.--img{
+          width: 522px;
+        }
+      }
+
+      &__ttl{
+        font-size: 36px;
+        color:$sub-color;
+        padding-left:40px;
+        position: relative;
+        margin-bottom: 30px;
+        display: block;
+        font-weight: bold;
+
+        &::before{
+          content:"";
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          top:-7px;
+          left:0;
+          @include svg-plus(24px, 24px, F84B20);
+          display: block;
+        }
+
+        &-sub{
+          font-size: 16px;
+          font-weight: normal;
+        }
+      }
+
+      &__txt{
+        line-height: $line-height-l;
+      }
+    }
+  }
+
+  .news{
+
+    .news-head{
+      display: flex;
+      align-items: center;
+
+      &__txt{
+        font-size: 16px;
+        line-height: $line-height-l;
+        margin-bottom: 80px;
+        margin-left: 120px;
+      }
+    }
+  }
+
+  .message{
+    background: url(../images/company/greeting_bg.png) no-repeat;
+    background-size: cover;
+
+    .message-flex{
+      display: flex;
+
+      &__txt{
+        font-size: 16px;
+        line-height: $line-height-l;
+        color:#fff;
+        padding-right: 48px;
+        width: calc(100% - 520px);
+
+        .message-flex__txt-l{
+          font-size: 24px;
+          display: inline-block;
+          margin-left: 16px;
+        }
+      }
+
+      &__img{
+        width: 520px;
+      }
+    }
+  }
+
+}
