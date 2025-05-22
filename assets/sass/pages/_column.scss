@@ -1,0 +1,140 @@
+@use "../base" as *;
+
+/*========================================================
+column
+========================================================*/
+#column{
+
+  .column{
+
+    .column-cat{
+      font-weight: bold;
+      padding-left: 24px;
+      position: relative;
+      margin-bottom: 16px;
+
+      &:before{
+        content:"";
+        width: 16px;
+        height: 16px;
+        background: url(../images/common/icon_plus.png) no-repeat;
+        background-position: center center;
+        background-size: contain;
+        position: absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        margin: auto;
+      }
+    }
+
+    .column-cat__list{
+      display: flex;
+      gap: 0 8px;
+      margin-bottom: 120px;
+
+      &-item{
+
+        &.--active{
+
+          a{
+            background: $bg02-color;
+            color:#fff;
+          }
+
+        }
+
+        a{
+          display: inline-block;
+          padding: 7px 24px;
+          color:$bg02-color;
+          border:1px solid $bg02-color;
+          border-radius: 100px;
+
+          &:hover{
+            background:$bg02-color;
+            color:#fff;
+          }
+
+        }
+
+      }
+
+    }
+
+    .column-list{
+      display: flex;
+      flex-wrap: wrap;
+      gap:120px 32px;
+      margin-bottom: 80px;
+
+      &__item{
+        width: calc(100% / 3 - 32px);
+        background: $bg01-color;
+        padding: 0 24px 32px;
+        border-radius: 0 16px 0 16px;
+      }
+      &__link{
+        color:#000;
+
+        &:hover{
+
+          .column__slider-ttl{
+            color:$sub-color;
+            opacity: .6;
+          }
+
+        }
+
+      }
+      &__img{
+        display: block;
+        transform: translateY(-50px);
+      }
+      &__date{
+        display: block;
+        margin-top: -28px;
+        font-size: 12px;
+        color:#AAAAAA;
+      }
+      &__ttl{
+        margin-top: 8px;
+        line-height: $line-height-l;
+        overflow: hidden;
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+      }
+
+      &__cat{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 26px;
+
+        &-link{
+
+          a{
+            display: inline-block;
+            padding: 3px 16px;
+            background: $bg02-color;
+            color:#fff;
+            border:1px solid $bg02-color;
+            border-radius: 100px;
+            font-size: 12px;
+
+            &:hover{
+              opacity: .6;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+  }
+
+}

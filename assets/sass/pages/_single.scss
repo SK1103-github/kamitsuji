@@ -1,0 +1,101 @@
+@use "../base" as *;
+
+/*========================================================
+single
+========================================================*/
+#single{
+
+  .single{
+
+    .single-head{
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+      border-bottom: 1px solid #DDDDDD;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      &__date{
+        font-size: 16px;
+        margin-right: 16px;
+        display: inline-block;
+      }
+      &__cat{
+        display: inline-block;
+        padding: 4px 16px;
+        color: #fff;
+        border: 1px solid #C1B092;
+        border-radius: 100px;
+        background: #C1B092;
+        font-size: 12px;
+      }
+      &__ttl{
+        width: 100%;
+        margin-top: 8px;
+        line-height: $line-height-l;
+        font-size: 24px;
+      }
+    }
+
+    .single-content{
+
+      &__thum{
+        margin-bottom: 40px;
+      }
+
+      *{
+        margin-bottom: 24px;
+        line-height: $line-height-m;
+      }
+
+      h2{
+        color:$sub-color;
+        font-size: 20px;
+        padding-left: 36px;
+        position: relative;
+
+        &::before{
+          content:"";
+          width: 20px;
+          height: 20px;
+          background: url(../images/common/icon_plus.png) no-repeat;
+          background-position: center center;
+          background-size: contain;
+          position: absolute;
+          top:0;
+          left:0;
+          display: block;
+        }
+      }
+
+      h3{
+        font-size: 18px;
+      }
+
+      p{
+        line-height: $line-height-l;
+      }
+
+      a{
+        color: $sub-color;
+        text-decoration: underline;
+      }
+    }
+
+    .single-back{
+      margin-top: 50px;
+
+      .--single{
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  .others{
+    background: #F3EAD9;
+
+    .section-ttl{
+      text-align: center;
+    }
+  }
+}

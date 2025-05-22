@@ -45,7 +45,7 @@ section
     left:0;
     transform: translateY(-50%);
 
-    h1{
+    h1,h2{
       font-size: 96px;
     }
     p{
@@ -56,6 +56,32 @@ section
     text-align: center;
     line-height: $line-height-l;
     font-size: 16px;
+
+    &.--contact{
+      width: fit-content;
+      margin:0 auto;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+    }
+  }
+}
+
+.s-page__bottom-txt{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 30px;
+
+  .s-page__bottom-phone{
+    font-size: 40px;
+    color:$sub-color;
+    margin-left: 5px;
+    display: block;
+  }
+  .s-page__bottom-hours{
+    color:#6D6D6D;
+    margin-left: 16px;
+    margin-bottom: 3px;
   }
 }
 
@@ -77,6 +103,10 @@ section
 
   &.--company{
     margin: 0 auto;
+  }
+
+  &.--others{
+    display: inline-block;
   }
 
   span{
@@ -224,7 +254,7 @@ contact
 }
 
 /*========================================================
-サービス内容
+サービス詳細
 ========================================================*/
 .s-service{
   background: #F3EAD9;
@@ -269,6 +299,7 @@ contact
       display: block;
       text-align: center;
       margin-bottom: 24px;
+      line-height: 150%;
     }
 
     &-txt{
@@ -329,10 +360,28 @@ contact
 ページリンク
 ========================================================*/
 .s-page__link{
-  background: url(../images/common/page_link_bg.png) no-repeat;
-  background-size: contain;
-  background-position: top center;
   padding: 300px 0 0;
+
+  &.--consultant{
+    background: url(../images/common/page_link_bg_01.png) no-repeat;
+    background-size: contain;
+    background-position: top center;
+  }
+  &.--due-diligence{
+    background: url(../images/common/page_link_bg_02.png) no-repeat;
+    background-size: contain;
+    background-position: top center;
+  }
+  &.--company-setup{
+    background: url(../images/common/page_link_bg_03.png) no-repeat;
+    background-size: contain;
+    background-position: top center;
+  }
+  &.--other-service{
+    background: url(../images/common/page_link_bg_04.png) no-repeat;
+    background-size: contain;
+    background-position: top center;
+  }
 
   .s-page__link-flex{
     padding: 64px;
@@ -391,6 +440,154 @@ contact
   .s-page__flex-btn{
     display: flex;
     gap:0 16px;
+  }
+
+}
+
+/*========================================================
+ページャー
+========================================================*/
+.s-pager{
+
+  ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li{
+      color:$sub-color;
+      font-size: 20px;
+      font-weight: bold;
+      margin-right: 16px;
+
+      &.active{
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 20px;
+        background: #fff;
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $sub-color;
+        color:#fff;
+      }
+
+      &.prev{
+        margin-right: 40px;
+
+        a{
+          position: relative;
+          transform: rotate(-180deg);
+
+          &:hover{
+            background: $sub-color;
+            &::before{
+              animation-name: transformRightLeft;
+              animation-delay: 0s;
+              @include svg-arrow(15px, 13px, ffffff);
+            }
+
+            &::after{
+              animation-name: transformLeftRight;
+              animation-delay: 0.2s;
+              @include svg-arrow(15px, 13px, ffffff);
+            }
+          }
+
+          &::before,
+          &::after{
+            content: "";
+            width:16px;
+            height: 14px;
+            @include svg-arrow(15px, 13px, F84B20);
+            position: absolute;
+            top: 0;
+            bottom:0;
+            left: 0;
+            right:0;
+            margin: auto;
+            animation-fill-mode: forwards;
+            animation-duration: 0.6s;
+            display: block;
+          }
+
+          &::after{
+            transform: translateX(-200%);
+          }
+        }
+
+      }
+      &.next{
+        margin-left: 40px;
+
+        a{
+          position: relative;
+
+          &:hover{
+            background: $sub-color;
+            &::before{
+              animation-name: transformRightLeft;
+              animation-delay: 0s;
+              @include svg-arrow(15px, 13px, ffffff);
+            }
+
+            &::after{
+              animation-name: transformLeftRight;
+              animation-delay: 0.2s;
+              @include svg-arrow(15px, 13px, ffffff);
+            }
+          }
+
+          &::before,
+          &::after{
+            content: "";
+            width:16px;
+            height: 14px;
+            @include svg-arrow(15px, 13px, F84B20);
+            position: absolute;
+            top: 0;
+            bottom:0;
+            left: 0;
+            right:0;
+            margin: auto;
+            animation-fill-mode: forwards;
+            animation-duration: 0.6s;
+            display: block;
+          }
+
+          &::after{
+            transform: translateX(-200%);
+          }
+        }
+
+      }
+
+      a{
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 20px;
+        color:$sub-color;
+        background: #fff;
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        &:hover{
+          background: $sub-color;
+          color:#fff;
+        }
+
+      }
+
+    }
+
   }
 
 }

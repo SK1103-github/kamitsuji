@@ -16,7 +16,7 @@ mixin
 @mixin svg-plus($width, $height, $color) {
   background-image: url('data:image/svg+xml,<svg width="#{$width}" height="#{$height}" viewBox="0 0 #{$width} #{$height}" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.5537 13.9056V24H10.4463V13.9056H0.5V9.78541H10.4463V0H14.5537V9.78541H24.5V13.9056H14.5537Z" fill="%23#{$color}"/></svg>');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center center;
 }
 

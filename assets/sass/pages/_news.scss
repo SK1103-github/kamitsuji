@@ -1,0 +1,42 @@
+@use "../base" as *;
+
+/*========================================================
+news
+========================================================*/
+.news{
+
+  .news-cat__list{
+    display: flex;
+    gap: 0 8px;
+    margin-bottom: 48px;
+
+    &-item{
+
+      &.--active{
+
+        a{
+          background: $bg02-color;
+          color:#fff;
+        }
+
+      }
+
+      a{
+        display: inline-block;
+        padding: 7px 24px;
+        color:$bg02-color;
+        border:1px solid $bg02-color;
+        border-radius: 100px;
+
+        &:hover{
+          background:$bg02-color;
+          color:#fff;
+        }
+
+      }
+
+    }
+
+  }
+
+}

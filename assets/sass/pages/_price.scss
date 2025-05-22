@@ -1,0 +1,98 @@
+@use "../base" as *;
+
+/*========================================================
+price
+========================================================*/
+#price{
+
+  .price{
+
+    .att-txt{
+      font-size: 16px;
+      margin-bottom: 60px;
+    }
+
+    .price-ttl{
+      font-size: 24px;
+      padding-left:35px;
+      padding-top: 16px;
+      position: relative;
+      margin-bottom: 30px;
+      display: block;
+
+      &::before{
+        content:"";
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top:0;
+        left:0;
+        @include svg-plus(24px, 24px, F84B20);
+        display: block;
+      }
+
+    }
+
+    table{
+      margin-bottom: 80px;
+
+      thead{
+
+        th{
+          background: #4F4030;
+          color:#fff;
+          line-height: 150%;
+          font-size: 16px;
+          text-align: center;
+          padding:22px 24px;
+          font-weight: normal;
+          border: solid #D9D9D9;
+          border-width: 0 1px 0 0;
+
+          &:last-child{
+            border: none;
+          }
+        }
+
+      }
+
+      tbody{
+
+        td{
+          font-size: 16px;
+          padding: 15px 24px;
+          background: #fff;
+          border: solid #D9D9D9;
+          border-width: 0 1px 1px 0;
+          text-align: left;
+
+          &:first-child{
+            background: #99886A;
+            color:#fff;
+          }
+
+          &:last-child{
+            border-width: 0 0 1px 0;
+          }
+        }
+      }
+    }
+
+    .table-flex{
+      display: flex;
+
+      &__item{
+
+        table{
+          width:448px;
+        }
+
+        &+.table-flex__item{
+          margin-left: 80px;
+        }
+
+      }
+    }
+  }
+
+}

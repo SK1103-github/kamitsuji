@@ -1,0 +1,53 @@
+@use "../base" as *;
+
+/*========================================================
+other
+========================================================*/
+#other{
+
+  .other{
+
+    .other-flex{
+      display: flex;
+      margin-bottom: 40px;
+
+      &__item{
+
+        &.--txt{
+          width: calc(100% - 424px);
+          padding: 40px 40px 56px;
+          background: #F3EAD9;
+
+          &.--left{
+            border-radius: 8px 0 0 8px;
+          }
+          &.--right{
+            border-radius: 0 8px 8px 0;
+          }
+        }
+        &.--img{
+          width: 424px;
+        }
+      }
+
+      &__ttl{
+        font-size: 24px;
+        color:$sub-color;
+        margin-bottom: 24px;
+        display: block;
+
+        &-sub{
+          font-size: 20px;
+          display: block;
+          font-weight: normal;
+          margin-bottom: 24px;
+        }
+      }
+
+      &__txt{
+        line-height: $line-height-l;
+      }
+    }
+  }
+
+}
