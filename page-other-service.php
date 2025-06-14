@@ -4,14 +4,14 @@
 
   <div class="s-page__head">
     <div class="s-page__head-inner">
-      <a href="" class="s-page__head-logo">
+      <a href="index.php" class="s-page__head-logo">
         <img src="assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
       </a>
 
       <div class="s-ttl s-page__head-ttl">
-        <span></span>
-        <h1 class="s-ttl__text s-font__en">Other Service</h1>
-        <p class="s-ttl__desp">その他のサービス</p>
+        <span class="icon-plus"></span>
+        <h1 class="s-ttl__text s-font__en fv-text__fade"><span class="fade-txt">Other Service</span></h1>
+        <p class="s-ttl__desp js-page__ttl-sub --left">その他のサービス</p>
       </div>
     </div>
 
@@ -29,7 +29,7 @@
 
     <section class="other">
       <div class="s-section__inner">
-        <div class="other-flex">
+        <div class="other-flex js-fade__bottom --bottom">
           <div class="other-flex__item --txt --left">
             <strong class="other-flex__ttl">
               <span class="other-flex__ttl-sub s-font__en">Others.01</span>
@@ -42,7 +42,7 @@
           </div>
         </div>
 
-        <div class="other-flex">
+        <div class="other-flex js-fade__bottom --bottom">
           <div class="other-flex__item --img">
             <img class="other-flex__img" src="assets/images/other/other_02.png" alt="心地良さ" loading="lazy">
           </div>
@@ -55,7 +55,7 @@
           </div>
         </div>
 
-        <div class="other-flex">
+        <div class="other-flex js-fade__bottom --bottom">
           <div class="other-flex__item --txt --left">
             <strong class="other-flex__ttl">
               <span class="other-flex__ttl-sub s-font__en">Others.03</span>
@@ -73,7 +73,7 @@
 
 
     <section class="s-page__link --company-setup">
-      <div class="s-section__inner">
+      <div class="s-section__inner js-fade__bottom --bottom">
         <div class="s-page__link-flex">
           <div class="s-page__flex-item --img">
             <img src="assets/images/common/kamitsuji.png" alt="代表　上辻 恭介">
@@ -85,14 +85,14 @@
 
             <div class="s-page__flex-btn">
               <div class="b-button --orange s-page__btn">
-                <a class="b-button__link" href="">料金表はこちら
+                <a class="b-button__link" href="page-price.php">料金表はこちら
                   <div class="b-button__link-arrow">
                     <span class="arrow"></span>
                   </div>
                 </a>
               </div>
               <div class="b-button --orange s-page__btn">
-                <a class="b-button__link" href="">サービス一覧を見る
+                <a class="b-button__link" href="page-service.php">サービス一覧を見る
                   <div class="b-button__link-arrow">
                     <span class="arrow"></span>
                   </div>

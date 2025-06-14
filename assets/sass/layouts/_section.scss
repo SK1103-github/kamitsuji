@@ -8,23 +8,72 @@ section
   margin:0 auto;
   padding: 100px 0;
 
+  @include mq(note){
+    width: 90%;
+  }
+
+  @include mq(tab){
+    width: 100%;
+    padding: 50px 20px;
+  }
+
+  &.--news{
+
+    @include mq(sp){
+      padding: 50px 20px 0;
+    }
+  }
+  &.--about{
+
+    @include mq(sp){
+      padding: 80px 20px 30px;
+    }
+  }
   &.--service{
     width: 100%;
     padding: 100px 150px 100px 0;
+
+    @include mq(mac){
+      padding: 100px 50px 100px 0;
+    }
+
+    @include mq(tab){
+      padding: 100px 20px;
+    }
+
+    @include mq(sp){
+      padding: 50px 20px;
+    }
   }
   &.--recruit{
     width: 100%;
+
+    @include mq(tab){
+      padding: 50px 0;
+    }
   }
   &.--environment{
     padding: 0 0 100px;
+
+    @include mq(note){
+      padding: 0;
+    }
   }
   &.--message{
     padding: 120px 0;
+
+    @include mq(sp){
+      padding: 60px 0;
+    }
   }
 }
 
 .s-page__head{
   position: relative;
+
+  &.--privacy{
+    text-align: left;
+  }
 
   &-inner{
     padding: 0 150px;
@@ -32,11 +81,38 @@ section
     height: 470px;
     background: url(../images/common/page_head_bg.png) no-repeat;
     background-position: center bottom;
+
+    @include mq(note){
+      height: 325px;
+      padding: 0 20px;
+      background-size: cover;
+    }
+
+    @include mq(sp){
+      background: url(../images/common/page_head_bg_sp.png) no-repeat;
+      background-position: center bottom;
+      background-size: cover;
+      padding: 40px 20px 44px;
+      height: auto;
+      margin-bottom: 32px;
+    }
   }
   &-logo{
     position: absolute;
     top:60px;
     left:100px;
+
+    @include mq(note){
+      width: 98px;
+      top:44px;
+      left:20px;
+    }
+
+    @include mq(sp){
+      position: inherit;
+      display: block;
+      margin-bottom: 64px;
+    }
   }
   &-ttl{
     color:#fff;
@@ -45,8 +121,23 @@ section
     left:0;
     transform: translateY(-50%);
 
+    @include mq(sp){
+      position: inherit!important;
+      transform: translateY(0)!important;
+    }
+
     h1,h2{
       font-size: 96px;
+
+      @include mq(note){
+        font-size: 56px;
+      }
+
+      span{
+        display: inline-block;
+        transition: 0s;
+        opacity: 0;
+      }
     }
     p{
       font-size: 20px;
@@ -57,11 +148,27 @@ section
     line-height: $line-height-l;
     font-size: 16px;
 
+    @include mq(tab){
+      padding: 0 20px;
+      text-align: left;
+    }
+
+    @include mq(sp){
+      text-align: left;
+      padding: 0 20px;
+      font-size: 14px;
+    }
+
     &.--contact{
       width: fit-content;
       margin:0 auto;
       padding-bottom: 30px;
       border-bottom: 1px solid #ddd;
+
+      @include mq(sp){
+        text-align: center;
+        padding-bottom: 24px;
+      }
     }
   }
 }
@@ -72,16 +179,39 @@ section
   justify-content: center;
   margin-top: 30px;
 
+  @include mq(sp){
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+
+  img{
+
+    @include mq(sp){
+      width: 30px;
+      height: 30px;
+    }
+  }
+
   .s-page__bottom-phone{
     font-size: 40px;
     color:$sub-color;
     margin-left: 5px;
     display: block;
+
+    @include mq(sp){
+      font-size: 36px;
+    }
   }
   .s-page__bottom-hours{
     color:#6D6D6D;
     margin-left: 16px;
     margin-bottom: 3px;
+
+    @include mq(sp){
+      margin-left: 0;
+      margin-top: 8px;
+      font-size: 16px;
+    }
   }
 }
 
@@ -92,6 +222,14 @@ section
   padding-left: 40px;
   position: relative;
   margin-bottom: 80px;
+  display: flex;
+  align-items: flex-end;
+
+  @include mq(sp){
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    padding-left: 30px;
+  }
 
   &.--recruit{
     display: inline-block;
@@ -99,6 +237,15 @@ section
 
   &.--contact{
     margin-bottom: 50px;
+
+    @include mq(tab){
+      display: inline-block;
+    }
+
+    @include mq(sp){
+      margin-bottom: 24px;
+      margin-left: -30px;
+    }
   }
 
   &.--company{
@@ -109,12 +256,22 @@ section
     display: inline-block;
   }
 
-  span{
+  &.--entry{
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  .icon-plus{
     width: 24px;
     height: 24px;
     position: absolute;
     top:0;
     left:0;
+
+    @include mq(sp){
+      width: 20px;
+      height: 20px;
+    }
 
     &::before{
       content:"";
@@ -125,6 +282,11 @@ section
       top:0;
       left:0;
       display: block;
+
+      @include mq(sp){
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 
@@ -133,15 +295,33 @@ section
     display: inline-block;
     margin-right: 24px;
 
+    @include mq(sp){
+      font-size: 56px;
+      display: block;
+      width: 100%;
+      margin: 0 0 8px 0;
+    }
+
     &.--white{
       color:#fff;
+    }
+
+    .fade-txt{
+      display: inline-block;
+      opacity: 0;
     }
 
   }
 
   &__desp{
     font-size: 20px;
+    margin-bottom: 10px;
     display: inline-block;
+
+    @include mq(sp){
+      font-size: 16px!important;
+      display: block;
+    }
 
     &.--white{
       color:#fff;
@@ -159,6 +339,24 @@ contact
   background-position: center bottom;
   background-size: contain;
 
+  .s-section__inner{
+
+    @include mq(tab){
+      padding: 50px 0 150px;
+    }
+
+    @include mq(sp){
+      padding: 50px 0 100px;
+    }
+  }
+
+  .section-ttl{
+
+    @include mq(tab){
+      text-align: center;
+    }
+  }
+
   .contact-layout__flex{
     width: 1140px;
     margin:0 auto;
@@ -171,9 +369,33 @@ contact
     justify-content: space-between;
     align-items: flex-end;
 
+    @include mq(note){
+      width: 100%;
+      padding: 100px 50px;
+    }
+
+    @include mq(tab){
+      display: block;
+      margin-bottom: 50px;
+    }
+
+    @media (max-width:700px){
+      padding: 48px 20px;
+      margin-bottom: 0;
+    }
+
     .contact__head-txt{
       font-size: 16px;
       line-height: $line-height-l;
+
+      @include mq(tab){
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      @include mq(sp){
+        text-align: left;
+      }
     }
 
     .contact__btn{
@@ -192,12 +414,32 @@ contact
     display: flex;
     gap: 0 30px;
 
+    @include mq(sp){
+      flex-wrap: wrap;
+      gap: 16px 0;
+    }
+
     &-item{
       width: calc(100% / 3 - 15px);
       position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+
+      @include mq(sp){
+        width: 60%;
+        margin:0 auto;
+      }
+
+      @media (max-width:700px){
+        width: 100%;
+      }
 
       &:hover{
         opacity: .7;
+
+        img{
+          transform: scale(1.1, 1.1);
+        }
 
         .b-button__arrow-item {
           &::before {
@@ -281,6 +523,10 @@ contact
       width: calc(100% /3 - 32px);
       position: relative;
 
+      @include mq(sp){
+        width: 100%;
+      }
+
       &:before{
         content:"";
         @include svg-plus(24px, 24px, F84B20);
@@ -300,6 +546,7 @@ contact
       text-align: center;
       margin-bottom: 24px;
       line-height: 150%;
+
     }
 
     &-txt{
@@ -311,6 +558,9 @@ contact
     line-height: $line-height-l;
     text-align: center;
     font-size: 16px;
+    @include mq(sp){
+      text-align: left;
+    }
   }
 
 }
@@ -324,6 +574,10 @@ contact
     display: flex;
     justify-content: space-between;
 
+    @include mq(tab){
+      flex-wrap: wrap;
+    }
+
     .--about{
       margin-bottom: 48px;
     }
@@ -333,8 +587,16 @@ contact
   .s-about__item{
     width: 50%;
 
+    @include mq(tab){
+      width: 100%;
+    }
+
     &.--txt{
       padding-right: 67px;
+
+      @include mq(tab){
+        padding-right: 0;
+      }
     }
 
     &-ttl{
@@ -343,6 +605,11 @@ contact
       line-height: $line-height-l;
       display: block;
       margin-bottom: 32px;
+
+      @include mq(sp){
+        font-size: 20px;
+        margin-bottom: 24px;
+      }
     }
 
     &-txt{
@@ -352,6 +619,12 @@ contact
     &-img{
       display: block;
       margin-left: auto;
+
+      @include mq(tab){
+        text-align: center;
+        margin:40px auto 0;
+        display: block;
+      }
     }
   }
 }
@@ -360,33 +633,65 @@ contact
 ページリンク
 ========================================================*/
 .s-page__link{
-  padding: 300px 0 0;
 
   &.--consultant{
     background: url(../images/common/page_link_bg_01.png) no-repeat;
     background-size: contain;
     background-position: top center;
+
+    @include mq(sp){
+      background: url(../images/common/page_link_bg_01_sp.png) no-repeat;
+    }
   }
   &.--due-diligence{
     background: url(../images/common/page_link_bg_02.png) no-repeat;
     background-size: contain;
     background-position: top center;
+
+    @include mq(sp){
+      background: url(../images/common/page_link_bg_02_sp.png) no-repeat;
+    }
   }
   &.--company-setup{
     background: url(../images/common/page_link_bg_03.png) no-repeat;
     background-size: contain;
     background-position: top center;
+
+    @include mq(sp){
+      background: url(../images/common/page_link_bg_03_sp.png) no-repeat;
+    }
   }
   &.--other-service{
     background: url(../images/common/page_link_bg_04.png) no-repeat;
     background-size: contain;
     background-position: top center;
+
+    @include mq(sp){
+      background: url(../images/common/page_link_bg_04_sp.png) no-repeat;
+    }
+  }
+
+  .s-section__inner{
+    padding: 300px 0 0;
+
+    @include mq(mac){
+      padding: 150px 0px 0;
+    }
+    @include mq(tab){
+      padding: 150px 20px 0;
+    }
   }
 
   .s-page__link-flex{
     padding: 64px;
     background: #fff;
     display: flex;
+
+    @include mq(tab){
+      border-radius: 8px;
+      display: block;
+      padding: 40px 24px;
+    }
   }
 
   .s-page__flex-item{
@@ -394,8 +699,20 @@ contact
     &.--img{
       width: 250px;
 
+      @include mq(tab){
+        margin:0 auto 40px;
+      }
+
+      @include mq(sp){
+        width: 210px;
+      }
+
       p{
         margin-top: 16px;
+
+        @include mq(note){
+          text-align: center;
+        }
       }
 
       span{
@@ -408,6 +725,11 @@ contact
     &.--txt{
       width: calc(100% - 250px);
       padding-left: 48px;
+
+      @include mq(tab){
+        width: 100%;
+        padding: 0;
+      }
     }
   }
 
@@ -418,6 +740,11 @@ contact
     margin-bottom: 20px;
     display: block;
 
+    @include mq(sp){
+      font-size: 20px;
+      line-height: $line-height-l;
+    }
+
     &::before{
       content:"";
       width: 24px;
@@ -427,6 +754,12 @@ contact
       left:0;
       @include svg-plus(24px, 24px, F84B20);
       display: block;
+
+      @include mq(sp){
+        width: 20px;
+        height: 20px;
+        top:0;
+      }
     }
 
   }
@@ -435,11 +768,21 @@ contact
     font-size: 16px;
     line-height: $line-height-l;
     margin-bottom: 48px;
+
+    @include mq(sp){
+      font-size: 14px;
+    }
   }
 
   .s-page__flex-btn{
     display: flex;
     gap:0 16px;
+
+    @include mq(note){
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
   }
 
 }
@@ -453,30 +796,56 @@ contact
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 0 16px;
+
+    @include mq(sp){
+      gap: 0 8px;
+    }
+
+    @media (max-width:500px){
+      justify-content: space-between;
+    }
 
     li{
       color:$sub-color;
       font-size: 20px;
       font-weight: bold;
-      margin-right: 16px;
 
       &.active{
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        font-weight: bold;
-        font-size: 20px;
-        background: #fff;
-        display: block;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: $sub-color;
-        color:#fff;
+
+        a{
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          font-weight: bold;
+          font-size: 20px;
+          background: #fff;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          background: $sub-color;
+          color:#fff;
+
+          @include mq(sp){
+            width: 38px;
+            height: 38px;
+          }
+        }
+      }
+
+      &.dots{
+        margin:0;
+        @include mq(sp){
+          font-size: 10px;
+        }
       }
 
       &.prev{
         margin-right: 40px;
+
+        @include mq(sp){
+          margin-right: 0;
+        }
 
         a{
           position: relative;
@@ -522,6 +891,10 @@ contact
       }
       &.next{
         margin-left: 40px;
+
+        @include mq(sp){
+          margin-left: 0;
+        }
 
         a{
           position: relative;
@@ -578,6 +951,11 @@ contact
         align-items: center;
         justify-content: center;
         overflow: hidden;
+
+        @include mq(sp){
+          width: 38px;
+          height: 38px;
+        }
 
         &:hover{
           background: $sub-color;

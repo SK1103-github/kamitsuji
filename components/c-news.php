@@ -59,6 +59,15 @@ if ($page == "index.php" || $page == "page-news.php"): ?>
     <span class="c-news__card-arrow"></span>
   </a>
 </div>
+<?php if ($page == "index.php"): ?>
+<div class="b-button --orange">
+  <a class="b-button__link" href="page-news.php">一覧を見る
+    <div class="b-button__link-arrow">
+      <span class="arrow"></span>
+    </div>
+  </a>
+</div>
+<?php endif; ?>
 
 <?php elseif($page == "page-recruit.php"): ?>
 <div class="c-news">
@@ -92,7 +101,7 @@ if ($page == "index.php" || $page == "page-news.php"): ?>
 </div>
 
 <div class="b-button --orange">
-  <a class="b-button__link" href="">一覧を見る
+  <a class="b-button__link" href="page-news.php">一覧を見る
     <div class="b-button__link-arrow">
       <span class="arrow"></span>
     </div>
@@ -131,7 +140,7 @@ if ($page == "index.php" || $page == "page-news.php"): ?>
 </div>
 
 <div class="b-button --orange">
-  <a class="b-button__link" href="">一覧を見る
+  <a class="b-button__link" href="page-news.php">一覧を見る
     <div class="b-button__link-arrow">
       <span class="arrow"></span>
     </div>

@@ -33,6 +33,11 @@ column
       gap: 0 8px;
       margin-bottom: 120px;
 
+      @include mq(sp){
+        flex-wrap: wrap;
+        gap:10px 8px;
+      }
+
       &-item{
 
         &.--active{
@@ -68,23 +73,36 @@ column
       gap:120px 32px;
       margin-bottom: 80px;
 
+      @include mq(sp){
+        gap: 100px 30px;
+      }
+
       &__item{
         width: calc(100% / 3 - 32px);
         background: $bg01-color;
         padding: 0 24px 32px;
         border-radius: 0 16px 0 16px;
-      }
-      &__link{
-        color:#000;
+
+        @include mq(sp){
+          width: calc(100% / 2 - 32px);
+        }
+
+        @media (max-width:500px){
+          width: 100%;
+        }
 
         &:hover{
 
-          .column__slider-ttl{
+          .column-list__ttl{
             color:$sub-color;
             opacity: .6;
           }
 
         }
+      }
+      &__link{
+        color:#000;
+
 
       }
       &__img{

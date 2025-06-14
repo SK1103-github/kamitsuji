@@ -4,14 +4,14 @@
 
   <div class="s-page__head">
     <div class="s-page__head-inner">
-      <a href="" class="s-page__head-logo">
+      <a href="index.php" class="s-page__head-logo">
         <img src="assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
       </a>
 
       <div class="s-ttl s-page__head-ttl">
-        <span></span>
-        <h1 class="s-ttl__text s-font__en">Company Setup</h1>
-        <p class="s-ttl__desp">会社設立支援</p>
+        <span class="icon-plus"></span>
+        <h1 class="s-ttl__text s-font__en fv-text__fade"><span class="fade-txt">Company Setup</span></h1>
+        <p class="s-ttl__desp js-page__ttl-sub --left">会社設立支援</p>
       </div>
     </div>
 
@@ -28,11 +28,11 @@
         <div class="s-about__flex">
           <div class="s-about__item --txt">
             <div class="s-ttl --about">
-              <span></span>
-              <h2 class="s-ttl__text s-font__en">About</h2>
-              <p class="s-ttl__desp">サービス概要</p>
+              <span class="icon-plus"></span>
+              <h2 class="s-ttl__text s-font__en js-fade__content-ttl">About</h2>
+              <p class="s-ttl__desp js-fade__sec --left">サービス概要</p>
             </div>
-            <strong class="s-about__item-ttl">新しいビジネスをスタートされる方、<br>
+            <strong class="s-about__item-ttl">新しいビジネスをスタートされる方、<br class="none --sp">
             これから会社を立ち上げる方のために</strong>
             <p class="s-about__item-txt">新しいビジネスの第一歩は、確実な設立準備が第一ステップです。<br>
             私たちは、会社形態の選定から登記申請、税務・労務管理の整備まで、スムーズなスタートを全面的に支援します。<br>
@@ -51,35 +51,35 @@
       <div class="s-section__inner">
         <div class="section-ttl">
           <div class="s-ttl --recruit">
-            <span></span>
-            <h2 class="s-ttl__text s-font__en">Service</h2>
-            <p class="s-ttl__desp">サービス詳細</p>
+            <span class="icon-plus"></span>
+            <h2 class="s-ttl__text s-font__en js-fade__content-ttl">Service</h2>
+            <p class="s-ttl__desp js-fade__sec --left">サービス詳細</p>
           </div>
         </div>
 
         <div class="s-service__flex">
 
-          <div class="s-service__flex-item">
+          <div class="s-service__flex-item js-fade__bottom --bottom">
             <strong class="s-service__flex-ttl">設立手続きの代行</strong>
             <p class="s-service__flex-txt">登記申請や必要書類の作成を含む、煩雑な手続きをワンストップで対応いたします。</p>
           </div>
 
-          <div class="s-service__flex-item">
+          <div class="s-service__flex-item js-fade__bottom --bottom">
             <strong class="s-service__flex-ttl">最適な会社形態の提案</strong>
             <p class="s-service__flex-txt">株式会社、合同会社（LLC）など事業内容に適した形態をアドバイスいたします。</p>
           </div>
 
-          <div class="s-service__flex-item">
+          <div class="s-service__flex-item js-fade__bottom --bottom">
             <strong class="s-service__flex-ttl">定款作成・認証サポート</strong>
             <p class="s-service__flex-txt">法的要件を満たした定款の作成と、公証人の認証手続きまでをトータルで支援します。</p>
           </div>
 
-          <div class="s-service__flex-item">
+          <div class="s-service__flex-item js-fade__bottom --bottom">
             <strong class="s-service__flex-ttl">税務・法務のサポート</strong>
             <p class="s-service__flex-txt">設立後の税務申告や労務管理に向けた準備をサポートし、スムーズな運営を実現します。</p>
           </div>
 
-          <div class="s-service__flex-item">
+          <div class="s-service__flex-item js-fade__bottom --bottom">
             <strong class="s-service__flex-ttl">資金調達のアドバイス</strong>
             <p class="s-service__flex-txt">設立時の資金計画や助成金、融資制度の活用についてご提案。</p>
           </div>
@@ -94,7 +94,7 @@
 
 
     <section class="s-page__link --company-setup">
-      <div class="s-section__inner">
+      <div class="s-section__inner js-fade__bottom --bottom">
         <div class="s-page__link-flex">
           <div class="s-page__flex-item --img">
             <img src="assets/images/common/kamitsuji.png" alt="代表　上辻 恭介">
@@ -106,14 +106,14 @@
 
             <div class="s-page__flex-btn">
               <div class="b-button --orange s-page__btn">
-                <a class="b-button__link" href="">料金表はこちら
+                <a class="b-button__link" href="page-price.php">料金表はこちら
                   <div class="b-button__link-arrow">
                     <span class="arrow"></span>
                   </div>
                 </a>
               </div>
               <div class="b-button --orange s-page__btn">
-                <a class="b-button__link" href="">サービス一覧を見る
+                <a class="b-button__link" href="page-service.php">サービス一覧を見る
                   <div class="b-button__link-arrow">
                     <span class="arrow"></span>
                   </div>

@@ -12,12 +12,68 @@ recruit
       position: relative;
     }
 
-    .recruit__head{
-      width: 500px;
+    .recruit-head{
+      width: 550px;
       margin:0 auto;
       text-align: center;
 
-      &-txt{
+      @include mq(mac){
+        width: 80%;
+      }
+      @include mq(sp){
+        width: 100%;
+        padding: 0 20px;
+        text-align: left;
+      }
+
+      &__ttl{
+        margin-bottom: 60px;
+        font-size: 32px;
+        line-height: $line-height-l;
+        color:$sub-color;
+        text-align: center;
+        position: relative;
+
+        @include mq(mac){
+          width: 50%;
+          margin:0 auto 80px;
+          font-size: 24px;
+        }
+
+        @include mq(sp){
+          width: 60%;
+          margin-bottom: 30px;
+        }
+
+        .icon-plus{
+          width: 36px;
+          height: 36px;
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          &:before{
+            content: "";
+            width: 36px;
+            height: 36px;
+            background-image: url(../images/common/icon_plus_lg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+          }
+        }
+
+        &-txt{
+          display: inline-block;
+          padding-left: 64px;
+        }
+      }
+
+      &__txt{
         margin-bottom: 60px;
         font-size: 16px;
         line-height: $line-height-l;
@@ -27,12 +83,37 @@ recruit
 
     .recruit__img{
 
+      @include mq(tab){
+        margin-top: -150px;
+        position: relative;
+        width: 100%;
+        height: 310px;
+        display: block;
+      }
+
+      @include mq(sp){
+        margin-top: 48px;
+      }
+
       .recruit__img-01{
         position: absolute;
         width: 294px;
         height: auto;
         top:50px;
         left:0;
+
+        @include mq(mac){
+          width: 250px;
+        }
+
+        @include mq(tab){
+          width: 195px;
+          top:0;
+        }
+
+        &.fade-in{
+          transition-delay: 0s;
+        }
       }
       .recruit__img-02{
         position: absolute;
@@ -40,6 +121,24 @@ recruit
         height: auto;
         top:50px;
         right:0;
+
+        @include mq(mac){
+          width: 250px;
+        }
+
+        @include mq(tab){
+          width: 150px;
+          right:20px;
+        }
+
+        @include mq(sp){
+          top:70px;
+          right: 0;
+        }
+
+        &.fade-in{
+          transition-delay: .5s;
+        }
       }
       .recruit__img-03{
         position: absolute;
@@ -47,6 +146,25 @@ recruit
         height: auto;
         bottom:0;
         left:210px;
+
+        @include mq(mac){
+          width: 150px;
+          left:150px;
+        }
+
+        @include mq(tab){
+          width: 140px;
+          left:34px;
+          bottom:40px;
+        }
+
+        @include mq(sp){
+          left:34px;
+        }
+
+        &.fade-in{
+          transition-delay: 1s;
+        }
       }
       .recruit__img-04{
         position: absolute;
@@ -54,6 +172,32 @@ recruit
         height: auto;
         bottom:0;
         right:229px;
+
+        @include mq(mac){
+          width: 150px;
+          right:150px;
+          bottom:-50px;
+        }
+
+        @include mq(tab){
+          width: 192px;
+          right:0;
+          bottom: 0;
+        }
+
+        &.fade-in{
+          transition-delay: 1.5s;
+        }
+      }
+
+      .break{
+        display: none;
+
+        @include mq(tab){
+          flex-basis: 100%;
+          display: block;
+        }
+
       }
 
     }
@@ -66,16 +210,42 @@ recruit
     background-position: top center;
     padding: 170px 0 100px;
 
+    @include mq(mac){
+      padding: 0 0 100px;
+    }
+
+    @include mq(sp){
+      background: url(../images/recruit/culture_bg_sp.png) no-repeat;
+      background-size: contain;
+      background-position: top center;
+      padding: 120px 0 100px;
+    }
+
     .culture-content{
       padding: 64px;
       background: #fff;
       position: relative;
+
+      @include mq(sp){
+        padding: 32px 24px 50px;
+      }
     }
 
     .culture-head__txt{
       font-size: 28px;
       line-height: $line-height-l;
       margin-bottom: 50px;
+
+      @include mq(sp){
+        font-size: 20px;
+      }
+    }
+
+    .section_ttl{
+
+      @include mq(sp){
+        text-align: center;
+      }
     }
 
     .culture-ttl{
@@ -109,6 +279,12 @@ recruit
         background: #F6F1E8;
         border-radius: 0 16px 0 16px;
         font-size: 16px;
+
+        @include mq(sp){
+          width: 100%;
+          display: block;
+          text-align: center;
+        }
       }
 
     }
@@ -116,17 +292,51 @@ recruit
     .culture-txt__en{
       font-size: 96px;
       color:#C1B092;
-      transform: rotate(90deg);
+      transform: translateY(100px) rotate(90deg);
       position: absolute;
       top:245px;
       right:-360px;
       opacity: .3;
       line-height: 120%;
+      opacity: 0;
+
+      @include mq(note){
+        right:-300px;
+      }
+
+      @include mq(mac){
+        font-size: 60px;
+        right:-200px;
+        top: 200px;
+      }
+
+      @include mq(sp){
+        transform: translateY(0) rotate(0);
+        font-size: 48px;
+        text-align: center;
+        top:auto;
+        bottom:-80px;
+      }
+
+      &.fade-in{
+        opacity: .3;
+        transform: translateY(0) rotate(90deg);
+
+        @include mq(sp){
+          left:0;
+          right:0;
+          transform: translateY(0) rotate(0);
+        }
+      }
     }
 
   }
 
   .environment{
+
+    @include mq(sp){
+      padding: 0 20px;
+    }
 
     .environment-flex{
       display: flex;
@@ -134,14 +344,55 @@ recruit
       border-bottom: 1px solid #DDDDDD;
       margin-bottom: 48px;
 
+      @include mq(sp){
+        flex-wrap: wrap;
+      }
+
+      &:last-child{
+
+        @include mq(note){
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
+      }
+
       &__item{
 
         &.--txt{
           width: calc(100% - 522px);
           padding: 48px 40px 56px;
+
+          @include mq(mac){
+            width: 50%;
+            padding: 20px 20px 40px;
+          }
+
+          @include mq(sp){
+            width: 100%;
+            order:1;
+            padding: 20px 0 40px;
+          }
+
         }
         &.--img{
           width: 522px;
+
+          @include mq(mac){
+            width: 50%;
+          }
+
+          @include mq(sp){
+            width: 100%;
+            order:2;
+          }
+
+          img{
+
+            @include mq(sp){
+              width: 100%;
+            }
+          }
+
         }
       }
 
@@ -168,6 +419,11 @@ recruit
         &-sub{
           font-size: 16px;
           font-weight: normal;
+
+          @include mq(mac){
+            display: block;
+            margin-top: 10px;
+          }
         }
       }
 
@@ -183,11 +439,29 @@ recruit
       display: flex;
       align-items: center;
 
+      @include mq(sp){
+        display: block;
+      }
+
       &__txt{
         font-size: 16px;
         line-height: $line-height-l;
         margin-bottom: 80px;
         margin-left: 120px;
+
+        @include mq(sp){
+          margin: 0 0 40px 0px;
+          text-align: center;
+        }
+      }
+    }
+
+    .b-button{
+
+      &__link{
+        @include mq(sp){
+          margin:0;
+        }
       }
     }
   }
@@ -199,6 +473,11 @@ recruit
     .message-flex{
       display: flex;
 
+      @include mq(sp){
+        display: block;
+        padding: 0 20px;
+      }
+
       &__txt{
         font-size: 16px;
         line-height: $line-height-l;
@@ -206,17 +485,100 @@ recruit
         padding-right: 48px;
         width: calc(100% - 520px);
 
+        @include mq(mac){
+          width: 60%;
+        }
+
+        @include mq(sp){
+          width: 100%;
+          padding-right: 0;
+          margin-bottom: 40px;
+        }
+
         .message-flex__txt-l{
           font-size: 24px;
           display: inline-block;
           margin-left: 16px;
+
+          @include mq(sp){
+            font-size: 20px;
+          }
+        }
+      }
+
+      &__ttl{
+        align-items: baseline;
+        padding-top: 20px;
+
+        @include mq(mac){
+          display: block;
+          margin-bottom: 40px;
+        }
+
+        .s-ttl__desp{
+
+          @include mq(mac){
+            margin-top: 20px;
+            margin-bottom: 0;
+          }
+        }
+
+      }
+
+      p{
+
+        @include mq(sp){
+          font-size: 14px;
         }
       }
 
       &__img{
         width: 520px;
+
+        @include mq(mac){
+          width: 40%;
+        }
+
+        @include mq(sp){
+          width: 100%;
+          display: block;
+          text-align: center;
+        }
+
+      }
+
+    }
+
+  }
+
+  .entry{
+    margin-top: 150px;
+    background: url(../images/common/footer_bg.png) no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    padding-bottom: 20px;
+
+    .entry-inner{
+      padding: 80px 0;
+      background: url(../images/recruit/entry_bg.png) no-repeat;
+      background-position: center center;
+      background-size: cover;
+
+      .section-ttl{
+        text-align: center;
+        color:#fff;
+        margin-bottom: 40px;
+      }
+
+      .entry-txt{
+        color: #fff;
+        font-size: 16px;
+        line-height: $line-height-l;
+        text-align: center;
+        margin-bottom: 40px;
       }
     }
+
   }
 
 }

@@ -4,14 +4,14 @@
 
   <div class="s-page__head">
     <div class="s-page__head-inner">
-      <a href="" class="s-page__head-logo">
+      <a href="index.php" class="s-page__head-logo">
         <img src="assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
       </a>
 
       <div class="s-ttl s-page__head-ttl">
-        <span></span>
-        <h1 class="s-ttl__text s-font__en">Due Diligence</h1>
-        <p class="s-ttl__desp">財務デューデリジェンス</p>
+        <span class="icon-plus"></span>
+        <h1 class="s-ttl__text s-font__en fv-text__fade"><span class="fade-txt">Due Diligence</span></h1>
+        <p class="s-ttl__desp js-page__ttl-sub --left">財務デューデリジェンス</p>
       </div>
     </div>
 
@@ -27,11 +27,11 @@
         <div class="s-about__flex">
           <div class="s-about__item --txt">
             <div class="s-ttl --about">
-              <span></span>
-              <h2 class="s-ttl__text s-font__en">About</h2>
-              <p class="s-ttl__desp">サービス概要</p>
+              <span class="icon-plus"></span>
+              <h2 class="s-ttl__text s-font__en js-fade__content-ttl">About</h2>
+              <p class="s-ttl__desp js-fade__sec --left">サービス概要</p>
             </div>
-            <strong class="s-about__item-ttl">確かな判断材料を求めている、<br>
+            <strong class="s-about__item-ttl">確かな判断材料を求めている、<br class="none --sp">
             経営者・意思決定者のために</strong>
             <p class="s-about__item-txt">財務デューデリジェンスでは、対象企業の財務状況を正確に把握し、潜在的なリスクを明確にすることが重要です。<br>
             <br>
@@ -51,40 +51,40 @@
       <div class="s-section__inner">
         <div class="section-ttl">
           <div class="s-ttl --recruit">
-            <span></span>
-            <h2 class="s-ttl__text s-font__en">Service</h2>
-            <p class="s-ttl__desp">サービス詳細</p>
+            <span class="icon-plus"></span>
+            <h2 class="s-ttl__text s-font__en js-fade__content-ttl">Service</h2>
+            <p class="s-ttl__desp js-fade__sec --left">サービス詳細</p>
           </div>
         </div>
 
         <div class="s-service__flex">
 
-          <div class="s-service__flex-item">
+          <div class="s-service__flex-item js-fade__bottom --bottom">
             <strong class="s-service__flex-ttl">財務デューデリジェンス</strong>
             <p class="s-service__flex-txt">対象企業の財務諸表を詳細に分析し、収益性、コスト構造、キャッシュフロー、資産・負債の状況を徹底調査。財務リスクや潜在的課題を洗い出します。</p>
           </div>
 
-          <div class="s-service__flex-item">
+          <div class="s-service__flex-item js-fade__bottom --bottom">
             <strong class="s-service__flex-ttl">会計・内部体制の評価</strong>
             <p class="s-service__flex-txt">会計方針の適正性や内部統制の整備状況を確認し、透明性と信頼性を評価します。</p>
           </div>
 
-          <div class="s-service__flex-item">
+          <div class="s-service__flex-item js-fade__bottom --bottom">
             <strong class="s-service__flex-ttl">事業価値評価と<br>収益性分析</strong>
             <p class="s-service__flex-txt">収益性や成長性を多角的に検証し、事業価値の正確な評価をサポートします。</p>
           </div>
 
-          <div class="s-service__flex-item">
+          <div class="s-service__flex-item js-fade__bottom --bottom">
             <strong class="s-service__flex-ttl">統合計画・<br>シナジー効果の支援</strong>
             <p class="s-service__flex-txt">必要性に応じて、統合計画やシナジー創出に向けた具体的な提言とアドバイスを提供します。</p>
           </div>
 
-          <div class="s-service__flex-item">
+          <div class="s-service__flex-item js-fade__bottom --bottom">
             <strong class="s-service__flex-ttl">再編・事業承継の<br>財務分析</strong>
             <p class="s-service__flex-txt">再編計画や事業承継に伴う財務基盤の評価を実施し、次のステップに向けた準備を支援します。</p>
           </div>
 
-          <div class="s-service__flex-item">
+          <div class="s-service__flex-item js-fade__bottom --bottom">
             <strong class="s-service__flex-ttl">将来的な資金調達の<br>アドバイス</strong>
             <p class="s-service__flex-txt">資金調達や財務基盤の強化を目的とした分析と提案を行います。</p>
           </div>
@@ -99,7 +99,7 @@
 
 
     <section class="s-page__link --due-diligence">
-      <div class="s-section__inner">
+      <div class="s-section__inner js-fade__bottom --bottom">
         <div class="s-page__link-flex">
           <div class="s-page__flex-item --img">
             <img src="assets/images/common/kamitsuji.png" alt="代表　上辻 恭介">
@@ -111,14 +111,14 @@
 
             <div class="s-page__flex-btn">
               <div class="b-button --orange s-page__btn">
-                <a class="b-button__link" href="">料金表はこちら
+                <a class="b-button__link" href="page-price.php">料金表はこちら
                   <div class="b-button__link-arrow">
                     <span class="arrow"></span>
                   </div>
                 </a>
               </div>
               <div class="b-button --orange s-page__btn">
-                <a class="b-button__link" href="">サービス一覧を見る
+                <a class="b-button__link" href="page-service.php">サービス一覧を見る
                   <div class="b-button__link-arrow">
                     <span class="arrow"></span>
                   </div>

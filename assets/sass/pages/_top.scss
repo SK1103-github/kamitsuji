@@ -6,25 +6,51 @@ fv
 ========================================================*/
 .fv{
 
-  &__inner{
+  &-inner{
     position: relative;
     width: 100%;
     height: 100vh;
     aspect-ratio: 90 / 59;
     background: url(../images/top/fv_pc.png) no-repeat;
     background-size: cover;
+
+    @include mq(note){
+      height: auto;
+      background-size: contain;
+    }
+
+    @include mq(sp){
+      aspect-ratio: initial;
+      height: 100vh;
+      background: url(../images/top/fv_sp.png) no-repeat;
+      background-size: cover;
+      background-position: center top;
+    }
+
+    .section_bg{
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+    }
   }
 
-  &__logo{
+  &-logo{
     position: absolute;
-    top:73px;
-    left:114px;
+    top:3.8%;
+    left:5.94%;
+
+    @include mq(sp){
+      bottom:30px;
+      left: 20px;
+      width: 150px;
+    }
+
   }
 
-  &__text{
+  &-text{
     position: absolute;
-    bottom: 150px;
-    left: 220px;
+    bottom: 20%;
+    left: 11.46%;
     color: #fff;
     font-size: 40px;
     letter-spacing: 0;
@@ -32,10 +58,16 @@ fv
     position: absolute;
     margin: 0;
 
-    &-01,
-    &-02{
+    @include mq(sp){
+      font-size: 29px;
+      bottom:145px;
+      left: 20px;
+    }
+
+    .fade-text{
       display: inline-block;
       transition: 0s;
+      opacity: 0;
     }
   }
 
@@ -50,6 +82,12 @@ news
     display: flex;
     gap: 0 8px;
     margin-bottom: 48px;
+
+    @include mq(sp){
+      flex-wrap: wrap;
+      gap:10px 8px;
+      margin-bottom: 32px;
+    }
 
     &-item{
 
@@ -91,7 +129,11 @@ about
   background-position: top center;
   margin-top: 115px;
   position: relative;
-  overflow-x: hidden;
+
+  @include mq(sp){
+    background: url(../images/top/about_bg_sp.png) no-repeat;
+    background-size: contain;
+  }
 
   &__head{
     display: flex;
@@ -99,10 +141,26 @@ about
     justify-content: space-between;
     margin-bottom: 80px;
 
+    @include mq(sp){
+      display: block;
+      margin-bottom: 55px;
+    }
+
     &-txt{
       line-height: $line-height-l;
       font-size: 16px;
       color:#fff;
+
+      @include mq(sp){
+        margin-bottom: 37px;
+      }
+    }
+
+    .b-button__link{
+
+      @include mq(sp){
+        margin:0;
+      }
     }
 
   }
@@ -113,6 +171,10 @@ about
     justify-content: space-between;
     align-items: flex-start;
 
+    @include mq(tab){
+      display: block;
+    }
+
     &__item{
       width: calc((100% / 3) - 15px);
       background: $bg01-color;
@@ -122,11 +184,29 @@ about
       opacity: 0;
       transform: translateY(50px);
 
+      @include mq(tab){
+        transform: none;
+        width: 70%;
+        margin:0 auto;
+      }
+
+      @include mq(sp){
+        width: 100%;
+      }
+
       &:nth-child(2){
         margin-top:72px;
+
+        @include mq(tab){
+          margin-top: 30px;
+        }
       }
       &:nth-child(3){
         margin-top:calc(72px * 2);
+
+        @include mq(tab){
+          margin-top: 30px;
+        }
       }
 
       &.fade-in{
@@ -139,16 +219,29 @@ about
       display: block;
       text-align: center;
       margin-bottom: 30px;
+
+      @include mq(sp){
+        width: 129px;
+        margin: 0 auto 30px;
+      }
     }
 
     &__ttl{
       text-align: center;
+
+      @include mq(mac){
+        line-height: $line-height-l;
+      }
 
       span{
         display: inline-block;
         font-size: 20px;
         margin-bottom: 32px;
         position: relative;
+
+        @include mq(sp){
+          margin-bottom: 20px;
+        }
 
         &::before{
           content:"";
@@ -159,6 +252,11 @@ about
           top:-14px;
           left:-30px;
           display: block;
+
+          @include mq(sp){
+            width: 20px;
+            height: 20px;
+          }
         }
       }
 
@@ -167,6 +265,10 @@ about
     &__txt{
       line-height: $line-height-l;
       height: 100px;
+
+      @include mq(sp){
+        height: auto;
+      }
     }
 
     &__num{
@@ -176,6 +278,12 @@ about
       position: absolute;
       bottom:-17px;
       right:6px;
+
+      @include mq(sp){
+        font-size: 96px;
+        right: 8px;
+        bottom: -14px;
+      }
     }
   }
 }
@@ -190,17 +298,47 @@ service
     align-items: flex-start;
     gap:0 120px;
 
+    @include mq(mac){
+      gap: 0 60px;
+    }
+
+    @include mq(tab){
+      display: block;
+    }
+
     .flexitem__left{
       width: calc(50% - 60px);
+
+      @include mq(mac){
+        width: calc(50% - 30px);
+      }
+
+      @include mq(tab){
+        display: none;
+      }
     }
 
     .flexitem__right{
       width: calc(50% - 60px);
 
+      @include mq(mac){
+        width: calc(50% - 30px);
+      }
+
+      @include mq(tab){
+        width: 70%;
+        margin: 0 auto;
+      }
+
+      @include mq(sp){
+        width: 100%;
+      }
+
       .flexitem__list{
         padding: 32px 112px 32px 32px;
         background: $main-color;
         position: relative;
+        border-radius: 8px;
 
         &+.flexitem__list{
           margin-top: 16px;
@@ -327,21 +465,58 @@ column
   position: relative;
   padding-top: 80px;
 
+  @media (max-width: 766px){
+    background: url(../images/top/column_bg_sp.png) no-repeat;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin-top: 30px;
+    background-size: cover;
+    background-position: top center;
+  }
+
   &__head{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 140px;
 
+    @include mq(mac){
+      margin-bottom: 100px;
+    }
+
+    @media (max-width: 766px){
+      display: block;
+      margin-bottom: 60px;
+    }
+
     &-txt{
       line-height: $line-height-l;
       font-size: 16px;
       color:#fff;
+
+      @media (max-width: 766px){
+        margin-bottom: 35px;
+      }
+
     }
 
+    .b-button__link{
+
+      @media (max-width: 766px){
+        margin: 0;
+      }
+    }
   }
 
   .column__slider{
+
+    @include mq(note){
+      padding: 0 50px 0;
+    }
+
+    @media (max-width: 766px){
+      padding: 0 0 80px 0;
+    }
 
     .slick-list{
       padding-top: 50px;
@@ -359,6 +534,12 @@ column
       border-radius: 100px;
       background: $bg01-color;
 
+      @media (max-width: 766px){
+        bottom: 0px;
+        top:auto;
+        transform: translateY(0);
+      }
+
       &::before,
       &::after{
         display: none;
@@ -366,9 +547,32 @@ column
 
       &.--prev{
         left: -80px;
+
+        @include mq(note){
+          left:-20px;
+        }
+        @include mq(tab){
+          left:-10px;
+        }
+
+        @media (max-width: 766px){
+          right:75px;
+          left: auto;
+        }
       }
       &.--next{
         right: -80px;
+
+        @include mq(note){
+          right:-20px;
+        }
+        @include mq(tab){
+          right:-10px;
+        }
+
+        @media (max-width: 766px){
+          right:15px;
+        }
       }
 
       &:hover{
@@ -535,6 +739,18 @@ company
     background: url(../images/top/company_bg_pc.png) no-repeat;
     background-size: contain;
     background-position: top center;
+    width: 100%;
+
+    @include mq(mac){
+      padding: 200px 0 0;
+    }
+
+    @include mq(sp){
+      background: url(../images/top/company_bg_sp.png) no-repeat;
+      background-size: contain;
+      background-position: top center;
+      padding: 164px 0 0;
+    }
   }
 
   .company-layout__flex{
@@ -546,6 +762,17 @@ company
       padding: 80px 150px;
       border-radius: 0 16px 16px 0;
       margin-bottom: 50px;
+
+      @include mq(mac){
+        width: 80%;
+        padding: 50px 100px;
+      }
+
+      @include mq(sp){
+        width: calc(100% - 40px);
+        padding: 40px 32px;
+      }
+
     }
 
     .company__head-txt{
@@ -559,8 +786,19 @@ company
       gap: 32px;
       justify-content: flex-start;
 
+      @include mq(sp){
+        display: block;
+      }
+
       a{
         margin:0;
+
+        &+a{
+
+          @include mq(sp){
+            margin-top: 16px;
+          }
+        }
       }
 
     }
@@ -574,11 +812,27 @@ company
         line-height: 120%;
         white-space: nowrap;
         position: absolute;
-        transform: rotate(90deg);
+        transform: translateY(100%) rotate(90deg);
         left: -200px;
         bottom: 60px;
-        opacity: .3;
+        opacity: 0;
+
+        @include mq(mac){
+          left: -300px;
+        }
+
+        @include mq(sp){
+          font-size: 56px;
+          left:-380px;
+        }
+
+        &.fade-in{
+          opacity: .3;
+          transform: translateY(0) rotate(90deg);
+        }
+
       }
+
     }
 
   }
@@ -599,6 +853,10 @@ recruit
     margin:0 auto;
     text-align: center;
 
+    @include mq(tab){
+      width: 100%;
+    }
+
     &-txt{
       margin-bottom: 60px;
       font-size: 16px;
@@ -609,12 +867,37 @@ recruit
 
   .recruit__img{
 
+    @include mq(tab){
+      margin-top: -150px;
+      position: relative;
+      width: 100%;
+      height: 310px;
+      display: block;
+    }
+
+    @include mq(sp){
+      margin-top: 48px;
+    }
+
     .recruit__img-01{
       position: absolute;
       width: 294px;
       height: auto;
       top:50px;
       left:0;
+
+      @include mq(mac){
+        width: 250px;
+      }
+
+      @include mq(tab){
+        width: 195px;
+        top:0;
+      }
+
+      &.fade-in{
+        transition-delay: 0s;
+      }
     }
     .recruit__img-02{
       position: absolute;
@@ -622,6 +905,23 @@ recruit
       height: auto;
       top:50px;
       right:0;
+
+      @include mq(mac){
+        width: 250px;
+      }
+
+      @include mq(tab){
+        width: 150px;
+        right:20px;
+      }
+
+      @include mq(sp){
+        top:70px;
+      }
+
+      &.fade-in{
+        transition-delay: .5s;
+      }
     }
     .recruit__img-03{
       position: absolute;
@@ -629,6 +929,23 @@ recruit
       height: auto;
       bottom:0;
       left:210px;
+
+      @include mq(mac){
+        width: 150px;
+        left:150px;
+      }
+
+      @include mq(tab){
+        width: 140px;
+        left:34px;
+        bottom:40px;
+      }
+
+
+
+      &.fade-in{
+        transition-delay: 1s;
+      }
     }
     .recruit__img-04{
       position: absolute;
@@ -636,6 +953,30 @@ recruit
       height: auto;
       bottom:0;
       right:229px;
+
+      @include mq(mac){
+        width: 150px;
+        right:150px;
+      }
+
+      @include mq(tab){
+        width: 192px;
+        right:0;
+      }
+
+      &.fade-in{
+        transition-delay: 1.5s;
+      }
+    }
+
+    .break{
+      display: none;
+
+      @include mq(tab){
+        flex-basis: 100%;
+        display: block;
+      }
+
     }
 
   }

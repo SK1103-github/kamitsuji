@@ -15,10 +15,19 @@ single
       align-items: center;
       flex-wrap: wrap;
 
+      @include mq(sp){
+        padding-bottom: 32px;
+        margin-bottom: 32px;
+      }
+
       &__date{
         font-size: 16px;
         margin-right: 16px;
         display: inline-block;
+
+        @include mq(sp){
+          font-size: 12px;
+        }
       }
       &__cat{
         display: inline-block;
@@ -34,6 +43,10 @@ single
         margin-top: 8px;
         line-height: $line-height-l;
         font-size: 24px;
+
+        @include mq(sp){
+          font-size: 18px;
+        }
       }
     }
 
@@ -53,6 +66,11 @@ single
         font-size: 20px;
         padding-left: 36px;
         position: relative;
+
+        @include mq(sp){
+          font-size: 18px;
+          padding-left: 30px;
+        }
 
         &::before{
           content:"";

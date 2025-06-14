@@ -4,14 +4,14 @@
 
   <div class="s-page__head">
     <div class="s-page__head-inner">
-      <a href="" class="s-page__head-logo">
+      <a href="index.php" class="s-page__head-logo">
         <img src="assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
       </a>
 
       <div class="s-ttl s-page__head-ttl">
-        <span></span>
-        <h2 class="s-ttl__text s-font__en">Column</h2>
-        <p class="s-ttl__desp">コラム</p>
+        <span class="icon-plus"></span>
+        <h2 class="s-ttl__text s-font__en fv-text__fade"><span class="fade-txt">Column</span></h2>
+        <p class="s-ttl__desp js-page__ttl-sub --left">コラム</p>
       </div>
     </div>
   </div>
@@ -88,7 +88,7 @@
             <span class="prev-next__item-txt">前の記事</span>
             <h3 class="prev-next__item-ttl">ここにコラムのタイトルがはいります。この文章はダミーです。ここにコラムのタイトルがはいります。</h3>
           </a>
-          <a href="" class="prev-next__item">
+          <a href="" class="prev-next__item --next">
             <div class="b-button__arrow prev-next__item-arrow --white --next">
               <div class="b-button__arrow-item"></div>
             </div>
@@ -105,152 +105,152 @@
       <div class="s-section__inner">
         <div class="section-ttl">
           <div class="s-ttl --others">
-            <span></span>
-            <h2 class="s-ttl__text s-font__en">Others</h2>
-            <p class="s-ttl__desp">その他のコラム</p>
+            <span class="icon-plus"></span>
+            <h2 class="s-ttl__text s-font__en js-text__fade">Others</h2>
+            <p class="s-ttl__desp js-page__ttl-sub --left">その他のコラム</p>
           </div>
         </div>
 
-        <div class="column__slider">
-          <div class="column__slider-item">
-            <a class="column__slider-link" href="">
-              <picture class="column__slider-img">
+        <div class="others__slider">
+          <div class="others__slider-item">
+            <a class="others__slider-link" href="">
+              <picture class="others__slider-img">
                 <img src="assets/images/top/slider_img01.png" alt="">
               </picture>
-              <span class="column__slider-date">2024.4.1</span>
-              <h3 class="column__slider-ttl">コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。</h3>
+              <span class="others__slider-date">2024.4.1</span>
+              <h3 class="others__slider-ttl">コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。</h3>
             </a>
-            <ul class="column__cat">
-              <li class="column__cat-link">
+            <ul class="others__cat">
+              <li class="others__cat-link">
                 <a href="">すべて</a>
               </li>
-              <li class="column__cat-link">
+              <li class="others__cat-link">
                 <a href="">お知らせ</a>
               </li>
-              <li class="column__cat-link">
+              <li class="others__cat-link">
                 <a href="">採用情報</a>
               </li>
-              <li class="column__cat-link">
+              <li class="others__cat-link">
                 <a href="">コラム</a>
               </li>
             </ul>
           </div>
 
-          <div class="column__slider-item">
-            <a class="column__slider-link" href="">
-              <picture class="column__slider-img">
+          <div class="others__slider-item">
+            <a class="others__slider-link" href="">
+              <picture class="others__slider-img">
                 <img src="assets/images/top/slider_img01.png" alt="">
               </picture>
-              <span class="column__slider-date">2024.4.1</span>
-              <h3 class="column__slider-ttl">コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。</h3>
+              <span class="others__slider-date">2024.4.1</span>
+              <h3 class="others__slider-ttl">コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。</h3>
             </a>
-            <ul class="column__cat">
-              <li class="column__cat-link">
+            <ul class="others__cat">
+              <li class="others__cat-link">
                 <a href="">すべて</a>
               </li>
-              <li class="column__cat-link">
+              <li class="others__cat-link">
                 <a href="">お知らせ</a>
               </li>
-              <li class="column__cat-link">
+              <li class="others__cat-link">
                 <a href="">採用情報</a>
               </li>
-              <li class="column__cat-link">
+              <li class="others__cat-link">
                 <a href="">コラム</a>
               </li>
             </ul>
           </div>
 
-          <div class="column__slider-item">
-            <a class="column__slider-link" href="">
-              <picture class="column__slider-img">
+          <div class="others__slider-item">
+            <a class="others__slider-link" href="">
+              <picture class="others__slider-img">
                 <img src="assets/images/top/slider_img01.png" alt="">
               </picture>
-              <span class="column__slider-date">2024.4.1</span>
-              <h3 class="column__slider-ttl">コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。</h3>
+              <span class="others__slider-date">2024.4.1</span>
+              <h3 class="others__slider-ttl">コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。</h3>
             </a>
-            <ul class="column__cat">
-              <li class="column__cat-link">
+            <ul class="others__cat">
+              <li class="others__cat-link">
                 <a href="">すべて</a>
               </li>
-              <li class="column__cat-link">
+              <li class="others__cat-link">
                 <a href="">お知らせ</a>
               </li>
-              <li class="column__cat-link">
+              <li class="others__cat-link">
                 <a href="">採用情報</a>
               </li>
-              <li class="column__cat-link">
+              <li class="others__cat-link">
                 <a href="">コラム</a>
               </li>
             </ul>
           </div>
 
-          <div class="column__slider-item">
-            <a class="column__slider-link" href="">
-              <picture class="column__slider-img">
+          <div class="others__slider-item">
+            <a class="others__slider-link" href="">
+              <picture class="others__slider-img">
                 <img src="assets/images/top/slider_img01.png" alt="">
               </picture>
-              <span class="column__slider-date">2024.4.1</span>
-              <h3 class="column__slider-ttl">コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。</h3>
+              <span class="others__slider-date">2024.4.1</span>
+              <h3 class="others__slider-ttl">コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。</h3>
             </a>
-            <ul class="column__cat">
-              <li class="column__cat-link">
+            <ul class="others__cat">
+              <li class="others__cat-link">
                 <a href="">すべて</a>
               </li>
-              <li class="column__cat-link">
+              <li class="others__cat-link">
                 <a href="">お知らせ</a>
               </li>
-              <li class="column__cat-link">
+              <li class="others__cat-link">
                 <a href="">採用情報</a>
               </li>
-              <li class="column__cat-link">
+              <li class="others__cat-link">
                 <a href="">コラム</a>
               </li>
             </ul>
           </div>
 
-          <div class="column__slider-item">
-            <a class="column__slider-link" href="">
-              <picture class="column__slider-img">
+          <div class="others__slider-item">
+            <a class="others__slider-link" href="">
+              <picture class="others__slider-img">
                 <img src="assets/images/top/slider_img01.png" alt="">
               </picture>
-              <span class="column__slider-date">2024.4.1</span>
-              <h3 class="column__slider-ttl">コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。</h3>
+              <span class="others__slider-date">2024.4.1</span>
+              <h3 class="others__slider-ttl">コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。</h3>
             </a>
-            <ul class="column__cat">
-              <li class="column__cat-link">
+            <ul class="others__cat">
+              <li class="others__cat-link">
                 <a href="">すべて</a>
               </li>
-              <li class="column__cat-link">
+              <li class="others__cat-link">
                 <a href="">お知らせ</a>
               </li>
-              <li class="column__cat-link">
+              <li class="others__cat-link">
                 <a href="">採用情報</a>
               </li>
-              <li class="column__cat-link">
+              <li class="others__cat-link">
                 <a href="">コラム</a>
               </li>
             </ul>
           </div>
 
-          <div class="column__slider-item">
-            <a class="column__slider-link" href="">
-              <picture class="column__slider-img">
+          <div class="others__slider-item">
+            <a class="others__slider-link" href="">
+              <picture class="others__slider-img">
                 <img src="assets/images/top/slider_img01.png" alt="">
               </picture>
-              <span class="column__slider-date">2024.4.1</span>
-              <h3 class="column__slider-ttl">コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。</h3>
+              <span class="others__slider-date">2024.4.1</span>
+              <h3 class="others__slider-ttl">コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。</h3>
             </a>
-            <ul class="column__cat">
-              <li class="column__cat-link">
+            <ul class="others__cat">
+              <li class="others__cat-link">
                 <a href="">すべて</a>
               </li>
-              <li class="column__cat-link">
+              <li class="others__cat-link">
                 <a href="">お知らせ</a>
               </li>
-              <li class="column__cat-link">
+              <li class="others__cat-link">
                 <a href="">採用情報</a>
               </li>
-              <li class="column__cat-link">
+              <li class="others__cat-link">
                 <a href="">コラム</a>
               </li>
             </ul>

@@ -12,6 +12,7 @@ body {
   color: #000!important; // テキストの基本色
   background-color: #f6f1e8!important; // 背景色
   font-weight: normal!important;
+  overflow-x: hidden;
 
   a{
     text-decoration: none;

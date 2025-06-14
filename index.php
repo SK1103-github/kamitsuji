@@ -3,23 +3,25 @@
 <article id="top" class="">
 
   <div class="fv">
-    <div class="fv__inner">
-      <h1 class="fv__logo">
+    <div class="fv-inner">
+      <h1 class="fv-logo">
         <a href="">
           <img src="assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
         </a>
       </h1>
 
-      <picture class="fv__img">
+      <picture class="fv-img">
       </picture>
-      <h2 class="fv__text">
-        <div class="fv__text-wrapper-01">
-          <span class="fv__text-01">税務をもっと身近に、</span>
+      <h2 class="fv-text">
+        <div class="fv-text__fade">
+          <span class="fade-text">税務をもっと身近に、</span>
         </div>
-        <div class="fv__text-wrapper-02">
-          <span class="fv__text-02">もっとわかりやすく。</span>
+        <div class="fv-text__fade">
+          <span class="fade-text">もっとわかりやすく。</span>
         </div>
       </h2>
+
+      <img class="section_bg" src="assets/images/common/section_bg.png" alt="">
 
     </div>
   </div>
@@ -28,25 +30,25 @@
   <main class="main_content">
 
     <section class="news">
-      <div class="s-section__inner">
+      <div class="s-section__inner --news">
         <div class="s-ttl">
-          <span></span>
-          <h2 class="s-ttl__text s-font__en">News</h2>
-          <p class="s-ttl__desp">お知らせ</p>
+          <span class="icon-plus"></span>
+          <h2 class="s-ttl__text s-font__en js-fade__content-ttl"><span class="fade-txt">News</span></h2>
+          <p class="s-ttl__desp js-fade__sec --left">お知らせ</p>
         </div>
 
         <ul class="news-cat__list">
           <li class="news-cat__list-item --active">
-            <a href="">すべて</a>
+            <a href="page-news.php">すべて</a>
           </li>
           <li class="news-cat__list-item">
-            <a href="">お知らせ</a>
+            <a href="page-news.php">お知らせ</a>
           </li>
           <li class="news-cat__list-item">
-            <a href="">採用情報</a>
+            <a href="page-news.php">採用情報</a>
           </li>
           <li class="news-cat__list-item">
-            <a href="">コラム</a>
+            <a href="page-news.php">コラム</a>
           </li>
         </ul>
 
@@ -60,11 +62,11 @@
     <section class="about">
       <p class="js-scroll__txt s-font__en">Making Tax More Accessible, More Understandable. Making Tax More Accessible, More Understandable. Making Tax More Accessible, More Understandable. Making Tax More Accessible, More Understandable.</p>
 
-      <div class="s-section__inner">
+      <div class="s-section__inner --about">
         <div class="s-ttl">
-          <span></span>
-          <h2 class="s-ttl__text s-font__en --white">About us</h2>
-          <p class="s-ttl__desp --white">上辻会計事務所について</p>
+          <span class="icon-plus"></span>
+          <h2 class="s-ttl__text s-font__en --white js-fade__content-ttl"><span class="fade-txt">About us</span></h2>
+          <p class="s-ttl__desp --white js-fade__sec --left">上辻会計事務所について</p>
         </div>
 
         <div class="about__head">
@@ -72,7 +74,7 @@
           長年の経験と最新技術を駆使し、事業の成長を総合的にサポートすることが可能です。</p>
 
           <div class="b-button --white">
-            <a class="b-button__link" href="">詳しく見る
+            <a class="b-button__link" href="page-about.php">詳しく見る
               <div class="b-button__link-arrow">
                 <span class="arrow"></span>
               </div>
@@ -86,7 +88,7 @@
               <img src="assets/images/top/about_img_01.png" alt="30年以上の豊富な経験と実績">
             </picture>
             <h4 class="about-flex__ttl">
-              <span>30年以上の豊富な経験と実績</span>
+              <span>30年以上の豊富な<br class="block --mac none --sp">経験と実績</span>
             </h4>
             <p class="about-flex__txt">平成18年に開業し、勤務時代から通算して30年以上の経験と実績があります。税務・会計の専門知識であらゆるビジネスステージに対応することが可能です。</p>
             <span class="about-flex__num s-font__en">01</span>
@@ -108,7 +110,7 @@
               <img src="assets/images/top/about_img_03.png" alt="DXの活用でスマートな経営を">
             </picture>
             <h4 class="about-flex__ttl">
-              <span>DXの活用でスマートな経営を</span>
+              <span>DXの活用で<br class="block --mac none --sp">スマートな経営を</span>
             </h4>
             <p class="about-flex__txt">クラウド会計とペーパーレス化で経理を効率化。財務をリアルタイム把握し、迅速な意思決定を支援。紙の管理負担を減らし、本業に集中できる環境を提供します。</p>
             <span class="about-flex__num s-font__en">03</span>
@@ -125,14 +127,14 @@
         <div class="service-layout__flex">
           <div class="flexitem__left">
             <picture class="flexitem__img">
-              <img src="assets/images/top/service_img.png" alt="サービス内容">
+              <img src="assets/images/top/service_img.png" class="js-service__fade --left" alt="サービス内容">
             </picture>
           </div>
           <div class="flexitem__right">
             <div class="s-ttl">
-              <span></span>
-              <h2 class="s-ttl__text s-font__en">Service</h2>
-              <p class="s-ttl__desp">サービス内容</p>
+              <span class="icon-plus"></span>
+              <h2 class="s-ttl__text s-font__en js-fade__content-ttl"><span class="fade-txt">Service</span></h2>
+              <p class="s-ttl__desp js-fade__sec --left">サービス内容</p>
             </div>
 
             <dl class="flexitem__list">
@@ -168,7 +170,7 @@
             </dl>
 
             <div class="b-button --orange service__btn">
-              <a class="b-button__link" href="">一覧を見る
+              <a class="b-button__link" href="page-service.php">一覧を見る
                 <div class="b-button__link-arrow">
                   <span class="arrow"></span>
                 </div>
@@ -184,17 +186,17 @@
     <section class="column">
       <div class="s-section__inner">
         <div class="s-ttl">
-          <span></span>
-          <h2 class="s-ttl__text s-font__en --white">Column</h2>
-          <p class="s-ttl__desp --white">お役立ちコラム</p>
+          <span class="icon-plus"></span>
+          <h2 class="s-ttl__text s-font__en --white js-fade__content-ttl"><span class="fade-txt">Column</span></h2>
+          <p class="s-ttl__desp --white js-fade__sec --left">お役立ちコラム</p>
         </div>
 
         <div class="column__head">
-          <p class="column__head-txt">会計・税務に加え、会社設立に関する税務知識や<br>
+          <p class="column__head-txt">会計・税務に加え、会社設立に関する税務知識や<br class="none --sp">
           財務デューデリジェンスまで、専門的な知識をご紹介しています。</p>
 
           <div class="b-button --white">
-            <a class="b-button__link" href="">コラム一覧
+            <a class="b-button__link" href="page-column.php">コラム一覧
               <div class="b-button__link-arrow">
                 <span class="arrow"></span>
               </div>
@@ -204,7 +206,7 @@
 
         <div class="column__slider">
           <div class="column__slider-item">
-            <a class="column__slider-link" href="">
+            <a class="column__slider-link" href="single-column.php">
               <picture class="column__slider-img">
                 <img src="assets/images/top/slider_img01.png" alt="">
               </picture>
@@ -228,7 +230,7 @@
           </div>
 
           <div class="column__slider-item">
-            <a class="column__slider-link" href="">
+            <a class="column__slider-link" href="single-column.php">
               <picture class="column__slider-img">
                 <img src="assets/images/top/slider_img01.png" alt="">
               </picture>
@@ -252,7 +254,7 @@
           </div>
 
           <div class="column__slider-item">
-            <a class="column__slider-link" href="">
+            <a class="column__slider-link" href="single-column.php">
               <picture class="column__slider-img">
                 <img src="assets/images/top/slider_img01.png" alt="">
               </picture>
@@ -276,7 +278,7 @@
           </div>
 
           <div class="column__slider-item">
-            <a class="column__slider-link" href="">
+            <a class="column__slider-link" href="single-column.php">
               <picture class="column__slider-img">
                 <img src="assets/images/top/slider_img01.png" alt="">
               </picture>
@@ -300,7 +302,7 @@
           </div>
 
           <div class="column__slider-item">
-            <a class="column__slider-link" href="">
+            <a class="column__slider-link" href="single-column.php">
               <picture class="column__slider-img">
                 <img src="assets/images/top/slider_img01.png" alt="">
               </picture>
@@ -324,7 +326,7 @@
           </div>
 
           <div class="column__slider-item">
-            <a class="column__slider-link" href="">
+            <a class="column__slider-link" href="single-column.php">
               <picture class="column__slider-img">
                 <img src="assets/images/top/slider_img01.png" alt="">
               </picture>
@@ -356,23 +358,23 @@
     <section class="company">
       <div class="s-section__inner company__inner --full">
         <div class="company-layout__flex">
-          <div class="flex-item__left">
+          <div class="flex-item__left js-company__fade --left">
             <div class="s-ttl">
-              <span></span>
-              <h2 class="s-ttl__text s-font__en">Company</h2>
-              <p class="s-ttl__desp">事務所概要</p>
+              <span class="icon-plus"></span>
+              <h2 class="s-ttl__text s-font__en js-fade__content-ttl"><span class="fade-txt">Company</span></h2>
+              <p class="s-ttl__desp js-fade__sec --left">事務所概要</p>
             </div>
 
             <p class="company__head-txt">大阪市中央区を拠点に、経営者の相談しやすい税務のパートナーを目指し活動しています。<br>
               アクセス情報など詳しい情報はこちらをご覧ください。</p>
 
             <div class="b-button --orange company__btn">
-              <a class="b-button__link" href="">事務所概要
+              <a class="b-button__link" href="page-company.php">事務所概要
                 <div class="b-button__link-arrow">
                   <span class="arrow"></span>
                 </div>
               </a>
-              <a class="b-button__link" href="">代表メッセージ
+              <a class="b-button__link" href="page-company.php#greeting">代表メッセージ
                 <div class="b-button__link-arrow">
                   <span class="arrow"></span>
                 </div>
@@ -380,8 +382,8 @@
             </div>
           </div>
           <div class="flex-item__right">
-            <p class="flex-item__right-txt s-font__en">Your Taxes, Clear<br>
-            and Within Reach.</p>
+            <p class="flex-item__right-txt s-font__en js-fade__delay --bottom">Your Taxes, Clear<br class="none --sp">
+            and <br class="block --sp">Within Reach.</p>
           </div>
         </div>
       </div>
@@ -394,9 +396,9 @@
       <div class="s-section__inner recruit__inner --recruit">
         <div class="recruit__head">
           <div class="s-ttl --recruit">
-            <span></span>
-            <h2 class="s-ttl__text s-font__en">Recruit</h2>
-            <p class="s-ttl__desp">採用情報</p>
+            <span class="icon-plus"></span>
+            <h2 class="s-ttl__text s-font__en js-fade__content-ttl"><span class="fade-txt">Recruit</span></h2>
+            <p class="s-ttl__desp js-fade__sec --left">採用情報</p>
           </div>
 
           <p class="recruit__head-txt">
@@ -408,7 +410,7 @@
         </div>
 
         <div class="b-button --orange service__btn">
-          <a class="b-button__link" href="">詳細を見る
+          <a class="b-button__link" href="page-recruit.php">詳細を見る
             <div class="b-button__link-arrow">
               <span class="arrow"></span>
             </div>
@@ -416,10 +418,13 @@
         </div>
 
         <picture class="recruit__img">
-          <img class="recruit__img-01" src="assets/images/top/recruit_img01.png" alt="" loading="lazy">
-          <img class="recruit__img-02" src="assets/images/top/recruit_img02.png" alt="" loading="lazy">
-          <img class="recruit__img-03" src="assets/images/top/recruit_img03.png" alt="" loading="lazy">
-          <img class="recruit__img-04" src="assets/images/top/recruit_img04.png" alt="" loading="lazy">
+          <img class="recruit__img-01 js-fade --left" src="assets/images/top/recruit_img01.png" alt="" loading="lazy">
+          <img class="recruit__img-02 js-fade --right" src="assets/images/top/recruit_img02.png" alt="" loading="lazy">
+          <img class="recruit__img-03 none --tab js-fade --left" src="assets/images/top/recruit_img03.png" alt="" loading="lazy">
+          <img class="recruit__img-04 none --tab js-fade --right" src="assets/images/top/recruit_img04.png" alt="" loading="lazy">
+
+          <img class="recruit__img-03 block --tab js-fade --left" src="assets/images/top/recruit_img03_sp.png" alt="" loading="lazy">
+          <img class="recruit__img-04 block --tab js-fade --right" src="assets/images/top/recruit_img04_sp.png" alt="" loading="lazy">
         </picture>
       </div>
     </section>

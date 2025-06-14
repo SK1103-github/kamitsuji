@@ -12,4 +12,89 @@ js
   top:-108px;
   opacity: .3;
   transition: 0s;
+
+  @include mq(sp){
+    font-size: 72px;
+    top:-62px;
+  }
+}
+
+
+.js-page__ttl,
+.js-page__ttl-sub,
+.js-fade__sec,
+.js-fade__delay,
+.js-fade__bottom{
+  opacity: 0;
+
+  &.--left{
+    transform: translateX(-10px);
+  }
+  &.--right{
+    transform: translateX(100px);
+  }
+  &.--bottom{
+    transform: translateY(100px);
+  }
+
+  &.fade-in{
+    opacity: 1;
+    transform: initial;
+    transform: initial;
+  }
+
+}
+
+.js-fade{
+  opacity: 0;
+
+  &.--left{
+    transform: translateX(-100px);
+  }
+  &.--right{
+    transform: translateX(100px);
+  }
+  &.--bottom{
+    transform: translateY(100px);
+  }
+
+  &.fade-in{
+    opacity: 1;
+    transform: initial;
+    transform: initial;
+  }
+
+}
+
+.js-recruit__fade{
+  opacity: 0;
+
+  &.--left{
+    transform: translateX(-100px);
+  }
+  &.--bottom{
+    transform: translateY(100px);
+  }
+
+  &.fade-in{
+    opacity: 1;
+    transform: initial;
+    transform: initial;
+  }
+
+}
+
+.js-service__fade,
+.js-company__fade{
+  opacity: 0;
+
+  &.--left{
+    transform: translateX(-100px);
+  }
+
+  &.fade-in{
+    opacity: 1;
+    transform: initial;
+    transform: initial;
+  }
 }

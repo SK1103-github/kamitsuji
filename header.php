@@ -56,7 +56,7 @@
   <div class="l-header__inner">
     <div class="l-header__btn-group">
       <div class="l-header__mail">
-        <a href="">
+        <a href="page-contact.php">
         <img src="assets/images/common/icon_mail.svg" alt="mail" width="28" height="18">
         </a>
       </div>
@@ -79,7 +79,7 @@
       <nav class="l-header__nav">
         <ul class="l-header__list">
           <li class="l-header__list-item">
-            <a href="" class="l-header__list-link">トップ</a>
+            <a href="index.php" class="l-header__list-link">トップ</a>
           </li>
           <li class="l-header__list-item">
             <a href="page-news.php" class="l-header__list-link">お知らせ</a>

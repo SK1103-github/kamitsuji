@@ -11,7 +11,6 @@ header
 
   &__inner{
     position: relative;
-
   }
 
   &__btn-group{
@@ -23,6 +22,14 @@ header
     background-color: $bg01-color;
     border-radius: 0px 0px 0px 4px;
     box-shadow: -4px 4px 4px 0 rgba(0,0,0,.1);
+
+    @include mq(sp){
+      width: 100%;
+      position: fixed;
+      left:0;
+      bottom:0;
+      border-radius: 0;
+    }
   }
 
   &__mail{
@@ -62,6 +69,10 @@ header
     background: $sub-color;
     position: relative;
     cursor: pointer;
+
+    @include mq(sp){
+      margin-left: auto;
+    }
 
     &.opened{
 
@@ -112,6 +123,12 @@ header
     right:46px;
     opacity: 0;
     pointer-events: none;
+
+    @include mq(sp){
+      top:auto;
+      bottom:94px;
+      right:20px;
+    }
 
     &.open{
       opacity: 1;

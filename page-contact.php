@@ -4,18 +4,18 @@
 
   <div class="s-page__head">
     <div class="s-page__head-inner">
-      <a href="" class="s-page__head-logo">
+      <a href="index.php" class="s-page__head-logo">
         <img src="assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
       </a>
 
       <div class="s-ttl s-page__head-ttl">
-        <span></span>
-        <h1 class="s-ttl__text s-font__en">Company</h1>
-        <p class="s-ttl__desp">事務所情報</p>
+        <span class="icon-plus"></span>
+        <h1 class="s-ttl__text s-font__en fv-text__fade"><span class="fade-txt">Contact</span></h1>
+        <p class="s-ttl__desp js-page__ttl-sub --left">お問い合わせ</p>
       </div>
     </div>
 
-    <p class="s-page__head-txt --contact">下記フォームより、お問い合わせを受け付けております。<br>
+    <p class="s-page__head-txt --contact">下記フォームより、お問い合わせを受け付けております。<br class="none">
     お急ぎの方はお電話でも受け付けておりますので、下記までご連絡ください。</p>
     <div class="s-page__bottom-txt">
       <img src="assets/images/common/icon_phone.svg" alt="tel" width="36" height="36">
@@ -27,49 +27,75 @@
   <!--========== ▼ main_content ==========-->
   <main class="main_content">
 
-    <section class="company-content">
+    <section class="contact">
       <div class="s-section__inner">
 
-        <div class="company-info">
-          <div class="company-info__row">
-            <div class="company-info__item">会社名</div>
-            <div class="company-info__item">上辻会計事務所</div>
+        <div class="contact-form">
+          <div class="contact-form__row --required">
+            <div class="contact-form__row-item --item">お名前</div>
+            <div class="contact-form__row-item --input">
+              <input type="text" name="name" id="">
+            </div>
           </div>
-          <div class="company-info__row">
-            <div class="company-info__item">代表者</div>
-            <div class="company-info__item">税理士 上辻 恭介</div>
+          <div class="contact-form__row --required">
+            <div class="contact-form__row-item --item">ふりがな</div>
+            <div class="contact-form__row-item --input">
+              <input type="text" name="name" id="">
+            </div>
           </div>
-          <div class="company-info__row">
-            <div class="company-info__item">所在地</div>
-            <div class="company-info__item">〒541-0051<br>
-            大阪府大阪市中央区備後町2-4-6 森田ビル5F</div>
+          <div class="contact-form__row">
+            <div class="contact-form__row-item --item">会社名</div>
+            <div class="contact-form__row-item --input">
+              <input type="text" name="name" id="">
+            </div>
           </div>
-          <div class="company-info__row">
-            <div class="company-info__item">電話番号</div>
-            <div class="company-info__item">06-4303-4877</div>
+          <div class="contact-form__row">
+            <div class="contact-form__row-item --item">URL</div>
+            <div class="contact-form__row-item --input">
+              <input type="text" name="name" id="">
+            </div>
           </div>
-          <div class="company-info__row">
-            <div class="company-info__item">FAX</div>
-            <div class="company-info__item">06-6231-0885</div>
+          <div class="contact-form__row --required">
+            <div class="contact-form__row-item --item">電話番号</div>
+            <div class="contact-form__row-item --input">
+              <input type="text" name="name" id="">
+            </div>
           </div>
-          <div class="company-info__row">
-            <div class="company-info__item">主な事業内容</div>
-            <div class="company-info__item">会社設立支援<br>
-            財務デューデリジェンスのサポート<br>
-            経営計画の立案、資金計画のシミュレーション<br>
-            事業承継対策<br>
-            譲渡・贈与・相続の申告書の作成および事前対策<br>
-            法人税・所得税・消費税の申告書、各種届出書の作成<br>
-            総勘定元帳の作成、月次決算書の作成（記帳代行）<br>
-            公益法人運営に関するアドバイス<br>
-            その他各種税務相談</div>
+          <div class="contact-form__row --required">
+            <div class="contact-form__row-item --item">メールアドレス</div>
+            <div class="contact-form__row-item --input">
+              <input type="text" name="name" id="">
+            </div>
+          </div>
+          <div class="contact-form__row">
+            <div class="contact-form__row-item --item">住所</div>
+            <div class="contact-form__row-item --input --address">
+              <input type="number" class="address">
+              <input type="text">
+            </div>
+          </div>
+          <div class="contact-form__row --required">
+            <div class="contact-form__row-item --item">お問い合わせ内容</div>
+            <div class="contact-form__row-item --input --required --message">
+              <textarea name="message" id=""></textarea>
+            </div>
+          </div>
+          <div class="praivacy-check">
+            <input type="checkbox" name="praivacy" id="praivacy">
+            <label for="praivacy">プライバシーポリシーに同意する</label>
+          </div>
+          <div class="b-button --orange">
+            <a href="page-comfirm.php" class="b-button__link" href="">送信内容確認
+              <div class="b-button__link-arrow">
+                <span class="arrow"></span>
+              </div>
+            </button>
           </div>
         </div>
 
       </div>
     </section>
 
-    <?php include('components/c-contact.php'); ?>
   </main>
   <!--========== ▲ main_content ==========-->
 

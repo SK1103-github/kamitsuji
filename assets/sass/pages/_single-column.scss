@@ -10,11 +10,42 @@ single-column
     justify-content: space-between;
     margin-bottom: 120px;
 
+    @include mq(note){
+      margin-top: 50px;
+      margin-bottom: 0;
+    }
+
+    @include mq(tab){
+      display: block;
+    }
+
     &__item{
       width: 50%;
 
+      @include mq(tab){
+        width: 100%;
+      }
+
+      &+.head-flex__item{
+
+        @include mq(tab){
+          width: 100%;
+          padding-left: 20px;
+          margin-top: 50px;
+        }
+
+      }
+
       &-txt{
         padding:0 60px 0 150px;
+
+        @include mq(mac){
+          padding: 0 40px;
+        }
+
+        @include mq(sp){
+          padding: 0 20px;
+        }
       }
       &-date{
         font-size: 16px;
@@ -25,6 +56,10 @@ single-column
         font-size: 24px;
         line-height: $line-height-l;
         margin-bottom: 16px;
+
+        @include mq(sp){
+          font-size: 18px;
+        }
       }
       &-cat{
         display: inline-block;
@@ -56,6 +91,15 @@ single-column
     padding: 50px 100px;
     counter-reset: number 0;
 
+    @include mq(tab){
+      width: 100%;
+      margin: 0 0 50px;
+    }
+
+    @include mq(sp){
+      padding: 40px 20px;
+    }
+
     &-ttl{
       display: block;
       text-align: center;
@@ -80,6 +124,10 @@ single-column
       padding: 18px 10px;
       border-bottom: 1px solid #ddd;
 
+      @include mq(sp){
+        font-size: 14px;
+      }
+
       &:before{
         counter-increment: number 1;
         content: counter(number) ".　";
@@ -93,6 +141,10 @@ single-column
     *{
       margin-bottom: 32px;
       line-height: $line-height-l;
+
+      @include mq(sp){
+        margin-bottom: 24px;
+      }
     }
 
     h2{
@@ -101,6 +153,10 @@ single-column
       position: relative;
       font-size: 20px;
       color:$sub-color;
+
+      @include mq(sp){
+        font-size: 18px;
+      }
 
       &:before{
         content:"";
@@ -118,6 +174,11 @@ single-column
       color:$sub-color;
       padding: 4px 10px 4px 36px;
       position: relative;
+
+      @include mq(sp){
+        font-size: 18px;
+        padding: 2px 10px 2px 30px;
+      }
 
       &:before{
         content:"";
@@ -146,6 +207,10 @@ single-column
       background: $sub-color;
       font-size: 16px;
       position: relative;
+
+      @media (max-width:599px){
+        width: 100%;
+      }
 
       &:before{
         content:"";
@@ -180,6 +245,11 @@ single-column
       background: #F3EAD9;
       margin-bottom: 120px;
 
+      @include mq(sp){
+        margin-bottom: 50px;
+        padding: 40px 20px;
+      }
+
       &__ttl{
         text-align: center;
         font-size: 20px;
@@ -188,6 +258,11 @@ single-column
         position: relative;
         display: inline-block;
         padding-left: 33px;
+
+        @include mq(sp){
+          font-size: 18px;
+          text-align: left;
+        }
 
         &:before{
           content:"";
@@ -202,6 +277,10 @@ single-column
         }
       }
       &__txt{
+
+        @include mq(sp){
+          margin: 0;
+        }
 
       }
     }
@@ -228,6 +307,24 @@ single-column
       padding: 20px 100px;
       position: relative;
 
+      @include mq(tab){
+        padding: 10px 16px 10px 60px;
+      }
+      @include mq(sp){
+        padding: 10px 16px 10px 30px;
+      }
+
+      &.--next{
+
+        @include mq(tab){
+          padding: 10px 60px 10px 16px;
+        }
+        @include mq(sp){
+          padding: 10px 30px 10px 16px;
+        }
+
+      }
+
       &:hover{
 
         .prev-next__item-ttl{
@@ -246,6 +343,15 @@ single-column
           }
         }
 
+      }
+
+      .b-button__arrow{
+
+        @include mq(sp){
+          width: 15px;
+          height: 12px;
+          background: none;
+        }
       }
 
       &-arrow{
@@ -269,12 +375,25 @@ single-column
         color:$sub-color;
         display: block;
         margin-bottom: 10px;
+
+        @include mq(sp){
+          font-size: 14px;
+        }
       }
 
       &-ttl{
         font-size: 16px;
         line-height: $line-height-l;
         color:#000;
+
+        @include mq(sp){
+          font-size: 12px;
+          overflow: hidden;
+          display: -webkit-box;
+          text-overflow: ellipsis;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+        }
       }
     }
   }
@@ -296,8 +415,19 @@ single-column
       margin-bottom: 40px;
     }
 
-    .column__slider{
-      margin-bottom: 60px;
+    .others__slider{
+      margin-bottom: 50px;
+
+      @include mq(note){
+        padding: 0 50px 0;
+      }
+
+      @media (max-width: 766px){
+        padding: 0 0 80px 0;
+      }
+      @media (max-width: 599px){
+        padding: 0 0 0px 0;
+      }
 
       .slick-list{
         padding-top: 50px;
@@ -315,6 +445,12 @@ single-column
         border-radius: 100px;
         background: $bg01-color;
 
+        @media (max-width: 766px){
+          bottom: 0px;
+          top:auto;
+          transform: translateY(0);
+        }
+
         &::before,
         &::after{
           display: none;
@@ -322,9 +458,32 @@ single-column
 
         &.--prev{
           left: -80px;
+
+          @include mq(note){
+            left:-20px;
+          }
+          @include mq(tab){
+            left:-10px;
+          }
+
+          @media (max-width: 766px){
+            right:75px;
+            left: auto;
+          }
         }
         &.--next{
           right: -80px;
+
+          @include mq(note){
+            right:-20px;
+          }
+          @include mq(tab){
+            right:-10px;
+          }
+
+          @media (max-width: 766px){
+            right:15px;
+          }
         }
 
         &:hover{
@@ -417,6 +576,24 @@ single-column
         padding: 0 24px 32px;
         border-radius: 0 16px 0 16px;
         margin:0 16px;
+
+        @media (max-width:599px){
+          margin:0 0 100px 0;
+        }
+
+        &:nth-child(n+3){
+
+          @media (max-width:599px){
+            margin:0;
+          }
+        }
+
+        &:nth-child(n+4){
+
+          @media (max-width:599px){
+            display: none;
+          }
+        }
       }
       &-link{
         color:#000;
@@ -451,7 +628,7 @@ single-column
         -webkit-line-clamp: 3;
       }
 
-      .column__cat{
+      .others__cat{
         display: flex;
         flex-wrap: wrap;
         gap: 8px;

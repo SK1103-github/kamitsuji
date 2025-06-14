@@ -1,0 +1,55 @@
+@use "../base" as *;
+
+/*========================================================
+privacy
+========================================================*/
+#privacy{
+
+  .privacy{
+
+    .s-section__inner{
+
+      @include mq(sp){
+        padding: 0 20px;
+      }
+    }
+
+    .privacy-head{
+      font-size: 16px;
+      line-height: $line-height-l;
+      padding-bottom: 50px;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 50px;
+
+      @include mq(sp){
+        font-size: 14px;
+        padding-bottom: 32px;
+        margin-bottom: 32px;
+      }
+    }
+
+    dt,dd{
+      line-height: $line-height-l;
+    }
+
+    dt{
+      font-size: 16px;
+      color:$sub-color;
+      font-weight: bold;
+      margin-bottom: 16px;
+
+      @include mq(sp){
+        margin-bottom: 8px;
+      }
+    }
+
+    dd{
+      margin-bottom: 50px;
+      @include mq(sp){
+        font-size: 12px;
+        margin-bottom: 32px;
+      }
+    }
+
+  }
+}

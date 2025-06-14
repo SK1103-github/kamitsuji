@@ -3,6 +3,23 @@
 /*========================================================
 mixin
 ========================================================*/
+$breakpoints: (
+  sp: 768px,  // スマホ（iPadmini含む）
+  tab: 992px, // タブレット
+  mac: 1200px, // MacBook Air
+  note: 1440px // MacBook Pro
+);
+
+// メディアクエリ mixin（クォートなし対応）
+@mixin mq($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (max-width: map-get($breakpoints, $size)) {
+      @content;
+    }
+  } @else {
+    @warn "指定されたサイズ #{$size} は定義されていません。";
+  }
+}
 
 //矢印（→）
 @mixin svg-arrow($width, $height, $color) {

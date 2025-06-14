@@ -4,14 +4,14 @@
 
   <div class="s-page__head">
     <div class="s-page__head-inner">
-      <a href="" class="s-page__head-logo">
+      <a href="index.php" class="s-page__head-logo">
         <img src="assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
       </a>
 
       <div class="s-ttl s-page__head-ttl">
-        <span></span>
-        <h1 class="s-ttl__text s-font__en">Tax Consultant</h1>
-        <p class="s-ttl__desp">税務会計顧問</p>
+        <span class="icon-plus"></span>
+        <h1 class="s-ttl__text s-font__en fv-text__fade"><span class="fade-txt">Tax Consultant</span></h1>
+        <p class="s-ttl__desp js-page__ttl-sub --left">税務会計顧問</p>
       </div>
     </div>
 
@@ -29,9 +29,9 @@
         <div class="s-about__flex">
           <div class="s-about__item --txt">
             <div class="s-ttl --about">
-              <span></span>
-              <h2 class="s-ttl__text s-font__en">About</h2>
-              <p class="s-ttl__desp">サービス概要</p>
+              <span class="icon-plus"></span>
+              <h2 class="s-ttl__text s-font__en js-fade__content-ttl">About</h2>
+              <p class="s-ttl__desp js-fade__sec --left">サービス概要</p>
             </div>
 
             <strong class="s-about__item-ttl">法人・個人問わず、税務会計の枠を超えた<br>
@@ -53,36 +53,36 @@
       <div class="s-section__inner">
         <div class="section-ttl">
           <div class="s-ttl --recruit">
-            <span></span>
-            <h2 class="s-ttl__text s-font__en">Service</h2>
-            <p class="s-ttl__desp">サービス詳細</p>
+            <span class="icon-plus"></span>
+            <h2 class="s-ttl__text s-font__en js-fade__content-ttl">Service</h2>
+            <p class="s-ttl__desp js-fade__sec --left">サービス詳細</p>
           </div>
         </div>
 
         <div class="s-service__flex">
-          <div class="s-service__flex-item">
+          <div class="s-service__flex-item js-fade__bottom --bottom">
             <strong class="s-service__flex-ttl">月次決算</strong>
             <p class="s-service__flex-txt">毎月の決算作業を通じて、現時点での利益状況を正確に把握できるようサポートします。<br>
             作成した月次決算資料を活用し、戦略的な経営判断を後押しします。</p>
           </div>
 
-          <div class="s-service__flex-item">
+          <div class="s-service__flex-item js-fade__bottom --bottom">
             <strong class="s-service__flex-ttl">決算対策</strong>
             <p class="s-service__flex-txt">決算期が近づく前に、事前の計画と対策を立てることで、決算予測や納税額の試算を経営者様と共に進め、効果的な経営計画を支援します。</p>
           </div>
 
-          <div class="s-service__flex-item">
+          <div class="s-service__flex-item js-fade__bottom --bottom">
             <strong class="s-service__flex-ttl">決算業務</strong>
             <p class="s-service__flex-txt">法人税、所得税、消費税、地方税など、各種税務申告書の作成と提出を代行し、煩雑な決算手続きをスムーズに進めます。</p>
           </div>
 
-          <div class="s-service__flex-item">
+          <div class="s-service__flex-item js-fade__bottom --bottom">
             <strong class="s-service__flex-ttl">税務相談・節税サポート</strong>
             <p class="s-service__flex-txt">事業の状況に合わせた税務相談に加え、事務所から積極的に適切な節税プランをご提案いたします。<br>
             税負担の軽減を目指した具体的なアドバイスを提供します。</p>
           </div>
 
-          <div class="s-service__flex-item">
+          <div class="s-service__flex-item js-fade__bottom --bottom">
             <strong class="s-service__flex-ttl">特別案件・臨時対応</strong>
             <p class="s-service__flex-txt">事業承継や財務デューデリジェンス、長期的な課題への対応や、補助金の申請支援が必要な場合には、専門スタッフや提携先と連携し、最適な解決策を提案します。</p>
           </div>
@@ -97,7 +97,7 @@
 
 
     <section class="s-page__link --consultant">
-      <div class="s-section__inner">
+      <div class="s-section__inner js-fade__bottom --bottom">
         <div class="s-page__link-flex">
           <div class="s-page__flex-item --img">
             <img src="assets/images/common/kamitsuji.png" alt="代表　上辻 恭介">
@@ -109,14 +109,14 @@
 
             <div class="s-page__flex-btn">
               <div class="b-button --orange s-page__btn">
-                <a class="b-button__link" href="">料金表はこちら
+                <a class="b-button__link" href="page-price.php">料金表はこちら
                   <div class="b-button__link-arrow">
                     <span class="arrow"></span>
                   </div>
                 </a>
               </div>
               <div class="b-button --orange s-page__btn">
-                <a class="b-button__link" href="">サービス一覧を見る
+                <a class="b-button__link" href="page-service.php">サービス一覧を見る
                   <div class="b-button__link-arrow">
                     <span class="arrow"></span>
                   </div>

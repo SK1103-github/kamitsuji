@@ -1,0 +1,59 @@
+@use "../base" as *;
+
+.block{
+  display: none;
+
+  &.--mac{
+
+    @include mq(mac){
+      display: block;
+    }
+
+  }
+
+  &.--tab{
+
+    @include mq(tab){
+      display: block;
+    }
+
+  }
+
+  &.--sp{
+
+    @include mq(sp){
+      display: block;
+    }
+
+  }
+
+}
+
+.none{
+  display: block;
+
+  &.--mac{
+
+    @include mq(mac){
+      display: none!important;
+    }
+
+  }
+
+  &.--tab{
+
+    @include mq(tab){
+      display: none!important;
+    }
+
+  }
+
+  &.--sp{
+
+    @include mq(tab){
+      display: none!important;
+    }
+
+  }
+
+}

@@ -11,12 +11,36 @@ other
       display: flex;
       margin-bottom: 40px;
 
+      @media (max-width:1300px){
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      @include mq(tab){
+        flex-wrap: wrap;
+        background: #F3EAD9;
+        padding: 40px 24px 30px;
+        margin-bottom: 24px;
+      }
+
       &__item{
 
         &.--txt{
           width: calc(100% - 424px);
           padding: 40px 40px 56px;
           background: #F3EAD9;
+
+          @media (max-width:1300px){
+            padding: 20px 20px 30px;
+            width: calc(100% - 450px);
+          }
+
+          @include mq(tab){
+            width: 100%;
+            order:1;
+            padding: 0;
+            background: none;
+          }
 
           &.--left{
             border-radius: 8px 0 0 8px;
@@ -27,6 +51,14 @@ other
         }
         &.--img{
           width: 424px;
+
+          @include mq(tab){
+            width: 100%;
+            order:2;
+            margin-top: 30px;
+            text-align: center;
+          }
+
         }
       }
 
@@ -36,11 +68,21 @@ other
         margin-bottom: 24px;
         display: block;
 
+        @include mq(sp){
+          line-height: $line-height-m;
+          font-size: 18px;
+        }
+
         &-sub{
           font-size: 20px;
           display: block;
           font-weight: normal;
           margin-bottom: 24px;
+
+          @include mq(sp){
+            font-size: 16px;
+            margin-bottom: 8px;
+          }
         }
       }
 

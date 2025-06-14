@@ -4,14 +4,14 @@
 
   <div class="s-page__head">
     <div class="s-page__head-inner">
-      <a href="" class="s-page__head-logo">
+      <a href="index.php" class="s-page__head-logo">
         <img src="assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
       </a>
 
       <div class="s-ttl s-page__head-ttl">
-        <span></span>
-        <h2 class="s-ttl__text s-font__en">Column</h2>
-        <p class="s-ttl__desp">コラム</p>
+        <span class="icon-plus"></span>
+        <h2 class="s-ttl__text s-font__en fv-text__fade"><span class="fade-txt">Column</span></h2>
+        <p class="s-ttl__desp js-page__ttl-sub --left">コラム</p>
       </div>
     </div>
 
@@ -340,14 +340,16 @@
             <li class="prev">
               <a href=""></a>
             </li>
-            <li class="active">1</li>
+            <li class="active">
+              <a href="">1</a>
+            </li>
             <li class="">
               <a href="">2</a>
             </li>
             <li class="">
               <a href="">3</a>
             </li>
-            <li class="">
+            <li class="dots">
               <span>・・・</span>
             </li>
             <li class="">

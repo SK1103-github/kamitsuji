@@ -4,14 +4,14 @@
 
   <div class="s-page__head">
     <div class="s-page__head-inner">
-      <a href="" class="s-page__head-logo">
+      <a href="index.php" class="s-page__head-logo">
         <img src="assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
       </a>
 
       <div class="s-ttl s-page__head-ttl">
-        <span></span>
-        <h1 class="s-ttl__text s-font__en">Company</h1>
-        <p class="s-ttl__desp">事務所情報</p>
+        <span class="icon-plus"></span>
+        <h1 class="s-ttl__text s-font__en fv-text__fade"><span class="fade-txt">Company</span></h1>
+        <p class="s-ttl__desp js-page__ttl-sub --left">事務所情報</p>
       </div>
     </div>
 
@@ -23,12 +23,12 @@
   <main class="main_content">
 
     <section class="company-content">
-      <div class="s-section__inner">
+      <div class="s-section__inner --outline">
         <div class="section-ttl">
           <div class="s-ttl --company">
-            <span></span>
-            <h2 class="s-ttl__text s-font__en">Outline</h2>
-            <p class="s-ttl__desp">基本情報</p>
+            <span class="icon-plus"></span>
+            <h2 class="s-ttl__text s-font__en js-fade__content-ttl"><span class="fade-txt">Outline</span></h2>
+            <p class="s-ttl__desp js-fade__sec --left">基本情報</p>
           </div>
         </div>
 
@@ -74,10 +74,12 @@
 
     <section class="access">
       <div class="s-section__inner">
-        <div class="s-ttl">
-          <span></span>
-          <h2 class="s-ttl__text s-font__en">Access</h2>
-          <p class="s-ttl__desp">アクセス</p>
+        <div class="section-ttl">
+          <div class="s-ttl --about">
+            <span class="icon-plus"></span>
+            <h2 class="s-ttl__text s-font__en js-fade__content-ttl"><span class="fade-txt">Access</span></h2>
+            <p class="s-ttl__desp js-fade__sec --left">アクセス</p>
+          </div>
         </div>
         <div class="access-flex">
           <div class="access-flex__txt">
@@ -95,12 +97,12 @@
 
 
 
-    <section class="greeting">
+    <section id="greeting" class="greeting">
       <div class="s-section__inner">
         <div class="s-ttl">
-          <span></span>
-          <h2 class="s-ttl__text s-font__en --white">Greeting</h2>
-          <p class="s-ttl__desp --white">代表挨拶</p>
+          <span class="icon-plus"></span>
+          <h2 class="s-ttl__text s-font__en --white js-fade__content-ttl"><span class="fade-txt">Greeting</span></h2>
+          <p class="s-ttl__desp --white js-fade__sec --left">代表挨拶</p>
         </div>
         <div class="greeting-flex">
           <div class="greeting-flex__txt">
@@ -118,7 +120,7 @@
           上辻会計事務所 代表<span>上辻 恭介</span>
           </div>
           <picture class="greeting-flex__img">
-            <img src="assets/images/company/greeting_img.png" alt="上辻会計事務所 代表 上辻 恭介">
+            <img src="assets/images/company/greeting_img.png" class="js-fade --right" alt="上辻会計事務所 代表 上辻 恭介">
           </picture>
       </div>
       </div>

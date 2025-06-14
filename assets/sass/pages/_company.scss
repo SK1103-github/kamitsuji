@@ -9,8 +9,32 @@ company
     text-align: center;
     margin-bottom: 80px;
 
+    @include mq(sp){
+      margin-bottom: 40px;
+    }
+
     .--company{
       display: inline-block;
+    }
+
+    .--about{
+
+      @include mq(sp){
+        display: inline-block;
+        margin-bottom: 0;
+      }
+    }
+
+  }
+
+  .s-section__inner{
+
+    &.--outline{
+
+      @include mq(sp){
+        padding: 50px 0;
+      }
+
     }
 
   }
@@ -21,6 +45,11 @@ company
       display: flex;
       padding: 40px 60px;
       line-height: $line-height-l;
+
+      @include mq(sp){
+        padding: 16px 32px 24px;
+        flex-wrap: wrap;
+      }
 
       &:nth-child(odd){
         background: #F3EAD9;
@@ -36,9 +65,21 @@ company
       &:nth-child(1){
         width: 19.3%;
         color:$sub-color;
+
+        @include mq(sp){
+          width: 100%;
+          display: block;
+          font-size: 16px;
+        }
       }
       &:nth-child(2){
         width: 80.7%;
+
+        @include mq(sp){
+          width: 100%;
+          display: block;
+          font-size: 15px;
+        }
       }
 
     }
@@ -51,9 +92,46 @@ company
       display: flex;
       justify-content: space-between;
 
+      @include mq(sp){
+        display: block;
+      }
+
       &__txt{
         font-size: 18px;
         line-height: $line-height-l;
+
+        @include mq(mac){
+          width: 40%;
+        }
+
+        @include mq(sp){
+          width: 100%;
+          font-size: 16px;
+          margin-bottom: 32px;
+        }
+      }
+
+      &__map{
+        @include mq(mac){
+          width: 60%;
+        }
+        @include mq(sp){
+          width: 100%;
+        }
+
+        iframe{
+
+          @include mq(mac){
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+          }
+
+          @media (max-width:700px){
+            height: 418px;
+            aspect-ratio:inherit;
+          }
+        }
       }
     }
 
@@ -66,12 +144,23 @@ company
     .greeting-flex{
       display: flex;
 
+      @include mq(sp){
+        display: block;
+      }
+
       &__txt{
         font-size: 16px;
         line-height: $line-height-l;
         color:#fff;
         padding-right: 48px;
         width: calc(100% - 520px);
+
+        @include mq(sp){
+          width: 100%;
+          font-size: 14px;
+          padding: 0;
+          margin-bottom: 50px;
+        }
 
         span{
           font-size: 24px;
@@ -82,6 +171,12 @@ company
 
       &__img{
         width: 520px;
+
+        @include mq(sp){
+          width: 100%;
+          text-align: center;
+          display: block;
+        }
       }
     }
   }
