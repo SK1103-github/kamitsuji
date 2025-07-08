@@ -8,11 +8,7 @@ section
   margin:0 auto;
   padding: 100px 0;
 
-  @include mq(note){
-    width: 90%;
-  }
-
-  @include mq(tab){
+  @include mq(mac){
     width: 100%;
     padding: 50px 20px;
   }
@@ -51,21 +47,36 @@ section
     @include mq(tab){
       padding: 50px 0;
     }
+
+    @include mq(sp){
+      padding: 0 0 30px 0;
+    }
   }
   &.--environment{
     padding: 0 0 100px;
 
     @include mq(note){
-      padding: 0;
+      padding: 0 20px;
     }
   }
   &.--message{
     padding: 120px 0;
 
-    @include mq(sp){
-      padding: 60px 0;
+    @include mq(mac){
+      padding: 60px 20px;
     }
   }
+  &.--contact{
+    width: 950px;
+
+    @include mq(sp){
+      width: 100%;
+    }
+  }
+  &.--thanks{
+    padding: 0 0 70px;
+  }
+
 }
 
 .s-page__head{
@@ -81,11 +92,11 @@ section
     height: 470px;
     background: url(../images/common/page_head_bg.png) no-repeat;
     background-position: center bottom;
+    background-size: cover;
 
-    @include mq(note){
+    @include mq(tab){
       height: 325px;
-      padding: 0 20px;
-      background-size: cover;
+      padding: 0 50px;
     }
 
     @include mq(sp){
@@ -103,9 +114,15 @@ section
     left:100px;
 
     @include mq(note){
+      width: 128px;
+      top:67px;
+      left:104px;
+    }
+
+    @include mq(tab){
       width: 98px;
       top:44px;
-      left:20px;
+      left:100px;
     }
 
     @include mq(sp){
@@ -129,8 +146,12 @@ section
     h1,h2{
       font-size: 96px;
 
-      @include mq(note){
+      @include mq(tab){
         font-size: 56px;
+      }
+
+      @include mq(sp){
+        line-height: .9;
       }
 
       span{
@@ -141,6 +162,16 @@ section
     }
     p{
       font-size: 20px;
+    }
+
+    h2{
+
+      &.--first{
+
+        @include mq(sp){
+          margin: 0;
+        }
+      }
     }
   }
   &-txt{
@@ -297,9 +328,13 @@ section
 
     @include mq(sp){
       font-size: 56px;
-      display: block;
+      display: block!important;
       width: 100%;
       margin: 0 0 8px 0;
+    }
+
+    &.--service{
+      display: none;
     }
 
     &.--white{
@@ -325,6 +360,13 @@ section
 
     &.--white{
       color:#fff;
+    }
+
+    &.--service{
+
+      @include mq(sp){
+        margin-top: 10px;
+      }
     }
 
   }
@@ -368,6 +410,7 @@ contact
     color:#fff;
     justify-content: space-between;
     align-items: flex-end;
+    border-radius: 8px;
 
     @include mq(note){
       width: 100%;
@@ -377,9 +420,13 @@ contact
     @include mq(tab){
       display: block;
       margin-bottom: 50px;
+      border-radius: 0;
     }
 
     @media (max-width:700px){
+      background: url(../images/common/contact_bg_sp.png) no-repeat;
+      background-position: center center;
+      background-size: cover;
       padding: 48px 20px;
       margin-bottom: 0;
     }
@@ -414,7 +461,7 @@ contact
     display: flex;
     gap: 0 30px;
 
-    @include mq(sp){
+    @include mq(tab){
       flex-wrap: wrap;
       gap: 16px 0;
     }
@@ -425,9 +472,10 @@ contact
       overflow: hidden;
       border-radius: 8px;
 
-      @include mq(sp){
+      @include mq(tab){
         width: 60%;
         margin:0 auto;
+        height: 200px;
       }
 
       @media (max-width:700px){
@@ -523,7 +571,7 @@ contact
       width: calc(100% /3 - 32px);
       position: relative;
 
-      @include mq(sp){
+      @include mq(tab){
         width: 100%;
       }
 
@@ -560,6 +608,7 @@ contact
     font-size: 16px;
     @include mq(sp){
       text-align: left;
+      font-size: 14px;
     }
   }
 
@@ -569,6 +618,10 @@ contact
 サービス概要
 ========================================================*/
 .s-about{
+
+  @include mq(sp){
+    margin-top: 50px;
+  }
 
   .s-about__flex{
     display: flex;
@@ -580,6 +633,10 @@ contact
 
     .--about{
       margin-bottom: 48px;
+
+      @include mq(sp){
+        margin-bottom: 24px;
+      }
     }
 
   }
@@ -641,6 +698,8 @@ contact
 
     @include mq(sp){
       background: url(../images/common/page_link_bg_01_sp.png) no-repeat;
+      background-size: contain;
+      background-position: top center;
     }
   }
   &.--due-diligence{
@@ -650,6 +709,8 @@ contact
 
     @include mq(sp){
       background: url(../images/common/page_link_bg_02_sp.png) no-repeat;
+      background-size: contain;
+      background-position: top center;
     }
   }
   &.--company-setup{
@@ -659,6 +720,8 @@ contact
 
     @include mq(sp){
       background: url(../images/common/page_link_bg_03_sp.png) no-repeat;
+      background-size: contain;
+      background-position: top center;
     }
   }
   &.--other-service{
@@ -668,6 +731,8 @@ contact
 
     @include mq(sp){
       background: url(../images/common/page_link_bg_04_sp.png) no-repeat;
+      background-size: contain;
+      background-position: top center;
     }
   }
 
@@ -792,7 +857,7 @@ contact
 ========================================================*/
 .s-pager{
 
-  ul{
+  .wp-pagenavi{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -802,166 +867,147 @@ contact
       gap: 0 8px;
     }
 
-    @media (max-width:500px){
-      justify-content: space-between;
+    .current{
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      font-weight: 500;
+      font-size: 20px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: $sub-color;
+      color:#fff;
+      border:none;
+      padding-bottom: 6px;
+
+      @include mq(sp){
+        width: 38px;
+        height: 38px;
+      }
     }
 
-    li{
-      color:$sub-color;
+    .extend{
+      margin: 0;
+      border: none;
+      padding: 0;
       font-size: 20px;
+      margin-bottom: 10px;
+      color:$sub-color;
+      letter-spacing: 5px;
       font-weight: bold;
+      @include mq(sp){
+        font-size: 10px;
+        margin-bottom: 6px;
+      }
+    }
 
-      &.active{
+    .previouspostslink{
+      position: relative;
+      transform: rotate(-180deg);
 
-        a{
-          width: 48px;
-          height: 48px;
-          border-radius: 50%;
-          font-weight: bold;
-          font-size: 20px;
-          background: #fff;
-          display: flex;
-          justify-content: center;
-          text-align: center;
-          background: $sub-color;
-          color:#fff;
+      &:hover{
+        background: $sub-color;
+        &::before{
+          animation-name: transformRightLeft;
+          animation-delay: 0s;
+          @include svg-arrow(15px, 13px, ffffff);
+        }
 
-          @include mq(sp){
-            width: 38px;
-            height: 38px;
-          }
+        &::after{
+          animation-name: transformLeftRight;
+          animation-delay: 0.2s;
+          @include svg-arrow(15px, 13px, ffffff);
         }
       }
 
-      &.dots{
-        margin:0;
-        @include mq(sp){
-          font-size: 10px;
-        }
-      }
-
-      &.prev{
-        margin-right: 40px;
-
-        @include mq(sp){
-          margin-right: 0;
-        }
-
-        a{
-          position: relative;
-          transform: rotate(-180deg);
-
-          &:hover{
-            background: $sub-color;
-            &::before{
-              animation-name: transformRightLeft;
-              animation-delay: 0s;
-              @include svg-arrow(15px, 13px, ffffff);
-            }
-
-            &::after{
-              animation-name: transformLeftRight;
-              animation-delay: 0.2s;
-              @include svg-arrow(15px, 13px, ffffff);
-            }
-          }
-
-          &::before,
-          &::after{
-            content: "";
-            width:16px;
-            height: 14px;
-            @include svg-arrow(15px, 13px, F84B20);
-            position: absolute;
-            top: 0;
-            bottom:0;
-            left: 0;
-            right:0;
-            margin: auto;
-            animation-fill-mode: forwards;
-            animation-duration: 0.6s;
-            display: block;
-          }
-
-          &::after{
-            transform: translateX(-200%);
-          }
-        }
-
-      }
-      &.next{
-        margin-left: 40px;
-
-        @include mq(sp){
-          margin-left: 0;
-        }
-
-        a{
-          position: relative;
-
-          &:hover{
-            background: $sub-color;
-            &::before{
-              animation-name: transformRightLeft;
-              animation-delay: 0s;
-              @include svg-arrow(15px, 13px, ffffff);
-            }
-
-            &::after{
-              animation-name: transformLeftRight;
-              animation-delay: 0.2s;
-              @include svg-arrow(15px, 13px, ffffff);
-            }
-          }
-
-          &::before,
-          &::after{
-            content: "";
-            width:16px;
-            height: 14px;
-            @include svg-arrow(15px, 13px, F84B20);
-            position: absolute;
-            top: 0;
-            bottom:0;
-            left: 0;
-            right:0;
-            margin: auto;
-            animation-fill-mode: forwards;
-            animation-duration: 0.6s;
-            display: block;
-          }
-
-          &::after{
-            transform: translateX(-200%);
-          }
-        }
-
-      }
-
-      a{
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        font-weight: bold;
-        font-size: 20px;
-        color:$sub-color;
-        background: #fff;
+      &::before,
+      &::after{
+        content: "";
+        width:16px;
+        height: 14px;
+        @include svg-arrow(15px, 13px, F84B20);
+        position: absolute;
+        top: 0;
+        bottom:0;
+        left: 0;
+        right:0;
+        margin: auto;
+        animation-fill-mode: forwards;
+        animation-duration: 0.6s;
         display: block;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
+      }
 
-        @include mq(sp){
-          width: 38px;
-          height: 38px;
+      &::after{
+        transform: translateX(-200%);
+      }
+    }
+    .nextpostslink{
+      position: relative;
+
+      &:hover{
+        background: $sub-color;
+        &::before{
+          animation-name: transformRightLeft;
+          animation-delay: 0s;
+          @include svg-arrow(15px, 13px, ffffff);
         }
 
-        &:hover{
-          background: $sub-color;
-          color:#fff;
+        &::after{
+          animation-name: transformLeftRight;
+          animation-delay: 0.2s;
+          @include svg-arrow(15px, 13px, ffffff);
         }
+      }
 
+      &::before,
+      &::after{
+        content: "";
+        width:16px;
+        height: 14px;
+        @include svg-arrow(15px, 13px, F84B20);
+        position: absolute;
+        top: 0;
+        bottom:0;
+        left: 0;
+        right:0;
+        margin: auto;
+        animation-fill-mode: forwards;
+        animation-duration: 0.6s;
+        display: block;
+      }
+
+      &::after{
+        transform: translateX(-200%);
+      }
+    }
+
+    a{
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      font-weight: 500;
+      font-size: 20px;
+      color:$sub-color;
+      background: #fff;
+      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border:none;
+      padding-bottom: 6px;
+
+      @include mq(sp){
+        width: 38px;
+        height: 38px;
+      }
+
+      &:hover{
+        background: $sub-color;
+        color:#fff;
       }
 
     }

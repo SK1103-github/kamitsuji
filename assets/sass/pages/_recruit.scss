@@ -17,13 +17,14 @@ recruit
       margin:0 auto;
       text-align: center;
 
-      @include mq(mac){
-        width: 80%;
-      }
-      @include mq(sp){
+      @include mq(tab){
         width: 100%;
         padding: 0 20px;
         text-align: left;
+      }
+
+      .section-ttl{
+        text-align: center;
       }
 
       &__ttl{
@@ -33,16 +34,20 @@ recruit
         color:$sub-color;
         text-align: center;
         position: relative;
+        display: inline-block;
 
         @include mq(mac){
-          width: 50%;
+          font-size: 24px;
+        }
+
+        @include mq(tab){
           margin:0 auto 80px;
           font-size: 24px;
         }
 
         @include mq(sp){
-          width: 60%;
-          margin-bottom: 30px;
+          margin-bottom: 24px;
+          font-size: 20px;
         }
 
         .icon-plus{
@@ -51,6 +56,11 @@ recruit
           position: absolute;
           top: 0;
           left: 0;
+
+          @include mq(sp){
+            width: 24px;
+            height: 24px;
+          }
 
           &:before{
             content: "";
@@ -64,12 +74,21 @@ recruit
             top: 0;
             left: 0;
             display: block;
+
+            @include mq(sp){
+              width: 24px;
+              height: 24px;
+            }
           }
         }
 
         &-txt{
           display: inline-block;
           padding-left: 64px;
+
+          @include mq(sp){
+            padding-left: 32px;
+          }
         }
       }
 
@@ -77,6 +96,11 @@ recruit
         margin-bottom: 60px;
         font-size: 16px;
         line-height: $line-height-l;
+        text-align: left;
+
+        @include mq(sp){
+          font-size: 14px;
+        }
       }
 
     }
@@ -84,7 +108,6 @@ recruit
     .recruit__img{
 
       @include mq(tab){
-        margin-top: -150px;
         position: relative;
         width: 100%;
         height: 310px;
@@ -95,6 +118,10 @@ recruit
         margin-top: 48px;
       }
 
+      img{
+        border-radius: 8px;
+      }
+
       .recruit__img-01{
         position: absolute;
         width: 294px;
@@ -103,10 +130,6 @@ recruit
         left:0;
 
         @include mq(mac){
-          width: 250px;
-        }
-
-        @include mq(tab){
           width: 195px;
           top:0;
         }
@@ -123,15 +146,7 @@ recruit
         right:0;
 
         @include mq(mac){
-          width: 250px;
-        }
-
-        @include mq(tab){
           width: 150px;
-          right:20px;
-        }
-
-        @include mq(sp){
           top:70px;
           right: 0;
         }
@@ -145,20 +160,11 @@ recruit
         width: 216px;
         height: auto;
         bottom:0;
-        left:210px;
+        left:100px;
 
         @include mq(mac){
-          width: 150px;
-          left:150px;
-        }
-
-        @include mq(tab){
           width: 140px;
-          left:34px;
           bottom:40px;
-        }
-
-        @include mq(sp){
           left:34px;
         }
 
@@ -171,15 +177,9 @@ recruit
         width: 178px;
         height: auto;
         bottom:0;
-        right:229px;
+        right:148px;
 
         @include mq(mac){
-          width: 150px;
-          right:150px;
-          bottom:-50px;
-        }
-
-        @include mq(tab){
           width: 192px;
           right:0;
           bottom: 0;
@@ -210,24 +210,25 @@ recruit
     background-position: top center;
     padding: 170px 0 100px;
 
-    @include mq(mac){
-      padding: 0 0 100px;
+    @include mq(note){
+      padding: 70px 0 100px;
     }
 
-    @include mq(sp){
+    @include mq(tab){
       background: url(../images/recruit/culture_bg_sp.png) no-repeat;
       background-size: contain;
       background-position: top center;
-      padding: 120px 0 100px;
+      padding: 70px 0 100px;
     }
 
     .culture-content{
-      padding: 64px;
+      padding: 64px 240px 64px 64px;
       background: #fff;
       position: relative;
 
       @include mq(sp){
         padding: 32px 24px 50px;
+        border-radius: 8px;
       }
     }
 
@@ -244,7 +245,11 @@ recruit
     .section_ttl{
 
       @include mq(sp){
-        text-align: center;
+        text-align: left;
+      }
+
+      .s-ttl{
+        margin-bottom: 64px;
       }
     }
 
@@ -256,6 +261,11 @@ recruit
       margin-bottom: 30px;
       display: block;
 
+      @include mq(sp){
+        padding-left: 28px;
+        font-size: 18px;
+      }
+
       &::before{
         content:"";
         width: 24px;
@@ -265,6 +275,11 @@ recruit
         left:0;
         @include svg-plus(24px, 24px, F84B20);
         display: block;
+
+        @include mq(sp){
+          width: 20px;
+          height: 20px;
+        }
       }
 
     }
@@ -284,6 +299,8 @@ recruit
           width: 100%;
           display: block;
           text-align: center;
+          line-height: $line-height-m;
+          padding: 16px 0;
         }
       }
 
@@ -312,7 +329,7 @@ recruit
 
       @include mq(sp){
         transform: translateY(0) rotate(0);
-        font-size: 48px;
+        font-size: 42px;
         text-align: center;
         top:auto;
         bottom:-80px;
@@ -325,7 +342,7 @@ recruit
         @include mq(sp){
           left:0;
           right:0;
-          transform: translateY(0) rotate(0);
+          transform: translateY(-5px) rotate(0);
         }
       }
     }
@@ -335,7 +352,15 @@ recruit
   .environment{
 
     @include mq(sp){
-      padding: 0 20px;
+      padding: 0 0px 80px;
+    }
+
+    .s-ttl__desp{
+
+      @include mq(sp){
+        display: inline-block;
+        margin:0 auto 10px;
+      }
     }
 
     .environment-flex{
@@ -349,8 +374,9 @@ recruit
       }
 
       &:last-child{
+        border-bottom: 0;
 
-        @include mq(note){
+        @include mq(sp){
           padding-bottom: 0;
           margin-bottom: 0;
         }
@@ -360,17 +386,17 @@ recruit
 
         &.--txt{
           width: calc(100% - 522px);
-          padding: 48px 40px 56px;
+          padding: 48px 40px 0;
 
           @include mq(mac){
             width: 50%;
-            padding: 20px 20px 40px;
+            padding: 20px 20px 0;
           }
 
           @include mq(sp){
             width: 100%;
             order:1;
-            padding: 20px 0 40px;
+            padding: 0 0;
           }
 
         }
@@ -384,6 +410,7 @@ recruit
           @include mq(sp){
             width: 100%;
             order:2;
+            margin-top: 30px;
           }
 
           img{
@@ -403,7 +430,7 @@ recruit
         position: relative;
         margin-bottom: 30px;
         display: block;
-        font-weight: bold;
+        font-weight: 500;
 
         &::before{
           content:"";
@@ -434,12 +461,13 @@ recruit
   }
 
   .news{
+    background: $main-color;
 
     .news-head{
       display: flex;
       align-items: center;
 
-      @include mq(sp){
+      @include mq(tab){
         display: block;
       }
 
@@ -449,9 +477,10 @@ recruit
         margin-bottom: 80px;
         margin-left: 120px;
 
-        @include mq(sp){
+        @include mq(tab){
           margin: 0 0 40px 0px;
-          text-align: center;
+          text-align: left;
+          font-size: 14px;
         }
       }
     }
@@ -475,7 +504,6 @@ recruit
 
       @include mq(sp){
         display: block;
-        padding: 0 20px;
       }
 
       &__txt{
@@ -556,13 +584,28 @@ recruit
     background: url(../images/common/footer_bg.png) no-repeat;
     background-position: center bottom;
     background-size: contain;
-    padding-bottom: 20px;
+    padding-bottom: 100px;
+
+    @include mq(sp){
+      margin-top: 50px;
+    }
 
     .entry-inner{
       padding: 80px 0;
       background: url(../images/recruit/entry_bg.png) no-repeat;
       background-position: center center;
       background-size: cover;
+
+      @media (max-width:768px){
+        margin-bottom: 50px;
+      }
+
+      @media (max-width:500px){
+        background: url(../images/recruit/entry_bg_sp.png) no-repeat;
+        background-position: center center;
+        background-size: cover;
+        margin-bottom: 0;
+      }
 
       .section-ttl{
         text-align: center;
@@ -576,6 +619,12 @@ recruit
         line-height: $line-height-l;
         text-align: center;
         margin-bottom: 40px;
+
+        @include mq(sp){
+          font-size: 14px;
+          text-align: left;
+          padding: 0 20px;
+        }
       }
     }
 

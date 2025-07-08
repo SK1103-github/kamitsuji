@@ -25,6 +25,18 @@ contact
       border-radius: 0 8px 0 8px;
     }
 
+    .wpcf7-not-valid-tip{
+      margin-top: 10px;
+      font-family: $base-font-family-jp;
+    }
+
+    .wpcf7-response-output{
+      text-align: center;
+      font-size: 16px;
+      border: 0;
+      font-family: $base-font-family-jp;
+    }
+
     &__row{
       display: flex;
 
@@ -67,8 +79,7 @@ contact
             content:"*";
             position: absolute;
             left:-16.5px;
-            top:50%;
-            transform: translateY(-50%);
+            top:10px;
             color:#FF0000;
             font-size: 16px;
 
@@ -100,12 +111,37 @@ contact
             width: 100%;
           }
 
+          .mwform-tel-field{
+            display: flex;
+            align-items: center;
+
+            input{
+              margin: 0 5px;
+            }
+          }
+
           &.--address{
             position: relative;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
 
             @include mq(sp){
               padding-left: 26px;
             }
+
+
+              span:nth-child(1){
+                width: 30%;
+
+                @include mq(sp){
+                  width: 50%;
+                }
+              }
+              span:nth-child(2){
+                width: 100%;
+                margin:10px 0 0 0;
+              }
 
             &:before{
               content:"〒";
@@ -128,7 +164,7 @@ contact
               content:"*";
               position: absolute;
               left:-16.5px;
-              top:20px;
+              top:10px;
               color:#FF0000;
               font-size: 16px;
             }
@@ -143,6 +179,7 @@ contact
             font-size: 16px;
             outline: none;
             border:1px solid transparent;
+            font-family: $base-font-family-jp;
 
             &:focus,
             &:focus-visible{
@@ -168,7 +205,11 @@ contact
       align-items: center;
       justify-content: center;
       margin-top: 70px;
-      margin-bottom: 24px;
+
+      &+.praivacy-check{
+        margin-bottom: 24px;
+        margin-top: 10px;
+      }
 
       input{
         width: fit-content;
@@ -218,6 +259,29 @@ contact
 
       label{
         cursor: pointer;
+      }
+    }
+
+    .submit-button{
+
+      .b-button__link{
+        padding-left: 0;
+        &:hover input{
+          color:$sub-color;
+        }
+      }
+
+      input{
+        cursor: pointer;
+        width: 264px;
+        height: 64px;
+        border-radius: 100px;
+        background: none;
+        border:none;
+        color:#fff;
+        font-size: 16px;
+        text-align: left;
+        padding-left: 32px;
       }
     }
   }
@@ -382,6 +446,7 @@ contact
         display: block;
         font-size: 24px;
         margin-bottom: 40px;
+        line-height: $line-height-m;
 
         @include mq(sp){
           font-size: 20px;

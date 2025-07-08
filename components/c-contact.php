@@ -21,7 +21,7 @@
             </div>
             <p class="b-button__link-txt">06-4303-4877<span>営業時間 / 平日9:00〜17:00</span></p>
           </a>
-          <a class="b-button__link --mail" href="page-contact.php">
+          <a class="b-button__link --mail" href="<?php echo esc_url( home_url() ); ?>/contact">
             <div class="b-button__link-arrow --mail">
               <span class="arrow"></span>
             </div>

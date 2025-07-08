@@ -1,16 +1,17 @@
+
 <?php include('header.php'); ?>
 <!--========== ▼ article　（ページ毎にid名を変更） ==========-->
 <article id="about" class="">
 
   <div class="s-page__head">
     <div class="s-page__head-inner">
-      <a href="index.php" class="s-page__head-logo">
-        <img src="assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
+      <a href="<?php echo esc_url( home_url() ); ?>" class="s-page__head-logo">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
       </a>
 
       <div class="s-ttl s-page__head-ttl">
         <span class="icon-plus"></span>
-        <h1 class="s-ttl__text s-font__en fv-text__fade">
+        <h1 class="s-ttl__text s-font__en page-text__fade">
           <span class="fv-text">About us</span>
         </h1>
         <p class="s-ttl__desp js-page__ttl-sub --left">上辻会計事務所について</p>
@@ -28,7 +29,7 @@
       <div class="s-section__inner">
         <div class="about-point__flex js-fade --bottom">
           <picture class="about-point__flex-item --left">
-            <img src="assets/images/top/about_img_01.png" alt="30年以上の豊富な経験と実績">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/about_img_01.png" alt="30年以上の豊富な経験と実績">
           </picture>
           <div class="about-point__flex-item --right">
             <div class="about-point__ttl">
@@ -46,7 +47,7 @@
 
         <div class="about-point__flex js-fade --bottom">
           <picture class="about-point__flex-item --left">
-            <img src="assets/images/top/about_img_02.png" alt="幅広いサービスの提供">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/about_img_02.png" alt="幅広いサービスの提供">
           </picture>
           <div class="about-point__flex-item --right">
             <div class="about-point__ttl">
@@ -65,7 +66,7 @@
 
         <div class="about-point__flex js-fade --bottom">
           <picture class="about-point__flex-item --left">
-            <img src="assets/images/top/about_img_03.png" alt="DXの活用でスマートな経営を">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/about_img_03.png" alt="DXの活用でスマートな経営を">
           </picture>
           <div class="about-point__flex-item --right">
             <div class="about-point__ttl">
@@ -76,7 +77,7 @@
             また、スプレッドシートを駆使して、詳細な経理業務や資金繰表作成を行い、正確なデータに基づいた戦略的な意思決定を支援しています。さらに、ペーパーレス化を進めることで、書類管理の効率化を実現し、クライアント様の業務を円滑に進められるようサポートしています。</p>
             <picture class="about-point__img">
               <source media="(max-width: 768px)" srcset="assets/images/about/tool_icon_sp.png" type="image/png">
-              <img src="assets/images/about/tool_icon.png" alt="DXの活用でスマートな経営を">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about/tool_icon.png" alt="DXの活用でスマートな経営を">
             </picture>
             <span class="about-point__num s-font__en">03</span>
           </div>

@@ -4,14 +4,15 @@
 
   <div class="s-page__head">
     <div class="s-page__head-inner">
-      <a href="index.php" class="s-page__head-logo">
-        <img src="assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
+      <a href="<?php echo esc_url( home_url() ); ?>" class="s-page__head-logo">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
       </a>
 
       <div class="s-ttl s-page__head-ttl">
         <span class="icon-plus"></span>
-        <h1 class="s-ttl__text s-font__en fv-text__fade"><span class="fade-txt">Tax Consultant</span></h1>
-        <p class="s-ttl__desp js-page__ttl-sub --left">税務会計顧問</p>
+        <h2 class="s-ttl__text s-font__en page-text__fade block --sp --first"><span class="fade-txt">Tax</span></h2>
+        <h2 class="s-ttl__text s-font__en page-text__fade block --sp"><span class="fade-txt">Consultant</span></h2>
+        <p class="s-ttl__desp js-page__ttl-sub --left --service">税務会計顧問</p>
       </div>
     </div>
 
@@ -28,13 +29,15 @@
       <div class="s-section__inner">
         <div class="s-about__flex">
           <div class="s-about__item --txt">
-            <div class="s-ttl --about">
-              <span class="icon-plus"></span>
-              <h2 class="s-ttl__text s-font__en js-fade__content-ttl">About</h2>
-              <p class="s-ttl__desp js-fade__sec --left">サービス概要</p>
+            <div class="about-ttl">
+              <div class="s-ttl --about">
+                <span class="icon-plus"></span>
+                <h2 class="s-ttl__text s-font__en js-fade__content-ttl">About</h2>
+                <p class="s-ttl__desp js-fade__sec --left">サービス概要</p>
+              </div>
             </div>
 
-            <strong class="s-about__item-ttl">法人・個人問わず、税務会計の枠を超えた<br>
+            <strong class="s-about__item-ttl">法人・個人問わず、税務会計の枠を超えた<br class="none --sp">
             経営全般のサポートのために伴走いたします</strong>
             <p class="s-about__item-txt">私たちは、お客様の経営を全力でサポートし、あらゆる課題解決に導きます。税務顧問として、会計・税務の幅広いニーズに対応。記帳代行から決算書・各種申告書作成、税務調査対応まで、丁寧かつ迅速に支援します。<br>
             <br>
@@ -42,9 +45,10 @@
             私たちは単なる「税務処理代行」ではなく、信頼できるパートナーとして、お客様と共に成長し、最適なソリューションをお届けします。</p>
 
           </div>
-          <div class="s-about__item">
-            <img src="assets/images/common/about_img_01.png" class="s-about__item-img" alt="サービス概要">
-          </div>
+          <picture class="s-about__item">
+            <source media="(max-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/about_img_01_sp.png" type="image/png">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about_img_01.png" class="s-about__item-img" alt="サービス概要">
+          </picture>
         </div>
       </div>
     </section>
@@ -100,7 +104,7 @@
       <div class="s-section__inner js-fade__bottom --bottom">
         <div class="s-page__link-flex">
           <div class="s-page__flex-item --img">
-            <img src="assets/images/common/kamitsuji.png" alt="代表　上辻 恭介">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/kamitsuji.png" alt="代表　上辻 恭介">
             <p>代表 <span>上辻 恭介</span></p>
           </div>
           <div class="s-page__flex-item --txt">
@@ -109,14 +113,14 @@
 
             <div class="s-page__flex-btn">
               <div class="b-button --orange s-page__btn">
-                <a class="b-button__link" href="page-price.php">料金表はこちら
+                <a class="b-button__link" href="<?php echo esc_url( home_url() ); ?>/price">料金表はこちら
                   <div class="b-button__link-arrow">
                     <span class="arrow"></span>
                   </div>
                 </a>
               </div>
               <div class="b-button --orange s-page__btn">
-                <a class="b-button__link" href="page-service.php">サービス一覧を見る
+                <a class="b-button__link" href="<?php echo esc_url( home_url() ); ?>/service">サービス一覧を見る
                   <div class="b-button__link-arrow">
                     <span class="arrow"></span>
                   </div>

@@ -4,14 +4,15 @@
 
   <div class="s-page__head">
     <div class="s-page__head-inner">
-      <a href="index.php" class="s-page__head-logo">
-        <img src="assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
+      <a href="<?php echo esc_url( home_url() ); ?>" class="s-page__head-logo">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
       </a>
 
       <div class="s-ttl s-page__head-ttl">
         <span class="icon-plus"></span>
-        <h1 class="s-ttl__text s-font__en fv-text__fade"><span class="fade-txt">Due Diligence</span></h1>
-        <p class="s-ttl__desp js-page__ttl-sub --left">財務デューデリジェンス</p>
+        <h2 class="s-ttl__text s-font__en page-text__fade block --sp --first"><span class="fade-txt">Due</span></h2>
+        <h2 class="s-ttl__text s-font__en page-text__fade block --sp"><span class="fade-txt">Diligence</span></h2>
+        <p class="s-ttl__desp js-page__ttl-sub --left --service">財務デューデリジェンス</p>
       </div>
     </div>
 
@@ -26,10 +27,12 @@
       <div class="s-section__inner">
         <div class="s-about__flex">
           <div class="s-about__item --txt">
-            <div class="s-ttl --about">
-              <span class="icon-plus"></span>
-              <h2 class="s-ttl__text s-font__en js-fade__content-ttl">About</h2>
-              <p class="s-ttl__desp js-fade__sec --left">サービス概要</p>
+            <div class="about-ttl">
+              <div class="s-ttl --about">
+                <span class="icon-plus"></span>
+                <h2 class="s-ttl__text s-font__en js-fade__content-ttl">About</h2>
+                <p class="s-ttl__desp js-fade__sec --left">サービス概要</p>
+              </div>
             </div>
             <strong class="s-about__item-ttl">確かな判断材料を求めている、<br class="none --sp">
             経営者・意思決定者のために</strong>
@@ -40,9 +43,10 @@
             事業承継や再編計画、資金調達にも対応し、クライアントの成功を支える最適なソリューションを提供いたします。</p>
 
           </div>
-          <div class="s-about__item">
-            <img src="assets/images/common/about_img_02.png" class="s-about__item-img" alt="サービス概要">
-          </div>
+          <picture class="s-about__item">
+            <source media="(max-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/about_img_02_sp.png" type="image/png">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about_img_02.png" class="s-about__item-img" alt="サービス概要">
+          </picture>
         </div>
       </div>
     </section>
@@ -102,7 +106,7 @@
       <div class="s-section__inner js-fade__bottom --bottom">
         <div class="s-page__link-flex">
           <div class="s-page__flex-item --img">
-            <img src="assets/images/common/kamitsuji.png" alt="代表　上辻 恭介">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/kamitsuji.png" alt="代表　上辻 恭介">
             <p>代表 <span>上辻 恭介</span></p>
           </div>
           <div class="s-page__flex-item --txt">
@@ -111,14 +115,14 @@
 
             <div class="s-page__flex-btn">
               <div class="b-button --orange s-page__btn">
-                <a class="b-button__link" href="page-price.php">料金表はこちら
+                <a class="b-button__link" href="<?php echo esc_url( home_url() ); ?>/price">料金表はこちら
                   <div class="b-button__link-arrow">
                     <span class="arrow"></span>
                   </div>
                 </a>
               </div>
               <div class="b-button --orange s-page__btn">
-                <a class="b-button__link" href="page-service.php">サービス一覧を見る
+                <a class="b-button__link" href="<?php echo esc_url( home_url() ); ?>/service">サービス一覧を見る
                   <div class="b-button__link-arrow">
                     <span class="arrow"></span>
                   </div>

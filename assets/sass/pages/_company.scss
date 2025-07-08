@@ -80,7 +80,11 @@ company
           display: block;
           font-size: 15px;
         }
+        &.--setup{
+          line-height: $line-height-l;
+        }
       }
+
 
     }
 

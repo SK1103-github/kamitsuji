@@ -4,13 +4,13 @@
 
   <div class="s-page__head">
     <div class="s-page__head-inner">
-      <a href="index.php" class="s-page__head-logo">
-        <img src="assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
+      <a href="<?php echo esc_url( home_url() ); ?>" class="s-page__head-logo">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
       </a>
 
       <div class="s-ttl s-page__head-ttl">
         <span class="icon-plus"></span>
-        <h1 class="s-ttl__text s-font__en fv-text__fade"><span class="fade-txt">Recruit</span></h1>
+        <h1 class="s-ttl__text s-font__en page-text__fade"><span class="fade-txt">Recruit</span></h1>
         <p class="s-ttl__desp js-page__ttl-sub --left">採用情報</p>
       </div>
     </div>
@@ -24,11 +24,13 @@
     <section class="recruit">
       <div class="s-section__inner recruit__inner --recruit">
         <div class="recruit-head">
-          <p class="recruit-head__ttl js-fade__delay --bottom">
-            <span class="icon-plus"></span>
-            <span class="recruit-head__ttl-txt">安心と信頼を共に築く、<br>
-            税務のプロフェッショナルへ。</span>
-          </p>
+          <div class="section-ttl">
+            <p class="recruit-head__ttl js-fade__delay --bottom">
+              <span class="icon-plus"></span>
+              <span class="recruit-head__ttl-txt">安心と信頼を共に築く、<br>
+              税務のプロフェッショナルへ。</span>
+            </p>
+          </div>
 
           <p class="recruit-head__txt js-fade__delay --bottom">
             上辻会計事務所は、企業や個人のお客様を支える税務・会計のパートナーです。お客様の課題に寄り添い、最適なソリューションを提供することで、安心と信頼を築いてきました。<br>
@@ -43,13 +45,13 @@
         </div>
 
         <picture class="recruit__img">
-          <img class="recruit__img-01 js-fade --left" src="assets/images/top/recruit_img01.png" alt="" loading="lazy">
-          <img class="recruit__img-02 js-fade --right" src="assets/images/top/recruit_img02.png" alt="" loading="lazy">
-          <img class="recruit__img-03 none --tab js-fade --left" src="assets/images/top/recruit_img03.png" alt="" loading="lazy">
-          <img class="recruit__img-04 none --tab js-fade --right" src="assets/images/top/recruit_img04.png" alt="" loading="lazy">
+          <img class="recruit__img-01 js-fade --left" src="<?php echo get_template_directory_uri(); ?>/assets/images/top/recruit_img01.png" alt="" loading="lazy">
+          <img class="recruit__img-02 js-fade --right" src="<?php echo get_template_directory_uri(); ?>/assets/images/top/recruit_img02.png" alt="" loading="lazy">
+          <img class="recruit__img-03 none --mac js-fade --left" src="<?php echo get_template_directory_uri(); ?>/assets/images/top/recruit_img03.png" alt="" loading="lazy">
+          <img class="recruit__img-04 none --mac js-fade --right" src="<?php echo get_template_directory_uri(); ?>/assets/images/top/recruit_img04.png" alt="" loading="lazy">
 
-          <img class="recruit__img-03 block --tab js-fade --left" src="assets/images/top/recruit_img03_sp.png" alt="" loading="lazy">
-          <img class="recruit__img-04 block --tab js-fade --right" src="assets/images/top/recruit_img04_sp.png" alt="" loading="lazy">
+          <img class="recruit__img-03 block --mac js-fade --left" src="<?php echo get_template_directory_uri(); ?>/assets/images/top/recruit_img03_sp.png" alt="" loading="lazy">
+          <img class="recruit__img-04 block --mac js-fade --right" src="<?php echo get_template_directory_uri(); ?>/assets/images/top/recruit_img04_sp.png" alt="" loading="lazy">
         </picture>
       </div>
     </section>
@@ -73,9 +75,9 @@
           <strong class="culture-ttl">上辻会計事務所の4つの価値観</strong>
 
           <div class="culture-list">
-            <div class="culture-list__item">お客様に寄り添い、常に新しい価値を追求する</div>
+            <div class="culture-list__item">お客様に寄り添い、<br class="block --sp">常に新しい価値を追求する</div>
             <div class="culture-list__item">柔軟な発想と行動力で変化を楽しむ</div>
-            <div class="culture-list__item">プロフェッショナルとして学び続ける姿勢を重視する</div>
+            <div class="culture-list__item">プロフェッショナルとして<br class="block --sp">学び続ける姿勢を重視する</div>
             <div class="culture-list__item">自己成長を支援し、主体性を尊重する</div>
           </div>
           <p class="culture-txt__en s-font__en js-fade__delay --bottom">United as a team,<br>
@@ -102,13 +104,13 @@
             <p class="environment-flex__txt">勤務中は、集中して業務に取り組むことを重視しており、一人ひとりが効率的に仕事を進められる環境を整えています。業務中の生産性を高めることで、無駄を省き、仕事を定時内で終えられるよう工夫しています。夕方5時以降は、自分の時間を大切にできるライフスタイルを実現できています。趣味や家族との時間、自己成長のための学びに使うなど、仕事とプライベートをバランスよく充実させることができます。</p>
           </div>
           <div class="environment-flex__item --img">
-            <img class="environment-flex__img js-fade --right" src="assets/images/recruit/environment_img01.png" alt="メリハリ" loading="lazy">
+            <img class="environment-flex__img js-fade --right" src="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/environment_img01.png" alt="メリハリ" loading="lazy">
           </div>
         </div>
 
         <div class="environment-flex">
           <div class="environment-flex__item --img">
-            <img class="environment-flex__img js-fade --left" src="assets/images/recruit/environment_img02.png" alt="心地良さ" loading="lazy">
+            <img class="environment-flex__img js-fade --left" src="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/environment_img02.png" alt="心地良さ" loading="lazy">
           </div>
           <div class="environment-flex__item --txt">
             <strong class="environment-flex__ttl">心地良さ
@@ -130,7 +132,7 @@
             また、エクシブの宿泊手配（宿泊費自腹）や京都祇園での春の都をどりの観賞や、お茶屋さんに舞妓さんや芸妓さんを招いての会食等など、特別なイベントも魅力の一つです。</p>
           </div>
           <div class="environment-flex__item --img">
-            <img class="environment-flex__img js-fade --right" src="assets/images/recruit/environment_img03.png" alt="リフレッシュ" loading="lazy">
+            <img class="environment-flex__img js-fade --right" src="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/environment_img03.png" alt="リフレッシュ" loading="lazy">
           </div>
         </div>
       </div>
@@ -150,6 +152,14 @@
         </div>
 
         <?php include('components/c-news.php'); ?>
+
+        <div class="b-button --orange">
+          <a class="b-button__link" href="<?php echo esc_url( home_url() ); ?>/category/news-recruit/">一覧を見る
+            <div class="b-button__link-arrow">
+              <span class="arrow"></span>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -179,7 +189,7 @@
 
           </div>
           <picture class="message-flex__img">
-            <img src="assets/images/recruit/message_img.png" class="js-fade --right" alt="上辻会計事務所 代表 上辻 恭介">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/message_img.png" class="js-fade --right" alt="上辻会計事務所 代表 上辻 恭介">
           </picture>
         </div>
       </div>

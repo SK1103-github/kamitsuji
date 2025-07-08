@@ -9,6 +9,7 @@ single-column
     display: flex;
     justify-content: space-between;
     margin-bottom: 120px;
+    margin-top: 80px;
 
     @include mq(note){
       margin-top: 50px;
@@ -20,10 +21,32 @@ single-column
     }
 
     &__item{
-      width: 50%;
 
       @include mq(tab){
         width: 100%;
+      }
+
+      &:nth-child(1){
+        width: 60%;
+
+        @include mq(note){
+          width: 50%;
+        }
+
+        @include mq(sp){
+          width: 100%;
+        }
+      }
+      &:nth-child(2){
+        width: 40%;
+
+        @include mq(note){
+          width: 50%;
+        }
+
+        @include mq(sp){
+          width: 100%;
+        }
       }
 
       &+.head-flex__item{
@@ -80,6 +103,13 @@ single-column
       }
       &-img{
         width: 100%;
+        height: 400px;
+        display: block;
+        border-radius: 8px 0 0 8px;
+
+        @include mq(sp){
+          height: 210px;
+        }
       }
     }
   }
@@ -128,6 +158,14 @@ single-column
         font-size: 14px;
       }
 
+      a{
+        color:$sub-color;
+
+        &:hover{
+          opacity: .7;
+        }
+      }
+
       &:before{
         counter-increment: number 1;
         content: counter(number) ".　";
@@ -137,10 +175,11 @@ single-column
   }
 
   .content{
+    line-height: $line-height-l;
+    font-family: $base-font-family-jp!important;
 
     *{
       margin-bottom: 32px;
-      line-height: $line-height-l;
 
       @include mq(sp){
         margin-bottom: 24px;
@@ -208,6 +247,10 @@ single-column
       font-size: 16px;
       position: relative;
 
+      &:hover{
+        opacity: 0.7;
+      }
+
       @media (max-width:599px){
         width: 100%;
       }
@@ -243,7 +286,6 @@ single-column
     &-point{
       padding: 60px 40px;
       background: #F3EAD9;
-      margin-bottom: 120px;
 
       @include mq(sp){
         margin-bottom: 50px;
@@ -289,6 +331,7 @@ single-column
   .prev-next__flex{
     display: flex;
     position: relative;
+    margin-top: 120px;
 
     &::before{
       content:"";
@@ -312,6 +355,15 @@ single-column
       }
       @include mq(sp){
         padding: 10px 16px 10px 30px;
+      }
+
+      &.--back{
+        display: flex;
+        align-items: center;
+
+        span{
+          margin-bottom: 0;
+        }
       }
 
       &.--next{
@@ -644,6 +696,7 @@ single-column
             border:1px solid $bg02-color;
             border-radius: 100px;
             font-size: 12px;
+            margin: 0;
 
             &:hover{
               opacity: .6;

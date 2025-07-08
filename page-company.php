@@ -4,13 +4,13 @@
 
   <div class="s-page__head">
     <div class="s-page__head-inner">
-      <a href="index.php" class="s-page__head-logo">
-        <img src="assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
+      <a href="<?php echo esc_url( home_url() ); ?>" class="s-page__head-logo">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
       </a>
 
       <div class="s-ttl s-page__head-ttl">
         <span class="icon-plus"></span>
-        <h1 class="s-ttl__text s-font__en fv-text__fade"><span class="fade-txt">Company</span></h1>
+        <h1 class="s-ttl__text s-font__en page-text__fade"><span class="fade-txt">Company</span></h1>
         <p class="s-ttl__desp js-page__ttl-sub --left">事務所情報</p>
       </div>
     </div>
@@ -56,7 +56,7 @@
           </div>
           <div class="company-info__row">
             <div class="company-info__item">主な事業内容</div>
-            <div class="company-info__item">会社設立支援<br>
+            <div class="company-info__item --setup">会社設立支援<br>
             財務デューデリジェンスのサポート<br>
             経営計画の立案、資金計画のシミュレーション<br>
             事業承継対策<br>
@@ -120,7 +120,7 @@
           上辻会計事務所 代表<span>上辻 恭介</span>
           </div>
           <picture class="greeting-flex__img">
-            <img src="assets/images/company/greeting_img.png" class="js-fade --right" alt="上辻会計事務所 代表 上辻 恭介">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/greeting_img.png" class="js-fade --right" alt="上辻会計事務所 代表 上辻 恭介">
           </picture>
       </div>
       </div>

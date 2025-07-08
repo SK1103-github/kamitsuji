@@ -1,150 +1,106 @@
-<?php
-$page = basename($_SERVER['PHP_SELF']);
-if ($page == "index.php" || $page == "page-news.php"): ?>
-
+<?php if (is_page('news')): ?>
 <div class="c-news">
-  <a href="single.php" class="c-news__card">
-    <span class="c-news__card-date">2024.4.1</span>
-    <span class="c-news__card-cat">お知らせ</span>
-    <h3 class="c-news__card-ttl">ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。</h3>
-    <span class="c-news__card-arrow"></span>
-  </a>
+<?php
+  $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+  $the_query = new WP_Query(array(
+    'post_status' => 'publish',
+    'paged' => $paged,
+    'posts_per_page' => 8, // 1ページあたり1件表示
+    'orderby' => 'date',
+    'order' => 'DESC',
+  ));
+?>
 
-  <a href="single.php" class="c-news__card">
-    <span class="c-news__card-date">2024.4.1</span>
-    <span class="c-news__card-cat">お知らせ</span>
-    <h3 class="c-news__card-ttl">ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。</h3>
-    <span class="c-news__card-arrow"></span>
-  </a>
-
-  <a href="single.php" class="c-news__card">
-    <span class="c-news__card-date">2024.4.1</span>
-    <span class="c-news__card-cat">お知らせ</span>
-    <h3 class="c-news__card-ttl">ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。</h3>
-    <span class="c-news__card-arrow"></span>
-  </a>
-
-  <a href="single.php" class="c-news__card">
-    <span class="c-news__card-date">2024.4.1</span>
-    <span class="c-news__card-cat">お知らせ</span>
-    <h3 class="c-news__card-ttl">ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。</h3>
-    <span class="c-news__card-arrow"></span>
-  </a>
-
-  <a href="single.php" class="c-news__card">
-    <span class="c-news__card-date">2024.4.1</span>
-    <span class="c-news__card-cat">お知らせ</span>
-    <h3 class="c-news__card-ttl">ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。</h3>
-    <span class="c-news__card-arrow"></span>
-  </a>
-
-  <a href="single.php" class="c-news__card">
-    <span class="c-news__card-date">2024.4.1</span>
-    <span class="c-news__card-cat">お知らせ</span>
-    <h3 class="c-news__card-ttl">ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。</h3>
-    <span class="c-news__card-arrow"></span>
-  </a>
-
-  <a href="single.php" class="c-news__card">
-    <span class="c-news__card-date">2024.4.1</span>
-    <span class="c-news__card-cat">お知らせ</span>
-    <h3 class="c-news__card-ttl">ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。</h3>
-    <span class="c-news__card-arrow"></span>
-  </a>
-
-  <a href="single.php" class="c-news__card">
-    <span class="c-news__card-date">2024.4.1</span>
-    <span class="c-news__card-cat">お知らせ</span>
-    <h3 class="c-news__card-ttl">ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。</h3>
-    <span class="c-news__card-arrow"></span>
-  </a>
-</div>
-<?php if ($page == "index.php"): ?>
-<div class="b-button --orange">
-  <a class="b-button__link" href="page-news.php">一覧を見る
-    <div class="b-button__link-arrow">
-      <span class="arrow"></span>
+<?php if ($the_query->have_posts()) : ?>
+  <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+    <div class="c-news__card">
+      <span class="c-news__card-date"><?php the_time('Y.m.d'); ?></span>
+      <?php
+        $categories = get_the_category();
+        if ($categories) :
+          foreach ($categories as $category) : ?>
+            <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>" class="c-news__card-cat"><?php echo esc_html($category->name); ?></a>
+      <?php endforeach; endif; ?>
+      <a href="<?php the_permalink(); ?>" class="c-news__card-ttl"><?php the_title(); ?></a>
+      <span class="c-news__card-arrow"></span>
     </div>
-  </a>
+  <?php endwhile; ?>
+
+  <?php else :  ?>
+      <p class="no_post s-font__en">Coming soon...</p>
+    <?php endif;
+  wp_reset_postdata(); ?>
 </div>
 <?php endif; ?>
 
-<?php elseif($page == "page-recruit.php"): ?>
+
+<?php if(is_page('recruit')): ?>
 <div class="c-news">
-  <a href="single.php" class="c-news__card">
-    <span class="c-news__card-date">2024.4.1</span>
-    <span class="c-news__card-cat">採用情報</span>
-    <h3 class="c-news__card-ttl">ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。</h3>
-    <span class="c-news__card-arrow"></span>
-  </a>
+<?php
+  $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+  $the_query = new WP_Query(array(
+    'post_status' => 'publish',
+    'paged' => $paged,
+    'posts_per_page' => 1, // 1ページあたり1件表示
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'cat' => '2',
+  ));
+?>
 
-  <a href="single.php" class="c-news__card">
-    <span class="c-news__card-date">2024.4.1</span>
-    <span class="c-news__card-cat">採用情報</span>
-    <h3 class="c-news__card-ttl">ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。</h3>
-    <span class="c-news__card-arrow"></span>
-  </a>
-
-  <a href="single.php" class="c-news__card">
-    <span class="c-news__card-date">2024.4.1</span>
-    <span class="c-news__card-cat">採用情報</span>
-    <h3 class="c-news__card-ttl">ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。</h3>
-    <span class="c-news__card-arrow"></span>
-  </a>
-
-  <a href="single.php" class="c-news__card">
-    <span class="c-news__card-date">2024.4.1</span>
-    <span class="c-news__card-cat">採用情報</span>
-    <h3 class="c-news__card-ttl">ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。</h3>
-    <span class="c-news__card-arrow"></span>
-  </a>
-</div>
-
-<div class="b-button --orange">
-  <a class="b-button__link" href="page-news.php">一覧を見る
-    <div class="b-button__link-arrow">
-      <span class="arrow"></span>
+<?php if ($the_query->have_posts()) : ?>
+  <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+    <div class="c-news__card">
+      <span class="c-news__card-date"><?php the_time('Y.m.d'); ?></span>
+      <?php
+        $categories = get_the_category();
+        if ($categories) :
+          foreach ($categories as $category) : ?>
+            <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>" class="c-news__card-cat"><?php echo esc_html($category->name); ?></a>
+      <?php endforeach; endif; ?>
+      <a href="<?php the_permalink(); ?>" class="c-news__card-ttl"><?php the_title(); ?></a>
+      <span class="c-news__card-arrow"></span>
     </div>
-  </a>
-</div>
+  <?php endwhile; ?>
 
-<?php elseif($page == "single.php"): ?>
+  <?php else :  ?>
+      <p class="no_post s-font__en">Coming soon...</p>
+    <?php endif;
+  wp_reset_postdata(); ?>
+</div>
+<?php endif; ?>
+
+<?php if(is_front_page() || is_single()): ?>
 <div class="c-news">
-  <a href="single.php" class="c-news__card">
-    <span class="c-news__card-date">2024.4.1</span>
-    <span class="c-news__card-cat">お知らせ</span>
-    <h3 class="c-news__card-ttl">ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。</h3>
-    <span class="c-news__card-arrow"></span>
-  </a>
+<?php
+  $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+  $the_query = new WP_Query(array(
+    'post_status' => 'publish',
+    'paged' => $paged,
+    'posts_per_page' => 4, // 1ページあたり1件表示
+    'orderby' => 'date',
+    'order' => 'DESC',
+  ));
+?>
 
-  <a href="single.php" class="c-news__card">
-    <span class="c-news__card-date">2024.4.1</span>
-    <span class="c-news__card-cat">お知らせ</span>
-    <h3 class="c-news__card-ttl">ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。</h3>
-    <span class="c-news__card-arrow"></span>
-  </a>
-
-  <a href="single.php" class="c-news__card">
-    <span class="c-news__card-date">2024.4.1</span>
-    <span class="c-news__card-cat">お知らせ</span>
-    <h3 class="c-news__card-ttl">ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。</h3>
-    <span class="c-news__card-arrow"></span>
-  </a>
-
-  <a href="single.php" class="c-news__card">
-    <span class="c-news__card-date">2024.4.1</span>
-    <span class="c-news__card-cat">お知らせ</span>
-    <h3 class="c-news__card-ttl">ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。ここにタイトルがはいります。この文章はダミーです。</h3>
-    <span class="c-news__card-arrow"></span>
-  </a>
-</div>
-
-<div class="b-button --orange">
-  <a class="b-button__link" href="page-news.php">一覧を見る
-    <div class="b-button__link-arrow">
-      <span class="arrow"></span>
+<?php if ($the_query->have_posts()) : ?>
+  <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+    <div class="c-news__card">
+      <span class="c-news__card-date"><?php the_time('Y.m.d'); ?></span>
+      <?php
+        $categories = get_the_category();
+        if ($categories) :
+          foreach ($categories as $category) : ?>
+            <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>" class="c-news__card-cat"><?php echo esc_html($category->name); ?></a>
+      <?php endforeach; endif; ?>
+      <a href="<?php the_permalink(); ?>" class="c-news__card-ttl"><?php the_title(); ?></a>
+      <span class="c-news__card-arrow"></span>
     </div>
-  </a>
-</div>
+  <?php endwhile; ?>
 
+  <?php else :  ?>
+      <p class="no_post s-font__en">Coming soon...</p>
+    <?php endif;
+  wp_reset_postdata(); ?>
+</div>
 <?php endif; ?>

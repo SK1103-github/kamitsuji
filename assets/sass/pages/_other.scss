@@ -59,6 +59,11 @@ other
             text-align: center;
           }
 
+          @include mq(sp){
+            border-radius: 8px;
+            overflow: hidden;
+          }
+
         }
       }
 
@@ -70,7 +75,6 @@ other
 
         @include mq(sp){
           line-height: $line-height-m;
-          font-size: 18px;
         }
 
         &-sub{

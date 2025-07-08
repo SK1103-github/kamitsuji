@@ -47,6 +47,17 @@ price
       @include mq(tab){
         overflow-x: scroll;
       }
+
+      @include mq(sp){
+        margin-bottom: 48px;
+      }
+
+      table{
+
+        @include mq(sp){
+          margin: 0;
+        }
+      }
     }
 
     table{
@@ -57,7 +68,8 @@ price
       }
 
       @include mq(sp){
-        width: 960px;
+        width: max-content;
+        margin-bottom: 48px;
       }
 
       thead{
@@ -75,6 +87,7 @@ price
 
           @include mq(tab){
             font-size: 14px;
+            font-weight: 500;
           }
 
           &:last-child{
@@ -94,6 +107,10 @@ price
           border-width: 0 1px 1px 0;
           text-align: left;
 
+          @include mq(sp){
+            font-size: 14px!important;
+          }
+
           &:first-child{
             background: #99886A;
             color:#fff;
@@ -101,6 +118,10 @@ price
 
           &:last-child{
             border-width: 0 0 1px 0;
+          }
+
+          @include mq(tab){
+            font-size: 14px;
           }
         }
       }
@@ -110,17 +131,25 @@ price
       display: flex;
 
       @include mq(tab){
-        overflow-x: scroll;
+        display: block;
       }
 
       &__item{
 
         table{
           width:448px;
+
+          @include mq(tab){
+            width: 100%;
+          }
         }
 
         &+.table-flex__item{
           margin-left: 80px;
+
+          @include mq(tab){
+            margin: 0;
+          }
         }
 
       }

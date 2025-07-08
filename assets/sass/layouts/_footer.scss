@@ -5,6 +5,7 @@ footer
 ========================================================*/
 .l-footer{
   background: #4F4030;
+  margin-top: -1px;
 
   .l-footer_inner{
     padding: 60px 0 90px;
@@ -12,12 +13,16 @@ footer
     margin:0 auto;
 
     @include mq(note){
+      width: 1120px;
+    }
+
+    @include mq(tab){
       width: 90%;
     }
 
     @include mq(sp){
       width: 100%;
-      padding: 0 20px 100px;
+      padding: 20px 20px 100px;
     }
   }
 
@@ -77,6 +82,11 @@ footer
         color:#fff;
         font-size: 14px;
         line-height: $line-height-l;
+
+        &:hover{
+          opacity: .6;
+        }
+
       }
 
       .l-footer__nav{
@@ -99,7 +109,8 @@ footer
           &.--sub{
             display: flex;
             flex-wrap: wrap;
-            padding: 16px 0;
+            padding: 10px 0 2px 0;
+            border-bottom: 1px solid #fff;
 
             @include mq(sp){
               padding: 16px 0 0 ;
@@ -111,6 +122,10 @@ footer
               margin: 0 16px 8px 0;
               font-size: 12px;
               line-height: $line-height-l;
+
+              &:hover{
+                opacity: .6;
+              }
             }
           }
 
@@ -124,7 +139,7 @@ footer
           &:nth-child(2){
 
             @include mq(sp){
-              order:5;
+              order:6;
             }
 
           }
@@ -138,7 +153,7 @@ footer
           &:nth-child(4){
 
             @include mq(sp){
-              order:6;
+              order:7;
             }
 
           }
@@ -152,7 +167,7 @@ footer
           &:nth-child(6){
 
             @include mq(sp){
-              order:7;
+              order:8;
             }
 
           }
@@ -173,7 +188,14 @@ footer
           &:nth-child(9){
 
             @include mq(sp){
-              order:9;
+              order:5;
+            }
+
+          }
+          &:nth-child(10){
+
+            @include mq(sp){
+              order:10;
             }
 
           }
@@ -187,6 +209,10 @@ footer
           border-bottom: 1px solid #fff;
           display: block;
           position: relative;
+
+          &:hover{
+            opacity: .6;
+          }
 
           &::before{
             content: "";

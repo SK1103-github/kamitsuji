@@ -32,37 +32,40 @@
 <meta name="format-detection" content="telephone=no" />
 
 <!-- ▼ スタイルシート -->
-<link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
-<link rel="stylesheet" type="text/css" href="assets/js/slick/slick-theme.css" />
-<link rel="stylesheet" type="text/css" href="assets/js/slick/slick.css" />
-<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/reset.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/js/slick/slick-theme.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/js/slick/slick.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css" />
 
 <!-- ▼ font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap" rel="stylesheet">
+
 
 <!-- ▼ ファビコン -->
-<link rel="apple-touch-icon" href="images/favicon/favicon.ico">
-<link rel="SHORTCUT ICON" href="images/favicon/favicon.ico">
-<link rel="icon" href="images/favicon/favicon.ico">
+<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon/favicon.ico">
+<link rel="SHORTCUT ICON" href="<?php echo get_template_directory_uri(); ?>/images/favicon/favicon.ico">
+<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon/favicon.ico">
 
 <!-- ▼ サイトタイトル -->
 <title></title>
+<?php wp_head(); ?>
 </head>
 <body>
-
+<div class="body-fade">
 <header class="l-header">
   <div class="l-header__inner">
-    <div class="l-header__btn-group">
+    <div class="l-header__btn-group <?php echo is_home() ? '--top' : '';?>">
       <div class="l-header__mail">
-        <a href="page-contact.php">
-        <img src="assets/images/common/icon_mail.svg" alt="mail" width="28" height="18">
+        <a href="<?php echo esc_url( home_url() ); ?>/contact">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon_mail.svg" alt="mail" width="28" height="18">
         </a>
       </div>
 
       <div class="l-header__info">
-        <img src="assets/images/common/icon_phone.svg" alt="tel" width="24" height="24">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon_phone.svg" alt="tel" width="24" height="24">
         <div class="l-header__info-text">
           <p class="l-header__info-phone">
             <a href="tel:0643034877" aria-label="電話番号に電話する">06-4303-4877</a></p>
@@ -79,38 +82,38 @@
       <nav class="l-header__nav">
         <ul class="l-header__list">
           <li class="l-header__list-item">
-            <a href="index.php" class="l-header__list-link">トップ</a>
+            <a href="<?php echo esc_url( home_url() ); ?>" class="l-header__list-link">トップ</a>
           </li>
           <li class="l-header__list-item">
-            <a href="page-news.php" class="l-header__list-link">お知らせ</a>
+            <a href="<?php echo esc_url( home_url() ); ?>/news" class="l-header__list-link">お知らせ</a>
           </li>
           <li class="l-header__list-item">
-            <a href="page-about.php" class="l-header__list-link">上辻会計事務所について</a>
+            <a href="<?php echo esc_url( home_url() ); ?>/about" class="l-header__list-link">上辻会計事務所について</a>
           </li>
           <li class="l-header__list-item">
             <div class="l-header__sub-nav js-nav__sub-btn">サービス内容</div>
             <div class="l-header__sub-item">
-              <a href="page-service.php" class="l-header__sub-link">- サービス内容一覧</a>
-              <a href="page-consultant.php" class="l-header__sub-link">- 税務会計顧問</a>
-              <a href="page-due-diligence.php" class="l-header__sub-link">- 財務デューデリジェンス</a>
-              <a href="page-company-setup.php" class="l-header__sub-link">- 会社設立支援</a>
-              <a href="page-other-service.php" class="l-header__sub-link">- その他</a>
+              <a href="<?php echo esc_url( home_url() ); ?>/service" class="l-header__sub-link">- サービス内容一覧</a>
+              <a href="<?php echo esc_url( home_url() ); ?>/consultant" class="l-header__sub-link">- 税務会計顧問</a>
+              <a href="<?php echo esc_url( home_url() ); ?>/due-diligence" class="l-header__sub-link">- 財務デューデリジェンス</a>
+              <a href="<?php echo esc_url( home_url() ); ?>/company-setup" class="l-header__sub-link">- 会社設立支援</a>
+              <a href="<?php echo esc_url( home_url() ); ?>/other-service" class="l-header__sub-link">- その他</a>
             </div>
           </li>
           <li class="l-header__list-item">
-            <a href="page-price.php" class="l-header__list-link">料金表</a>
+            <a href="<?php echo esc_url( home_url() ); ?>/price" class="l-header__list-link">料金表</a>
           </li>
           <li class="l-header__list-item">
-            <a href="page-column.php" class="l-header__list-link">コラム</a>
+            <a href="<?php echo esc_url(get_post_type_archive_link('column')); ?>" class="l-header__list-link">コラム</a>
           </li>
           <li class="l-header__list-item">
-            <a href="page-company.php" class="l-header__list-link">事務所概要</a>
+            <a href="<?php echo esc_url( home_url() ); ?>/company" class="l-header__list-link">事務所概要</a>
           </li>
           <li class="l-header__list-item">
-            <a href="page-recruit.php" class="l-header__list-link">採用情報</a>
+            <a href="<?php echo esc_url( home_url() ); ?>/recruit" class="l-header__list-link">採用情報</a>
           </li>
           <li class="l-header__list-item">
-            <a href="page-contact.php" class="l-header__list-link">お問い合わせ</a>
+            <a href="<?php echo esc_url( home_url() ); ?>/contact" class="l-header__list-link">お問い合わせ</a>
           </li>
         </ul>
       </nav>

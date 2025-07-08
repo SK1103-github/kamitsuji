@@ -47,6 +47,7 @@ js
 
 .js-fade{
   opacity: 0;
+  transition: ease-in-out .7s;
 
   &.--left{
     transform: translateX(-100px);

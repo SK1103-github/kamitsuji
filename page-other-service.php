@@ -4,13 +4,13 @@
 
   <div class="s-page__head">
     <div class="s-page__head-inner">
-      <a href="index.php" class="s-page__head-logo">
-        <img src="assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
+      <a href="<?php echo esc_url( home_url() ); ?>" class="s-page__head-logo">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
       </a>
 
       <div class="s-ttl s-page__head-ttl">
         <span class="icon-plus"></span>
-        <h1 class="s-ttl__text s-font__en fv-text__fade"><span class="fade-txt">Other Service</span></h1>
+        <h1 class="s-ttl__text s-font__en page-text__fade"><span class="fade-txt">Other Service</span></h1>
         <p class="s-ttl__desp js-page__ttl-sub --left">その他のサービス</p>
       </div>
     </div>
@@ -38,13 +38,13 @@
             <p class="other-flex__txt">企業の経営課題に応じた資金計画シミュレーションを作成し、キャッシュフローの最適化をサポートします。過去の資金流動性を分析し、現在の課題を明確化するとともに、将来の収支に影響を与える要因を予測。経営環境や市場動向を踏まえ、複数のシナリオに基づいた資金計画を作成します。突発的な資金需要や短期的な見直しにも迅速に対応し、借入や投資計画の見直し、リスクヘッジの提案を実施。資金繰りの透明性を高め、事業の安定性と持続的な成長を支援します。</p>
           </div>
           <div class="other-flex__item --img">
-            <img class="other-flex__img" src="assets/images/other/other_01.png" alt="メリハリ" loading="lazy">
+            <img class="other-flex__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/other/other_01.png" alt="メリハリ" loading="lazy">
           </div>
         </div>
 
         <div class="other-flex js-fade__bottom --bottom">
           <div class="other-flex__item --img">
-            <img class="other-flex__img" src="assets/images/other/other_02.png" alt="心地良さ" loading="lazy">
+            <img class="other-flex__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/other/other_02.png" alt="心地良さ" loading="lazy">
           </div>
           <div class="other-flex__item --txt --right">
             <strong class="other-flex__ttl">
@@ -65,18 +65,18 @@
             財産分割や税務申告の見直し、節税対策の再評価など、具体的な問題にフォーカスしながら、依頼者の意向を尊重したアドバイスを実施。さらに、家族全体の合意形成を支援し、不安や疑問を解消するための丁寧な説明にも注力します。相続手続きが複雑化する中、セカンドオピニオンを活用することで、より良い意思決定をサポートし、安心して相続に臨める環境を提供します。</p>
           </div>
           <div class="other-flex__item --img">
-            <img class="other-flex__img" src="assets/images/other/other_03.png" alt="リフレッシュ" loading="lazy">
+            <img class="other-flex__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/other/other_03.png" alt="リフレッシュ" loading="lazy">
           </div>
         </div>
       </div>
     </section>
 
 
-    <section class="s-page__link --company-setup">
+    <section class="s-page__link --other-service">
       <div class="s-section__inner js-fade__bottom --bottom">
         <div class="s-page__link-flex">
           <div class="s-page__flex-item --img">
-            <img src="assets/images/common/kamitsuji.png" alt="代表　上辻 恭介">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/kamitsuji.png" alt="代表　上辻 恭介">
             <p>代表 <span>上辻 恭介</span></p>
           </div>
           <div class="s-page__flex-item --txt">
@@ -85,14 +85,14 @@
 
             <div class="s-page__flex-btn">
               <div class="b-button --orange s-page__btn">
-                <a class="b-button__link" href="page-price.php">料金表はこちら
+                <a class="b-button__link" href="<?php echo esc_url( home_url() ); ?>/price">料金表はこちら
                   <div class="b-button__link-arrow">
                     <span class="arrow"></span>
                   </div>
                 </a>
               </div>
               <div class="b-button --orange s-page__btn">
-                <a class="b-button__link" href="page-service.php">サービス一覧を見る
+                <a class="b-button__link" href="<?php echo esc_url( home_url() ); ?>/service">サービス一覧を見る
                   <div class="b-button__link-arrow">
                     <span class="arrow"></span>
                   </div>

@@ -5,13 +5,14 @@
   <div class="fv">
     <div class="fv-inner">
       <h1 class="fv-logo">
-        <a href="">
-          <img src="assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
+        <a href="<?php echo esc_url( home_url() ); ?>">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
         </a>
       </h1>
 
-      <picture class="fv-img">
-      </picture>
+      <picture class="fv-img slider_01 --show"></picture>
+      <picture class="fv-img slider_02"></picture>
+      <picture class="fv-img slider_03"></picture>
       <h2 class="fv-text">
         <div class="fv-text__fade">
           <span class="fade-text">税務をもっと身近に、</span>
@@ -21,7 +22,7 @@
         </div>
       </h2>
 
-      <img class="section_bg" src="assets/images/common/section_bg.png" alt="">
+      <img class="section_bg" src="<?php echo get_template_directory_uri(); ?>/assets/images/common/section_bg.png" alt="">
 
     </div>
   </div>
@@ -36,23 +37,34 @@
           <h2 class="s-ttl__text s-font__en js-fade__content-ttl"><span class="fade-txt">News</span></h2>
           <p class="s-ttl__desp js-fade__sec --left">お知らせ</p>
         </div>
+        <?php if (have_posts()) : ?>
+          <ul class="news-cat__list">
+            <li class="news-cat__list-item --active">
+              <a href="<?php echo esc_url( home_url() ); ?>/news">すべて</a>
+            </li>
+            <?php
+              $args = array(
+                'hide_empty' => 0 // 記事が0件のカテゴリーも含む
+              );
+              $categories = get_categories($args);
+              if($categories):foreach ($categories as $category):?>
+              <li class="news-cat__list-item">
+                <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>" class=""><?php echo esc_html($category->name); ?></a>
+              </li>
+            <?php endforeach;endif; ?>
+          </ul>
+          <?php include('components/c-news.php'); ?>
 
-        <ul class="news-cat__list">
-          <li class="news-cat__list-item --active">
-            <a href="page-news.php">すべて</a>
-          </li>
-          <li class="news-cat__list-item">
-            <a href="page-news.php">お知らせ</a>
-          </li>
-          <li class="news-cat__list-item">
-            <a href="page-news.php">採用情報</a>
-          </li>
-          <li class="news-cat__list-item">
-            <a href="page-news.php">コラム</a>
-          </li>
-        </ul>
-
-        <?php include('components/c-news.php'); ?>
+          <div class="b-button --orange">
+            <a class="b-button__link" href="<?php echo esc_url( home_url() ); ?>/news">一覧を見る
+              <div class="b-button__link-arrow">
+                <span class="arrow"></span>
+              </div>
+            </a>
+          </div>
+        <?php else: ?>
+          <p class="no_post s-font__en">Coming soon...</p>
+        <?php endif; ?>
       </div>
     </section>
 
@@ -74,7 +86,7 @@
           長年の経験と最新技術を駆使し、事業の成長を総合的にサポートすることが可能です。</p>
 
           <div class="b-button --white">
-            <a class="b-button__link" href="page-about.php">詳しく見る
+            <a class="b-button__link" href="<?php echo esc_url( home_url() ); ?>/about">詳しく見る
               <div class="b-button__link-arrow">
                 <span class="arrow"></span>
               </div>
@@ -85,7 +97,7 @@
         <div class="about-flex">
           <div class="about-flex__item js-fade__bottom">
             <picture class="about-flex__img">
-              <img src="assets/images/top/about_img_01.png" alt="30年以上の豊富な経験と実績">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/about_img_01.png" alt="30年以上の豊富な経験と実績">
             </picture>
             <h4 class="about-flex__ttl">
               <span>30年以上の豊富な<br class="block --mac none --sp">経験と実績</span>
@@ -96,7 +108,7 @@
 
           <div class="about-flex__item js-fade__bottom">
             <picture class="about-flex__img">
-              <img src="assets/images/top/about_img_02.png" alt="幅広いサービスの提供">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/about_img_02.png" alt="幅広いサービスの提供">
             </picture>
             <h4 class="about-flex__ttl">
               <span>幅広いサービスの提供</span>
@@ -107,7 +119,7 @@
 
           <div class="about-flex__item js-fade__bottom">
             <picture class="about-flex__img">
-              <img src="assets/images/top/about_img_03.png" alt="DXの活用でスマートな経営を">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/about_img_03.png" alt="DXの活用でスマートな経営を">
             </picture>
             <h4 class="about-flex__ttl">
               <span>DXの活用で<br class="block --mac none --sp">スマートな経営を</span>
@@ -127,7 +139,7 @@
         <div class="service-layout__flex">
           <div class="flexitem__left">
             <picture class="flexitem__img">
-              <img src="assets/images/top/service_img.png" class="js-service__fade --left" alt="サービス内容">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/service_img.png" class="js-service__fade --left" alt="サービス内容">
             </picture>
           </div>
           <div class="flexitem__right">
@@ -138,39 +150,47 @@
             </div>
 
             <dl class="flexitem__list">
-              <dt class="flexitem__list-ttl">税務会計顧問</dt>
-              <a class="flexitem__list-txt" href="">「税務申告が複雑で、どこから手をつけていいか分からない」「節税のアイデアをもっと具体的に提案してほしい」「安心して任せられるパートナーがほしい」そんなお悩みを、私たちが解決します。法人から個人事業主まで幅広いお客様に対応可能な税務会計顧問サービスをご用意しています。</a>
-              <div class="flexitem__list-arrow">
-                <span class="arrow"></span>
-              </div>
+              <a href="<?php echo esc_url( home_url() ); ?>/consultant" class="flexitem__link">
+                <dt class="flexitem__list-ttl">税務会計顧問</dt>
+                <div class="flexitem__list-txt">「税務申告が複雑で、どこから手をつけていいか分からない」「節税のアイデアをもっと具体的に提案してほしい」「安心して任せられるパートナーがほしい」そんなお悩みを、私たちが解決します。法人から個人事業主まで幅広いお客様に対応可能な税務会計顧問サービスをご用意しています。</div>
+                <div class="flexitem__list-arrow">
+                  <span class="arrow"></span>
+                </div>
+              </a>
             </dl>
 
             <dl class="flexitem__list">
-              <dt class="flexitem__list-ttl">財務デューデリジェンス</dt>
-              <a class="flexitem__list-txt" href="">「M&Aを進める上で、財務リスクが見えないのが不安」「投資の判断材料として、正確な財務分析が欲しい」「専門的な視点での詳細なレポートが必要」そんな課題を、私たちの財務デューデリジェンスでサポートします。正確で信頼性の高いデータで、お客様の課題解決に貢献します。</a>
-              <div class="flexitem__list-arrow">
-                <span class="arrow"></span>
-              </div>
+              <a href="<?php echo esc_url( home_url() ); ?>/due-diligence" class="flexitem__link">
+                <dt class="flexitem__list-ttl">財務デューデリジェンス</dt>
+                <div class="flexitem__list-txt">「M&Aを進める上で、財務リスクが見えないのが不安」「投資の判断材料として、正確な財務分析が欲しい」「専門的な視点での詳細なレポートが必要」そんな課題を、私たちの財務デューデリジェンスでサポートします。正確で信頼性の高いデータで、お客様の課題解決に貢献します。</div>
+                <div class="flexitem__list-arrow">
+                  <span class="arrow"></span>
+                </div>
+              </a>
             </dl>
 
             <dl class="flexitem__list">
-              <dt class="flexitem__list-ttl">会社設立支援</dt>
-              <a class="flexitem__list-txt" href="">「初めての会社設立で何から始めればいいのかわからない」「必要な手続きや書類作成を専門家に任せたい」「設立後の税務や法務サポートを検討したい」そんなお悩みを、私たちがワンストップで解決します。専門知識を活かし、設立手続きから設立後の支援まで丁寧に伴走いたします。</a>
-              <div class="flexitem__list-arrow">
-                <span class="arrow"></span>
-              </div>
+              <a href="<?php echo esc_url( home_url() ); ?>/company-setup" class="flexitem__link">
+                <dt class="flexitem__list-ttl">会社設立支援</dt>
+                <div class="flexitem__list-txt">「初めての会社設立で何から始めればいいのかわからない」「必要な手続きや書類作成を専門家に任せたい」「設立後の税務や法務サポートを検討したい」そんなお悩みを、私たちがワンストップで解決します。専門知識を活かし、設立手続きから設立後の支援まで丁寧に伴走いたします。</div>
+                <div class="flexitem__list-arrow">
+                  <span class="arrow"></span>
+                </div>
+              </a>
             </dl>
 
             <dl class="flexitem__list">
-              <dt class="flexitem__list-ttl">その他サービス</dt>
-              <a class="flexitem__list-txt" href="">将来の安心を築くための資金計画シミュレーション、MAS監査の専門的sだポート、そして相続に関するご相談を承っております。お客様一人ひとりに寄り添い、確かな計画と安心をお届けし、専門知識と経験を活かしてお客様のニーズに応じた最適な解決策をご提案いたします。</a>
-              <div class="flexitem__list-arrow">
-                <span class="arrow"></span>
-              </div>
+              <a href="<?php echo esc_url( home_url() ); ?>/other-service" class="flexitem__link">
+                <dt class="flexitem__list-ttl">その他サービス</dt>
+                <div class="flexitem__list-txt">将来の安心を築くための資金計画シミュレーション、MAS監査の専門的なサポート、そして相続に関するご相談を承っております。お客様一人ひとりに寄り添い、確かな計画と安心をお届けし、専門知識と経験を活かしてお客様のニーズに応じた最適な解決策をご提案いたします。</div>
+                <div class="flexitem__list-arrow">
+                  <span class="arrow"></span>
+                </div>
+              </a>
             </dl>
 
             <div class="b-button --orange service__btn">
-              <a class="b-button__link" href="page-service.php">一覧を見る
+              <a class="b-button__link" href="<?php echo esc_url( home_url() ); ?>/service">一覧を見る
                 <div class="b-button__link-arrow">
                   <span class="arrow"></span>
                 </div>
@@ -196,7 +216,7 @@
           財務デューデリジェンスまで、専門的な知識をご紹介しています。</p>
 
           <div class="b-button --white">
-            <a class="b-button__link" href="page-column.php">コラム一覧
+            <a class="b-button__link" href="<?php echo esc_url(get_post_type_archive_link('column')); ?>">コラム一覧
               <div class="b-button__link-arrow">
                 <span class="arrow"></span>
               </div>
@@ -204,151 +224,48 @@
           </div>
         </div>
 
+        <?php
+          $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+          // カスタムループを生成し、記事を取得
+          $args = array(
+            'numberposts' => 6,                //表示（取得）する記事の数
+            'post_type' => 'column',   //投稿タイプの指定
+            'order' => 'ASC',//古い順に並べ替え
+            'post_status' => 'publish',
+            'paged' => $paged
+          );
+        ?>
+        <?php $the_query = new WP_Query( $args ); ?>
+        <?php if ( $the_query->have_posts() ) :?>
         <div class="column__slider">
-          <div class="column__slider-item">
-            <a class="column__slider-link" href="single-column.php">
-              <picture class="column__slider-img">
-                <img src="assets/images/top/slider_img01.png" alt="">
-              </picture>
-              <span class="column__slider-date">2024.4.1</span>
-              <h3 class="column__slider-ttl">コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。</h3>
-            </a>
-            <ul class="column__cat">
-              <li class="column__cat-link">
-                <a href="">すべて</a>
-              </li>
-              <li class="column__cat-link">
-                <a href="">お知らせ</a>
-              </li>
-              <li class="column__cat-link">
-                <a href="">採用情報</a>
-              </li>
-              <li class="column__cat-link">
-                <a href="">コラム</a>
-              </li>
-            </ul>
-          </div>
+          <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            <div class="column__slider-item">
+              <a class="column__slider-link" href="<?php the_permalink(); ?>">
+                <?php if(has_post_thumbnail()): ?>
+                    <picture class="column__slider-img" style="background:url(<?php the_post_thumbnail_url('full'); ?>) no-repeat;background-position: center center;background-size:cover;height:200px;"></picture>
+                  <?php else: ?>
+                    <picture class="column__slider-img" style="background:url(<?php echo get_template_directory_uri(); ?>/assets/images/common/no-image.jpg) no-repeat;background-position: center center;background-size:cover;height:200px;"></picture>
+                <?php endif; ?>
+                <span class="column__slider-date"><?php the_time('Y.m.d'); ?></span>
+                <h3 class="column__slider-ttl"><?php the_title(); ?></h3>
+              </a>
+              <ul class="column__cat">
+                <?php
+                  if ($terms = get_the_terms($post->ID, 'column-cat')):
+                  foreach ( $terms as $term ):?>
+                    <li class="column__cat-link">
+                      <a href="<?php echo esc_url(get_category_link($term->term_id)); ?>" class=""><?php echo esc_html($term->name); ?></a>
+                    </li>
+                <?php endforeach; endif; ?>
+              </ul>
+            </div>
+          <?php endwhile; ?>
 
-          <div class="column__slider-item">
-            <a class="column__slider-link" href="single-column.php">
-              <picture class="column__slider-img">
-                <img src="assets/images/top/slider_img01.png" alt="">
-              </picture>
-              <span class="column__slider-date">2024.4.1</span>
-              <h3 class="column__slider-ttl">コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。</h3>
-            </a>
-            <ul class="column__cat">
-              <li class="column__cat-link">
-                <a href="">すべて</a>
-              </li>
-              <li class="column__cat-link">
-                <a href="">お知らせ</a>
-              </li>
-              <li class="column__cat-link">
-                <a href="">採用情報</a>
-              </li>
-              <li class="column__cat-link">
-                <a href="">コラム</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="column__slider-item">
-            <a class="column__slider-link" href="single-column.php">
-              <picture class="column__slider-img">
-                <img src="assets/images/top/slider_img01.png" alt="">
-              </picture>
-              <span class="column__slider-date">2024.4.1</span>
-              <h3 class="column__slider-ttl">コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。</h3>
-            </a>
-            <ul class="column__cat">
-              <li class="column__cat-link">
-                <a href="">すべて</a>
-              </li>
-              <li class="column__cat-link">
-                <a href="">お知らせ</a>
-              </li>
-              <li class="column__cat-link">
-                <a href="">採用情報</a>
-              </li>
-              <li class="column__cat-link">
-                <a href="">コラム</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="column__slider-item">
-            <a class="column__slider-link" href="single-column.php">
-              <picture class="column__slider-img">
-                <img src="assets/images/top/slider_img01.png" alt="">
-              </picture>
-              <span class="column__slider-date">2024.4.1</span>
-              <h3 class="column__slider-ttl">コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。</h3>
-            </a>
-            <ul class="column__cat">
-              <li class="column__cat-link">
-                <a href="">すべて</a>
-              </li>
-              <li class="column__cat-link">
-                <a href="">お知らせ</a>
-              </li>
-              <li class="column__cat-link">
-                <a href="">採用情報</a>
-              </li>
-              <li class="column__cat-link">
-                <a href="">コラム</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="column__slider-item">
-            <a class="column__slider-link" href="single-column.php">
-              <picture class="column__slider-img">
-                <img src="assets/images/top/slider_img01.png" alt="">
-              </picture>
-              <span class="column__slider-date">2024.4.1</span>
-              <h3 class="column__slider-ttl">コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。</h3>
-            </a>
-            <ul class="column__cat">
-              <li class="column__cat-link">
-                <a href="">すべて</a>
-              </li>
-              <li class="column__cat-link">
-                <a href="">お知らせ</a>
-              </li>
-              <li class="column__cat-link">
-                <a href="">採用情報</a>
-              </li>
-              <li class="column__cat-link">
-                <a href="">コラム</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="column__slider-item">
-            <a class="column__slider-link" href="single-column.php">
-              <picture class="column__slider-img">
-                <img src="assets/images/top/slider_img01.png" alt="">
-              </picture>
-              <span class="column__slider-date">2024.4.1</span>
-              <h3 class="column__slider-ttl">コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。コラムのタイトルがはいります。この文章はダミーです。</h3>
-            </a>
-            <ul class="column__cat">
-              <li class="column__cat-link">
-                <a href="">すべて</a>
-              </li>
-              <li class="column__cat-link">
-                <a href="">お知らせ</a>
-              </li>
-              <li class="column__cat-link">
-                <a href="">採用情報</a>
-              </li>
-              <li class="column__cat-link">
-                <a href="">コラム</a>
-              </li>
-            </ul>
-          </div>
         </div>
+        <?php else :  ?>
+          <p class="no_post s-font__en --column">Coming soon...</p>
+        <?php endif;
+        wp_reset_postdata(); ?>
       </div>
     </section>
 
@@ -369,12 +286,12 @@
               アクセス情報など詳しい情報はこちらをご覧ください。</p>
 
             <div class="b-button --orange company__btn">
-              <a class="b-button__link" href="page-company.php">事務所概要
+              <a class="b-button__link" href="<?php echo esc_url( home_url() ); ?>/company">事務所概要
                 <div class="b-button__link-arrow">
                   <span class="arrow"></span>
                 </div>
               </a>
-              <a class="b-button__link" href="page-company.php#greeting">代表メッセージ
+              <a class="b-button__link" href="<?php echo esc_url( home_url() ); ?>/company#greeting">代表メッセージ
                 <div class="b-button__link-arrow">
                   <span class="arrow"></span>
                 </div>
@@ -402,7 +319,7 @@
           </div>
 
           <p class="recruit__head-txt">
-            私たちは、一緒に未来を創っていく新しい仲間を探しています。<br>
+            私たちは、一緒に未来を創っていく<br class="block --sp">新しい仲間を探しています。<br>
             <br>
             自分らしく働きたい、成長したい、<br>
             そんなあなたの挑戦を全力で応援します。
@@ -410,7 +327,7 @@
         </div>
 
         <div class="b-button --orange service__btn">
-          <a class="b-button__link" href="page-recruit.php">詳細を見る
+          <a class="b-button__link" href="<?php echo esc_url( home_url() ); ?>/recruit">詳細を見る
             <div class="b-button__link-arrow">
               <span class="arrow"></span>
             </div>
@@ -418,13 +335,13 @@
         </div>
 
         <picture class="recruit__img">
-          <img class="recruit__img-01 js-fade --left" src="assets/images/top/recruit_img01.png" alt="" loading="lazy">
-          <img class="recruit__img-02 js-fade --right" src="assets/images/top/recruit_img02.png" alt="" loading="lazy">
-          <img class="recruit__img-03 none --tab js-fade --left" src="assets/images/top/recruit_img03.png" alt="" loading="lazy">
-          <img class="recruit__img-04 none --tab js-fade --right" src="assets/images/top/recruit_img04.png" alt="" loading="lazy">
+          <img class="recruit__img-01 js-fade --left" src="<?php echo get_template_directory_uri(); ?>/assets/images/top/recruit_img01.png" alt="" loading="lazy">
+          <img class="recruit__img-02 js-fade --right" src="<?php echo get_template_directory_uri(); ?>/assets/images/top/recruit_img02.png" alt="" loading="lazy">
+          <img class="recruit__img-03 none --tab js-fade --left" src="<?php echo get_template_directory_uri(); ?>/assets/images/top/recruit_img03.png" alt="" loading="lazy">
+          <img class="recruit__img-04 none --tab js-fade --right" src="<?php echo get_template_directory_uri(); ?>/assets/images/top/recruit_img04.png" alt="" loading="lazy">
 
-          <img class="recruit__img-03 block --tab js-fade --left" src="assets/images/top/recruit_img03_sp.png" alt="" loading="lazy">
-          <img class="recruit__img-04 block --tab js-fade --right" src="assets/images/top/recruit_img04_sp.png" alt="" loading="lazy">
+          <img class="recruit__img-03 block --tab js-fade --left" src="<?php echo get_template_directory_uri(); ?>/assets/images/top/recruit_img03_sp.png" alt="" loading="lazy">
+          <img class="recruit__img-04 block --tab js-fade --right" src="<?php echo get_template_directory_uri(); ?>/assets/images/top/recruit_img04_sp.png" alt="" loading="lazy">
         </picture>
       </div>
     </section>

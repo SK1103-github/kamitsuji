@@ -4,13 +4,13 @@
 
   <div class="s-page__head">
     <div class="s-page__head-inner">
-      <a href="index.php" class="s-page__head-logo">
-        <img src="assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
+      <a href="<?php echo esc_url( home_url() ); ?>" class="s-page__head-logo">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
       </a>
 
       <div class="s-ttl s-page__head-ttl">
         <span class="icon-plus"></span>
-        <h1 class="s-ttl__text s-font__en fv-text__fade"><span class="fade-txt">Privacy Policy</span></h1>
+        <h1 class="s-ttl__text s-font__en page-text__fade"><span class="fade-txt">Privacy Policy</span></h1>
         <p class="s-ttl__desp js-page__ttl-sub --left">プライバシーポリシー</p>
       </div>
     </div>

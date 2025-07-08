@@ -4,13 +4,13 @@
 
   <div class="s-page__head">
     <div class="s-page__head-inner">
-      <a href="index.php" class="s-page__head-logo">
-        <img src="assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
+      <a href="<?php echo esc_url( home_url() ); ?>" class="s-page__head-logo">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
       </a>
 
       <div class="s-ttl s-page__head-ttl">
         <span class="icon-plus"></span>
-        <h2 class="s-ttl__text s-font__en fv-text__fade"><span class="fade-txt">News</span></h2>
+        <h2 class="s-ttl__text s-font__en page-text__fade"><span class="fade-txt">News</span></h2>
         <p class="s-ttl__desp js-page__ttl-sub --left">お知らせ</p>
       </div>
     </div>
@@ -21,29 +21,22 @@
 
     <section class="single">
       <div class="s-section__inner">
+        <?php if (have_posts()) : the_post(); ?>
         <div class="single-head">
-          <span class="single-head__date">2024.4.1</span>
+          <span class="single-head__date"><?php the_time('Y.m.d'); ?></span>
           <span class="single-head__cat">お知らせ</span>
-          <h1 class="single-head__ttl">お知らせ</h1>
+          <h1 class="single-head__ttl"><?php the_title(); ?></h1>
         </div>
 
         <div class="single-content">
           <div class="single-content__thum">
-            <img src="assets/images/top/fv_pc.png" alt="">
+            <?php if(has_post_thumbnail()): ?>
+              <img src="<?php the_post_thumbnail_url('full'); ?>" alt="">
+            <?php endif; ?>
           </div>
-          <h2>h2タイトルが入ります</h2>
-          <h3>h3タイトルが入ります</h3>
-          <img src="assets/images/top/slider_img01.png" alt="">
-          <p>この文章はダミーです。ニュースの本文がはいります。<br>
-          文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。<br>
-          ニュースの本文がはいります。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。<br>
-          <br>
-          ニュースの本文がはいります。<br>
-          文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。<br>
-          ニュースの本文がはいります。文字の大きさ、量、字間、行間等を確認するために入れています。<br>
-          この文章はダミーです。ニュースの本文がはいります。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
-          <a href="">リンクはこのように表示されます。</a>
+          <?php the_content(); ?>
         </div>
+        <?php endif; ?>
 
         <div class="single-back">
           <div class="b-button__arrow --white --single" onclick="history.back()">
@@ -66,6 +59,14 @@
         </div>
 
         <?php include('components/c-news.php'); ?>
+
+        <div class="b-button --orange">
+          <a class="b-button__link" href="<?php echo esc_url( home_url() ); ?>/news">一覧を見る
+            <div class="b-button__link-arrow">
+              <span class="arrow"></span>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
 

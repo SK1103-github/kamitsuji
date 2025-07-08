@@ -4,13 +4,13 @@
 
   <div class="s-page__head">
     <div class="s-page__head-inner">
-      <a href="index.php" class="s-page__head-logo">
-        <img src="assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
+      <a href="<?php echo esc_url( home_url() ); ?>" class="s-page__head-logo">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo_white.svg" alt="上辻会計事務所" width="173" height="86">
       </a>
 
       <div class="s-ttl s-page__head-ttl">
         <span class="icon-plus"></span>
-        <h1 class="s-ttl__text s-font__en fv-text__fade"><span class="fade-txt">Contact</span></h1>
+        <h1 class="s-ttl__text s-font__en page-text__fade"><span class="fade-txt">Contact</span></h1>
         <p class="s-ttl__desp js-page__ttl-sub --left">お問い合わせ</p>
       </div>
     </div>
@@ -64,7 +64,7 @@
 
           <div class="btn__group">
             <div class="b-button --gray">
-              <a href="page-contact.php" class="b-button__link" href="">修正
+              <a href="<?php echo esc_url( home_url() ); ?>/contact" class="b-button__link" href="">修正
                 <div class="b-button__link-arrow">
                   <span class="arrow"></span>
                 </div>
@@ -72,7 +72,7 @@
             </div>
 
             <div class="b-button --orange --send">
-              <a href="page-thanks.php" class="b-button__link" href="">送信
+              <a href="<?php echo esc_url( home_url() ); ?>/thanks" class="b-button__link" href="">送信
                 <div class="b-button__link-arrow">
                   <span class="arrow"></span>
                 </div>
