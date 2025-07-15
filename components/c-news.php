@@ -13,17 +13,17 @@
 
 <?php if ($the_query->have_posts()) : ?>
   <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-    <div class="c-news__card">
+    <a href="<?php the_permalink(); ?>" class="c-news__card">
       <span class="c-news__card-date"><?php the_time('Y.m.d'); ?></span>
       <?php
         $categories = get_the_category();
         if ($categories) :
           foreach ($categories as $category) : ?>
-            <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>" class="c-news__card-cat"><?php echo esc_html($category->name); ?></a>
+            <span class="c-news__card-cat"><?php echo esc_html($category->name); ?></span>
       <?php endforeach; endif; ?>
-      <a href="<?php the_permalink(); ?>" class="c-news__card-ttl"><?php the_title(); ?></a>
+      <h3 href="<?php the_permalink(); ?>" class="c-news__card-ttl"><?php the_title(); ?></h3>
       <span class="c-news__card-arrow"></span>
-    </div>
+    </a>
   <?php endwhile; ?>
 
   <?php else :  ?>
@@ -50,17 +50,17 @@
 
 <?php if ($the_query->have_posts()) : ?>
   <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-    <div class="c-news__card">
+    <a href="<?php the_permalink(); ?>" class="c-news__card">
       <span class="c-news__card-date"><?php the_time('Y.m.d'); ?></span>
       <?php
         $categories = get_the_category();
         if ($categories) :
           foreach ($categories as $category) : ?>
-            <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>" class="c-news__card-cat"><?php echo esc_html($category->name); ?></a>
+            <span class="c-news__card-cat"><?php echo esc_html($category->name); ?></span>
       <?php endforeach; endif; ?>
-      <a href="<?php the_permalink(); ?>" class="c-news__card-ttl"><?php the_title(); ?></a>
+      <h3 class="c-news__card-ttl"><?php the_title(); ?></h3>
       <span class="c-news__card-arrow"></span>
-    </div>
+    </a>
   <?php endwhile; ?>
 
   <?php else :  ?>
@@ -85,17 +85,17 @@
 
 <?php if ($the_query->have_posts()) : ?>
   <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-    <div class="c-news__card">
+    <a href="<?php the_permalink(); ?>" class="c-news__card">
       <span class="c-news__card-date"><?php the_time('Y.m.d'); ?></span>
       <?php
         $categories = get_the_category();
         if ($categories) :
           foreach ($categories as $category) : ?>
-            <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>" class="c-news__card-cat"><?php echo esc_html($category->name); ?></a>
+            <span class="c-news__card-cat"><?php echo esc_html($category->name); ?></span>
       <?php endforeach; endif; ?>
-      <a href="<?php the_permalink(); ?>" class="c-news__card-ttl"><?php the_title(); ?></a>
+      <h3 class="c-news__card-ttl"><?php the_title(); ?></h3>
       <span class="c-news__card-arrow"></span>
-    </div>
+    </a>
   <?php endwhile; ?>
 
   <?php else :  ?>

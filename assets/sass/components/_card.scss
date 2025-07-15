@@ -48,6 +48,10 @@ card
 
       }
 
+      .c-news__card-ttl{
+        color:$sub-color;
+      }
+
     }
 
     &-arrow{
@@ -101,10 +105,6 @@ card
       background: $bg02-color;
       font-size: 12px;
       margin-right: 8px;
-
-      &:hover{
-        opacity: .7;
-      }
     }
 
     &-ttl{
@@ -119,10 +119,6 @@ card
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 1;
       color:#000;
-
-      &:hover{
-        color:$sub-color;
-      }
 
       @include mq(sp){
         font-size: 14px;

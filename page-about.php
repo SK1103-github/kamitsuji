@@ -76,7 +76,7 @@
             <br>
             また、スプレッドシートを駆使して、詳細な経理業務や資金繰表作成を行い、正確なデータに基づいた戦略的な意思決定を支援しています。さらに、ペーパーレス化を進めることで、書類管理の効率化を実現し、クライアント様の業務を円滑に進められるようサポートしています。</p>
             <picture class="about-point__img">
-              <source media="(max-width: 768px)" srcset="assets/images/about/tool_icon_sp.png" type="image/png">
+              <source media="(max-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/about/tool_icon_sp.png" type="image/png">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about/tool_icon.png" alt="DXの活用でスマートな経営を">
             </picture>
             <span class="about-point__num s-font__en">03</span>

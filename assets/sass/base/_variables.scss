@@ -34,12 +34,12 @@ $content-width:1120px;
 animation
 ========================================================*/
 // 背景を拡大
-@keyframes slideBackground {
+@keyframes zoomUp {
   0% {
-    transform: scale(1.0, 1.0);
+    transform: scale(1);
   }
   100% {
-    transform: scale(1.2, 1.2);
+    transform: scale(1.15); /* 拡大率 */
   }
 }
 

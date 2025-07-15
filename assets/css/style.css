@@ -14,12 +14,12 @@ content
 /*========================================================
 animation
 ========================================================*/
-@keyframes slideBackground {
+@keyframes zoomUp {
   0% {
-    transform: scale(1, 1);
+    transform: scale(1);
   }
   100% {
-    transform: scale(1.2, 1.2);
+    transform: scale(1.15); /* 拡大率 */
   }
 }
 @keyframes transformLeftRight {
@@ -610,6 +610,9 @@ card
   animation-name: transformLeftRight;
   animation-delay: 0.2s;
 }
+.c-news__card:hover .c-news__card-ttl {
+  color: #F84B20;
+}
 .c-news__card-arrow {
   width: 16px;
   height: 14px;
@@ -660,9 +663,6 @@ card
   font-size: 12px;
   margin-right: 8px;
 }
-.c-news__card-cat:hover {
-  opacity: 0.7;
-}
 .c-news__card-ttl {
   line-height: 180%;
   font-size: 16px;
@@ -675,9 +675,6 @@ card
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   color: #000;
-}
-.c-news__card-ttl:hover {
-  color: #F84B20;
 }
 @media (max-width: 768px) {
   .c-news__card-ttl {
@@ -2328,63 +2325,27 @@ contact
   bottom: -1px;
   z-index: 999;
 }
-#top .fv-inner .fv-img {
+#top .fv-inner .fv-slider {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: calc(100vh + 120px);
   /* aspect-ratio: 90 / 59; */
-  opacity: 0;
-  z-index: 1;
   display: block;
 }
 @media (max-width: 768px) {
-  #top .fv-inner .fv-img {
-    height: calc(100vh + 120px);
+  #top .fv-inner .fv-slider {
+    height: 100vh;
     aspect-ratio: initial;
   }
 }
-#top .fv-inner .fv-img.slider_01 {
-  background: url(../images/top/fv_01_pc.png) no-repeat;
-  background-size: cover;
-  background-position: 0 50%;
+#top .fv-inner .fv-slider img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-@media (max-width: 768px) {
-  #top .fv-inner .fv-img.slider_01 {
-    background: url(../images/top/fv_01_sp.png) no-repeat;
-    background-position: 0 30%;
-    background-size: cover;
-  }
-}
-#top .fv-inner .fv-img.slider_02 {
-  background: url(../images/top/fv_02_pc.png) no-repeat;
-  background-size: cover;
-  background-position: center bottom;
-}
-@media (max-width: 768px) {
-  #top .fv-inner .fv-img.slider_02 {
-    background: url(../images/top/fv_02_sp.png) no-repeat;
-    background-position: center bottom;
-    background-size: cover;
-  }
-}
-#top .fv-inner .fv-img.slider_03 {
-  background: url(../images/top/fv_03_pc.png) no-repeat;
-  background-size: cover;
-  background-position: 0 50%;
-}
-@media (max-width: 768px) {
-  #top .fv-inner .fv-img.slider_03 {
-    background: url(../images/top/fv_03_sp.png) no-repeat;
-    background-position: 50% 100%;
-    background-size: cover;
-  }
-}
-#top .fv-inner .fv-img.--show {
-  opacity: 1;
-  z-index: 111;
-  animation: slideBackground 10s linear;
+#top .fv-inner .fv-slider .add-animation img {
+  animation: zoomUp 10s linear 0s normal both;
 }
 #top .fv-logo {
   position: absolute;

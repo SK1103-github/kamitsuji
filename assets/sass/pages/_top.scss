@@ -24,61 +24,30 @@ fv
       z-index: 999;
     }
 
-    .fv-img{
+    .fv-slider{
       position: absolute;
       top:0;
       left:0;
       width: 100%;
       height: calc(100vh + 120px);
       /* aspect-ratio: 90 / 59; */
-      opacity: 0;
-      z-index: 1;
       display: block;
 
       @include mq(sp){
-        height: calc(100vh + 120px);
+        height: calc(100vh);
         aspect-ratio: initial;
       }
 
-      &.slider_01{
-        background: url(../images/top/fv_01_pc.png) no-repeat;
-        background-size: cover;
-        background-position: 0 50%;
-
-        @include mq(sp){
-          background: url(../images/top/fv_01_sp.png) no-repeat;
-          background-position: 0 30%;
-          background-size: cover;
-        }
+      img{
+        object-fit: cover;
       }
-      &.slider_02{
-        background: url(../images/top/fv_02_pc.png) no-repeat;
-        background-size: cover;
-        background-position: center bottom;
 
-        @include mq(sp){
-          background: url(../images/top/fv_02_sp.png) no-repeat;
-          background-position: center bottom;
-          background-size: cover;
-        }
-      }
-      &.slider_03{
-        background: url(../images/top/fv_03_pc.png) no-repeat;
-        background-size: cover;
-        background-position: 0 50%;
-
-        @include mq(sp){
-          background: url(../images/top/fv_03_sp.png) no-repeat;
-          background-position: 50% 100%;
-          background-size: cover;
+      .add-animation {
+        img{
+          animation: zoomUp 10s linear 0s normal both;
         }
       }
 
-      &.--show{
-        opacity: 1;
-        z-index: 111;
-        animation: slideBackground 10s linear;
-      }
     }
   }
 

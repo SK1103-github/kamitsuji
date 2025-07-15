@@ -10,9 +10,20 @@
         </a>
       </h1>
 
-      <picture class="fv-img slider_01 --show"></picture>
-      <picture class="fv-img slider_02"></picture>
-      <picture class="fv-img slider_03"></picture>
+      <div class="fv-slider">
+        <picture class="fv-img slider_01">
+          <source media="(max-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/fv_01_sp.png" type="image/png">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/fv_01_pc.png" alt="">
+        </picture>
+        <picture class="fv-img slider_02">
+          <source media="(max-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/fv_02_sp.png" type="image/png">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/fv_02_pc.png" alt="">
+        </picture>
+        <picture class="fv-img slider_03">
+          <source media="(max-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/fv_03_sp.png" type="image/png">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/fv_03_pc.png" alt="">
+        </picture>
+      </div>
       <h2 class="fv-text">
         <div class="fv-text__fade">
           <span class="fade-text">税務をもっと身近に、</span>
