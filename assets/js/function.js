@@ -335,7 +335,7 @@ $(window).on('load', function () {
       fade: true, // フェードON
       arrows: false, // 矢印OFF
       speed: 3000, // スライド、フェードアニメーションの速度2000ミリ秒
-      autoplaySpeed: 3000, // 自動再生速度4000ミリ秒
+      autoplaySpeed: 3500, // 自動再生速度4000ミリ秒
       pauseOnFocus: false, // フォーカスで一時停止OFF
       pauseOnHover: false, // マウスホバーで一時停止OFF
     })
@@ -355,7 +355,7 @@ $(window).on('load', function () {
         );
       },
     });
-}, 3000); // ローディング終了後の遅延時間を設定
+}, 1800); // ローディング終了後の遅延時間を設定
 });
 
 
